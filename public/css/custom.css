@@ -1,0 +1,74 @@
+body {
+    font-family: 'Poppins', sans-serif; /* Ganti dengan font pilihan Anda */
+}
+
+/* Gaya umum section */
+.page-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+/* Warna teks umum */
+.text-muted {
+    color: #6c757d !important;
+}
+
+/* Navbar */
+#mainNav {
+    background-color: #212529; /* Warna navbar yang lebih gelap */
+}
+
+#mainNav .navbar-brand {
+    color: #fff; /* Warna brand navbar */
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+    color: rgba(255, 255, 255, 0.7); /* Warna link navbar */
+}
+
+#mainNav .navbar-nav .nav-item .nav-link:hover,
+#mainNav .navbar-nav .nav-item .nav-link:focus {
+    color: #fff; /* Warna link navbar saat hover */
+}
+
+#mainNav .navbar-nav .nav-item .nav-link.active {
+    color: #f4623a !important; /* Warna link navbar yang aktif */
+}
+
+/* Tombol */
+.btn-primary {
+    background-color: #f4623a;
+    border-color: #f4623a;
+}
+
+.btn-primary:hover {
+    background-color: #e04a24;
+    border-color: #d4441f;
+}
+
+/* Tambahan: Style untuk menampilkan font Aksara Batak dengan benar */
+.aksara-batak {
+    font-family: 'AksaraBatak', sans-serif;
+}
+
+#formTransliterasi textarea,
+#formNama input {
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    padding: 0.75rem;
+}
+
+/* Gaya Galeri */
+#galeri img {
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+/* Jarak dan tata letak pada list item (Kamus) */
+#kamus .list-group-item {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+}
