@@ -24,7 +24,7 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#page-top" style="gap: 8px;">
-    <img src="{{ asset('assets/img/logoboanAksara.png') }}" alt="Logo BoanAksara" style="height: 48px; width: auto;" />
+    <img src="{{ asset('assets/img/logoBoanAksara.png') }}" alt="Logo BoanAksara" style="height: 55px; width: auto;" />
     
     <span class="align-middle" style="font-size: 1.25rem;">BoanAksara</span>
 </a>
