@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-lg-8 align-self-baseline">
                     <p class="text-white-75 mb-5">Mulai perjalanan mengenal dan mengeksplor Aksara Batak dengan mudah dan menyenangkan</p>
-                    <a class="btn btn-primary btn-xl" href="#about">Cari lebih banyak</a>
+                    <a class="btn btn-danger btn-xl" href="#about">Cari lebih banyak</a>
                 </div>
             </div>
         </div>
