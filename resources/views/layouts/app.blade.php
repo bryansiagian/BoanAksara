@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>@yield('title', 'Default Title') -  BoanAksara</title>
+    <title>@yield('title', 'Default Title') - BoanAksara</title>
     <!-- Favicon-->
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/favicon.ico') }}" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -18,16 +19,20 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/SimpleLightbox/2.1.0/simpleLightbox.min.css" rel="stylesheet" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="{{ asset('css/styles.css') }}" rel="stylesheet" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+
 </head>
+
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand d-flex align-items-center gap-2" href="#page-top" style="gap: 8px;">
-    <img src="{{ asset('assets/img/logoBoanAksara.png') }}" alt="Logo BoanAksara" style="height: 55px; width: auto;" />
-    
-    <span class="align-middle" style="font-size: 1.25rem;">BoanAksara</span>
-</a>
+                <img src="{{ asset('assets/img/logoBoanAksara.png') }}" alt="Logo BoanAksara" style="height: 55px; width: auto;" />
+
+                <span class="align-middle" style="font-size: 1.25rem;">BoanAksara</span>
+            </a>
 
             <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -46,7 +51,9 @@
 
     <!-- Footer-->
     <footer class="bg-light py-5">
-        <div class="container px-4 px-lg-5"><div class="small text-center text-muted">Copyright © 2023 - Company Name</div></div>
+        <div class="container px-4 px-lg-5">
+            <div class="small text-center text-muted">Copyright © 2023 - Company Name</div>
+        </div>
     </footer>
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -64,4 +71,5 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     @stack('scripts')
 </body>
+
 </html>
