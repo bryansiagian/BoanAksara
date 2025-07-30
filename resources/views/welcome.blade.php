@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 mb-5">Selamat datang di Boan Aksara! Jelajahi keindahan dan kekayaan aksara Batak, warisan budaya yang tak ternilai harganya. Mulai perjalanan Anda sekarang dan lestarikan bersama!</p>
-                <a class="btn btn-primary btn-xl" href="#pengenalan">Pelajari Aksara</a>
+                <a class="btn btn-maroon btn-xl" href="#pengenalan">Pelajari Aksara</a>
             </div>
         </div>
     </div>
