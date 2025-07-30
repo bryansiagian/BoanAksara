@@ -17,62 +17,91 @@
             </div>
         </div>
     </div>
+    <head>
+  <style>
+    ::selection {
+      background: #ffffff;
+      color: #000;
+    }
+
+    ::-moz-selection {
+      background: #ffffff;
+      color: #000;
+    }
+  </style>
+</head>
+
 </header>
 
 <!-- About Aksara Batak -->
 <section class="page-section bg-light" id="pengenalan">
     <div class="container px-4 px-lg-5">
-        <div class="row gx-4 gx-lg-5 justify-content-center">
-            <div class="col-lg-8 text-center">
-                <h2 class="mt-0">Mengenal Aksara Batak</h2>
-                <hr class="divider my-4" />
-                <p class="text-muted mb-4">
-                    Aksara Batak, dikenal juga sebagai *Surat Batak*, adalah sistem penulisan tradisional yang digunakan oleh masyarakat Batak di Sumatera Utara, Indonesia. Aksara ini bukan hanya sekadar tulisan, tetapi juga simbol identitas dan warisan budaya yang kaya.
-                </p>
-                <p class="text-muted mb-4">
-                    Aksara Batak terdiri dari beberapa varian, yang masing-masing digunakan untuk menulis bahasa Batak yang berbeda, seperti Toba, Karo, Simalungun, Pakpak, dan Angkola/Mandailing. Setiap varian memiliki karakteristik uniknya sendiri, namun tetap berbagi dasar yang sama.
-                </p>
+        <div class="row gx-5 gy-4 align-items-center">
+            <!-- Gambar Ilustrasi -->
+            <div class="col-lg-6 text-center">
+                <img src="images/3d9a4e65-dd10-4606-88de-82b13cd9c5b9.png" alt="Ilustrasi Aksara Batak" class="img-fluid rounded shadow fade-in" style="max-height: 350px;" />
+            </div>
 
-                <!-- Box Sejarah Aksara Batak -->
-                <div class="history-box">
-                    <a href="sejarah.html">
-                        <h3>Sejarah Aksara Batak</h3>
+            <!-- Teks Penjelasan -->
+            <div class="col-lg-6">
+                <h2 class="mt-0 text-center text-lg-start">Mengenal Aksara Batak</h2>
+                <hr class="divider my-3" />
+                <p class="text-muted">
+                    <strong>Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>, adalah sistem penulisan kuno yang telah digunakan oleh masyarakat Batak di Sumatera Utara sejak berabad-abad lalu. Aksara ini tak hanya berfungsi sebagai alat komunikasi, namun juga merefleksikan nilai spiritual, adat, dan filsafat hidup suku Batak.
+                </p>
+                <p class="text-muted">
+                    Aksara ini memiliki beberapa varian utama seperti Toba, Karo, Simalungun, Pakpak, dan Mandailing, yang masing-masing disesuaikan dengan dialek lokal. Setiap aksara disusun dari konsonan dasar yang dimodifikasi dengan tanda vokal, menjadikannya unik namun tetap berbasis struktur fonetik yang kuat.
+                </p>
+                <p class="text-muted">
+                    Hari ini, Aksara Batak kembali dipelajari untuk memperkuat identitas budaya lokal dan diwariskan ke generasi muda sebagai bagian dari pelestarian kearifan lokal.
+                </p>
+            </div>
+        </div>
+
+        <!-- Box dan Card Info Tambahan -->
+        <div class="row mt-5">
+            <div class="col-md-12 mb-4">
+                <div class="p-4 bg-white rounded shadow history-box">
+                    <a href="sejarah.html" class="text-decoration-none text-dark">
+                        <h4 class="fw-bold">Sejarah Aksara Batak</h4>
                         <p>
-                            Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli...
+                            Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli, namun berbagai naskah kuno telah membuktikan bahwa aksara ini telah digunakan dalam ritual keagamaan, surat-menyurat, dan pelestarian adat sejak abad ke-18.
                             <br><br>
-                            [Klik untuk membaca selengkapnya]
+                            <em>[Klik untuk membaca selengkapnya]</em>
                         </p>
                     </a>
                 </div>
+            </div>
 
-                <div class="row">
-                    <div class="col-md-6 mb-4">
-                        <a href="sejarah.html" class="card-link">
-                            <div class="card h-100 shadow-sm border-0 history-card">
-                                <div class="card-body text-center">
-                                    <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
-                                    <h5 class="card-title">Sejarah dan Filosofi</h5>
-                                    <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang mendasarinya. Pahami bagaimana aksara ini mencerminkan pandangan dunia masyarakat Batak.</p>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Struktur Aksara</h5>
-                                <p class="card-text text-muted">Kenali struktur aksara Batak, termasuk konsonan, vokal, dan tanda baca. Pahami aturan penulisan dan pelafalan yang berlaku.</p>
-                            </div>
+            <div class="col-md-6 mb-4">
+                <a href="sejarah.html" class="card-link">
+                    <div class="card h-100 shadow-sm border-0 history-card">
+                        <div class="card-body text-center">
+                            <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
+                            <h5 class="card-title fw-bold">Sejarah dan Filosofi</h5>
+                            <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang melatarinya. Setiap guratan huruf memiliki makna mendalam dalam struktur sosial dan religius Batak.</p>
                         </div>
                     </div>
-                </div>
+                </a>
+            </div>
 
-                <a class="btn btn-primary btn-xl" href="#fitur">Jelajahi Fitur</a>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0">
+                    <div class="card-body text-center">
+                        <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title fw-bold">Struktur Aksara</h5>
+                        <p class="card-text text-muted">Struktur aksara Batak terdiri dari 19 huruf dasar, tanda vokal (diakritik), dan beberapa tanda baca. Pemahaman ini penting dalam proses transliterasi dan pembacaan teks kuno.</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+        <div class="text-center mt-4">
+            <a class="btn btn-maroon btn-xl" href="#fitur">Jelajahi Fitur</a>
+        </div>
     </div>
+</section>
+
 
 <!-- Fitur-Fitur -->
 <section class="page-section" id="fitur">
