@@ -37,11 +37,6 @@
 <section class="page-section bg-light" id="pengenalan">
     <div class="container px-4 px-lg-5">
         <div class="row gx-5 gy-4 align-items-center">
-            <!-- Gambar Ilustrasi -->
-            <div class="col-lg-6 text-center">
-                <img src="images/3d9a4e65-dd10-4606-88de-82b13cd9c5b9.png" alt="Ilustrasi Aksara Batak" class="img-fluid rounded shadow fade-in" style="max-height: 350px;" />
-            </div>
-
             <!-- Teks Penjelasan -->
             <div class="col-lg-6">
                 <h2 class="mt-0 text-center text-lg-start">Mengenal Aksara Batak</h2>
@@ -55,6 +50,11 @@
                 <p class="text-muted">
                     Hari ini, Aksara Batak kembali dipelajari untuk memperkuat identitas budaya lokal dan diwariskan ke generasi muda sebagai bagian dari pelestarian kearifan lokal.
                 </p>
+            </div>
+
+            <!-- Gambar Ilustrasi -->
+            <div class="col-lg-6 text-center">
+                <img src="images/3d9a4e65-dd10-4606-88de-82b13cd9c5b9.png" alt="Ilustrasi Aksara Batak" class="img-fluid rounded shadow fade-in" style="max-height: 350px;" />
             </div>
         </div>
 
