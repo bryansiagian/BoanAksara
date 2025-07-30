@@ -36,18 +36,24 @@
 
 <!-- About Aksara Batak -->
 <section class="page-section bg-light" id="pengenalan">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-6 text-left" style="text-align: justify;">
-                <!-- Text Content Here -->
-                <h2>Mengenal Aksara Batak</h2>
-                <p>Aksara Batak, atau dikenal sebagai <i>Surat Batak</i>, adalah sistem penulisan kuno yang telah digunakan oleh masyarakat Batak di Sumatera Utara sejak berabad-abad lalu. Aksara ini tak hanya berfungsi sebagai alat komunikasi, namun juga merefleksikan nilai spiritual, adat, dan filsafat hidup suku Batak.</p>
-                <p>Aksara ini digunakan oleh beberapa suku Batak, seperti Toba, Karo, Simalungun, Pakpak/Dairi, dan Mandailing, dengan bentuk yang disesuaikan menurut dialek masing-masing. Setiap aksara dibangun dari konsonan dasar yang dimodifikasi tanda vokal, sehingga memiliki keunikan tersendiri meski tetap mempertahankan struktur fonetik yang sama.</p>
-                <p>Hari ini, Aksara Batak kembali dipelajari dipelajari untuk memperkuat identitas budaya lokal dan diwariskan ke generasi muda sebagai bagian dari pelestarian kearifan lokal.</p>
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-5 gy-4 align-items-center">
+            <!-- Teks Penjelasan -->
+            <div class="col-lg-6">
+                <h2 class="mt-0 text-center text-lg-start">Mengenal Aksara Batak</h2>
+                <hr class="divider my-3" />
+                <p class="text-muted">
+                    <strong>Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>, adalah sistem penulisan kuno yang telah digunakan oleh masyarakat Batak di Sumatera Utara sejak berabad-abad lalu. Aksara ini tak hanya berfungsi sebagai alat komunikasi, namun juga merefleksikan nilai spiritual, adat, dan filsafat hidup suku Batak.
+                </p>
+                <p class="text-muted">
+                    Aksara ini digunakan oleh beberapa suku Batak, seperti Toba, Karo, Simalungun, Pakpak/Dairi, dan Mandailing, dengan bentuk yang disesuaikan menurut dialek masing-masing. Setiap aksara dibangun dari konsonan dasar yang dimodifikasi tanda vokal, sehingga memiliki keunikan tersendiri meski tetap mempertahankan struktur fonetik yang sama.
+                </p>
+                <p class="text-muted">
+                    Hari ini, Aksara Batak kembali dipelajari untuk memperkuat identitas budaya lokal dan diwariskan ke generasi muda sebagai bagian dari pelestarian kearifan lokal.
+                </p>
             </div>
-
             <div class="col-lg-6 text-center">
-                <img src="assets/img/Gbr.png" alt="Ilustrasi Aksara Batak" class="img-fluid rounded shadow animated-image" style="max-height: 500px; width: 100%; object-fit: contain;" />
+                <img src="assets/img/aksarabatakhah.png" alt="Ilustrasi Aksara Batak" style="max-height: 420px; width: 100%; object-fit: contain;" />
             </div>
         </div>
     </div>
