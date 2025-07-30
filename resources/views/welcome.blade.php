@@ -33,15 +33,29 @@
                     Aksara Batak terdiri dari beberapa varian, yang masing-masing digunakan untuk menulis bahasa Batak yang berbeda, seperti Toba, Karo, Simalungun, Pakpak, dan Angkola/Mandailing. Setiap varian memiliki karakteristik uniknya sendiri, namun tetap berbagi dasar yang sama.
                 </p>
 
+                <!-- Box Sejarah Aksara Batak -->
+                <div class="history-box">
+                    <a href="sejarah.html">
+                        <h3>Sejarah Aksara Batak</h3>
+                        <p>
+                            Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli...
+                            <br><br>
+                            [Klik untuk membaca selengkapnya]
+                        </p>
+                    </a>
+                </div>
+
                 <div class="row">
                     <div class="col-md-6 mb-4">
-                        <div class="card h-100 shadow-sm border-0">
-                            <div class="card-body text-center">
-                                <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
-                                <h5 class="card-title">Sejarah dan Filosofi</h5>
-                                <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang mendasarinya. Pahami bagaimana aksara ini mencerminkan pandangan dunia masyarakat Batak.</p>
+                        <a href="sejarah.html" class="card-link">
+                            <div class="card h-100 shadow-sm border-0 history-card">
+                                <div class="card-body text-center">
+                                    <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
+                                    <h5 class="card-title">Sejarah dan Filosofi</h5>
+                                    <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang mendasarinya. Pahami bagaimana aksara ini mencerminkan pandangan dunia masyarakat Batak.</p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="col-md-6 mb-4">
@@ -59,7 +73,6 @@
             </div>
         </div>
     </div>
-</section>
 
 <!-- Fitur-Fitur -->
 <section class="page-section" id="fitur">

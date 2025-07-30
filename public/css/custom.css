@@ -4,20 +4,30 @@
     --heading-color: #333;
     --text-muted: #6c757d;
     --light-orange: #fff8f0;
-    --primary-color: #e69138;
-    --primary-color-hover: #d17b23;
+    --primary-color: #dc3545;
+    /* Warna merah */
+    --primary-color-hover: #c82333;
+    /* Warna merah lebih gelap saat hover */
     --masthead-overlay: rgba(0, 0, 0, 0.1);
-
-    /* Tinggi navbar (penting untuk offset scroll) */
-    --navbar-height: 70px;
+    --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    --transition-duration: 0.3s;
+    /* Durasi transisi yang lebih mudah diubah */
+    --section-padding: 8rem;
+    /* Padding default untuk section */
+    --heading-margin-bottom: 2.5rem;
+    /* Margin bawah untuk heading */
 }
 
 /* General Styles */
 body {
     font-family: var(--primary-font);
-    line-height: 1.6;
+    line-height: 1.7;
+    /* Line height lebih lebar untuk keterbacaan */
     color: var(--text-muted);
     background-color: var(--light-orange);
+    font-size: 1.1rem;
+    /* Ukuran font dasar yang lebih besar */
 }
 
 h1,
@@ -38,7 +48,8 @@ html {
 /* Masthead Styles */
 .masthead {
     padding: 12rem 0;
-    background: linear-gradient(to bottom, rgba(230, 145, 56, 0.8) 0%, rgba(230, 145, 56, 0.8) 100%), url('https://source.unsplash.com/1920x1080/?culture');
+    background: linear-gradient(to bottom, rgba(220, 53, 69, 0.8) 0%, rgba(220, 53, 69, 0.8) 100%), url('https://source.unsplash.com/1920x1080/?culture');
+    /* Linear gradient merah */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -65,24 +76,28 @@ html {
 }
 
 .masthead h1 {
-    font-size: 4rem;
+    font-size: 4.5rem;
+    /* Lebih besar untuk dampak visual */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .masthead p {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
+    /* Lebih besar untuk dibaca */
     font-weight: 300;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 /* Page Section Styles */
 .page-section {
-    padding: 7rem 0;
+    padding: var(--section-padding) 0;
+    /* Padding lebih besar untuk spasi yang lebih baik */
 }
 
 .page-section h2 {
-    font-size: 2.75rem;
-    margin-bottom: 2rem;
+    font-size: 3rem;
+    /* Ukuran heading yang lebih besar */
+    margin-bottom: var(--heading-margin-bottom);
     color: var(--heading-color);
     text-align: center;
 }
@@ -98,104 +113,276 @@ html {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
     font-weight: 600;
-    padding: 1rem 2rem;
-    font-size: 1.25rem;
-    transition: all 0.3s ease;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    padding: 1.2rem 2.5rem;
+    /* Padding yang lebih besar */
+    font-size: 1.4rem;
+    transition: all var(--transition-duration) ease;
+    box-shadow: var(--box-shadow);
 }
 
 .btn-primary:hover {
     background-color: var(--primary-color-hover);
     border-color: var(--primary-color-hover);
-    transform: translateY(-2px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+    /* Efek hover lebih dramatis */
+    box-shadow: var(--box-shadow-hover);
 }
 
 /* Feature Item Styles */
 .feature-item {
     text-align: center;
-    padding: 2rem;
-    border-radius: 1rem;
+    padding: 2.5rem;
+    /* Padding lebih besar */
+    border-radius: 1.2rem;
     background-color: #fff;
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease;
+    box-shadow: var(--box-shadow);
+    transition: all var(--transition-duration) ease;
+    margin-bottom: 3rem;
+    /* Margin bottom yang sama */
 }
 
 .feature-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-7px);
+    /* Efek hover lebih besar */
+    box-shadow: var(--box-shadow-hover);
 }
 
 .feature-item i {
     color: var(--primary-color);
-    font-size: 3em;
-    margin-bottom: 1rem;
+    font-size: 3.5em;
+    /* Ikon yang lebih besar */
+    margin-bottom: 1.2rem;
 }
 
 .feature-item h4 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.7rem;
+    /* Ukuran heading yang lebih besar */
+    margin-bottom: 1.2rem;
     color: var(--heading-color);
 }
 
 .feature-item p {
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
 }
 
 /* Card Styles */
 .card {
-    border-radius: 1rem;
-    transition: all 0.3s ease;
+    border-radius: 1.2rem;
+    transition: all var(--transition-duration) ease;
     border: none;
+    box-shadow: var(--box-shadow);
     /* Remove card border */
+    margin-bottom: 2rem;
+    /* Margin bottom yang sama */
 }
 
 .card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+    /* Efek hover lebih besar */
+    box-shadow: var(--box-shadow-hover);
 }
 
-/* Shadow for cards */
-.shadow-sm {
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.075) !important;
-    transition: box-shadow 0.3s ease;
+/* Styling untuk Box Sejarah */
+.history-box {
+    background-color: #fff;
+    border-radius: 1.2rem;
+    /* Radius yang lebih besar */
+    padding: 2.5rem;
+    /* Padding lebih besar */
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+    /* Margin bottom yang sama */
+    box-shadow: var(--box-shadow);
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease, background-color var(--transition-duration) ease;
+    text-align: left;
+    position: relative;
+    overflow: hidden;
 }
 
-.shadow-sm:hover {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+.history-box:hover {
+    transform: translateY(-7px);
+    /* Efek hover lebih besar */
+    box-shadow: var(--box-shadow-hover);
+    background-color: var(--light-orange);
+    /* Warna latar belakang yang berbeda saat hover */
+}
+
+.history-box h3 {
+    color: var(--heading-color);
+    margin-bottom: 1.5rem;
+    /* Margin lebih besar */
+    position: relative;
+    z-index: 1;
+    font-size: 1.8rem;
+    /* Ukuran heading yang lebih besar */
+}
+
+.history-box p {
+    color: var(--text-muted);
+    font-size: 1.2rem;
+    /* Ukuran font yang lebih besar */
+    line-height: 1.8;
+    /* Line height yang lebih lebar */
+    position: relative;
+    z-index: 1;
+}
+
+.history-box a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
+    /* Menjadikan tautan sebagai konteks positioning */
+    z-index: 2;
+    /* Menempatkan tautan di atas elemen-elemen lain */
+}
+
+/* Styling Tambahan untuk Kartu Sejarah */
+.history-card {
+    transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+}
+
+.history-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.card-link {
+    text-decoration: none;
+    /* Menghilangkan garis bawah tautan */
+    color: inherit;
+    /* Mewarisi warna teks dari kartu */
+    display: block;
+    /* Memastikan tautan mengisi seluruh area kartu */
+    height: 100%;
+    /* Memastikan tautan mengisi seluruh area kartu */
 }
 
 /* Media Queries for Responsiveness */
-@media (max-width: 768px) {
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
     .masthead h1 {
         font-size: 3.5rem;
+        /* Dikecilkan sedikit untuk mobile */
     }
 
     .masthead p {
-        font-size: 1.25rem;
+        font-size: 1.4rem;
+        /* Dikecilkan sedikit untuk mobile */
     }
 
     .page-section {
         padding: 5rem 0;
+        /* Padding yang lebih kecil untuk mobile */
     }
 
     .page-section h2 {
-        font-size: 2.25rem;
+        font-size: 2.5rem;
+        /* Dikecilkan sedikit untuk mobile */
     }
 
-    .feature-item h4 {
-        font-size: 1.35rem;
+    /* History Box Responsif */
+    .history-box {
+        padding: 1.75rem;
+        margin-top: 1.75rem;
     }
 
-    .feature-item p {
-        font-size: 0.9rem;
+    .history-box h3 {
+        font-size: 1.5rem;
+        /* Dikecilkan sedikit untuk mobile */
+    }
+
+    .history-box p {
+        font-size: 1.1rem;
+        /* Dikecilkan sedikit untuk mobile */
+        line-height: 1.6;
+    }
+
+    body {
+        font-size: 1rem;
+        /* Ukuran font dasar di mobile */
+    }
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .masthead h1 {
+        font-size: 4rem;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .page-section h2 {
+        font-size: 2.8rem;
+    }
+
+    .col-md-6 {
+        width: 100%;
+    }
+
+    /* History Box Responsif */
+    .history-box {
+        padding: 2rem;
+        margin-top: 2rem;
+    }
+
+    .history-box h3 {
+        font-size: 1.6rem;
+    }
+
+    .history-box p {
+        font-size: 1.15rem;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .page-section h2 {
+        font-size: 2.9rem;
+    }
+
+    /* History Box Responsif */
+    .history-box {
+        padding: 2.25rem;
+        margin-top: 2.25rem;
+    }
+
+    .history-box h3 {
+        font-size: 1.7rem;
+    }
+
+    .history-box p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .page-section h2 {
+        font-size: 3rem;
+    }
+
+    /* History Box Responsif */
+    .history-box {
+        padding: 2.5rem;
+        margin-top: 2.5rem;
+    }
+
+    .history-box h3 {
+        font-size: 1.8rem;
+    }
+
+    .history-box p {
+        font-size: 1.2rem;
     }
 }
 
 /* Contact Section Styles */
 #contact .form-control:focus {
-    border-color: #e69138;
+    border-color: var(--primary-color);
     /* Warna primer saat fokus */
     box-shadow: 0 0 0 0.2rem rgba(230, 145, 56, 0.25);
     /* Efek shadow saat fokus */
@@ -217,4 +404,6 @@ html {
 
 #contact i:hover {
     color: #e69138;
+    transition: color 0.2s ease-in-out;
+    /* Efek transisi untuk perubahan warna */
 }
