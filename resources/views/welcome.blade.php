@@ -45,7 +45,7 @@
                     <strong>Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>, adalah sistem penulisan kuno yang telah digunakan oleh masyarakat Batak di Sumatera Utara sejak berabad-abad lalu. Aksara ini tak hanya berfungsi sebagai alat komunikasi, namun juga merefleksikan nilai spiritual, adat, dan filsafat hidup suku Batak.
                 </p>
                 <p class="text-muted">
-                    Aksara ini memiliki beberapa varian utama seperti Toba, Karo, Simalungun, Pakpak, dan Mandailing, yang masing-masing disesuaikan dengan dialek lokal. Setiap aksara disusun dari konsonan dasar yang dimodifikasi dengan tanda vokal, menjadikannya unik namun tetap berbasis struktur fonetik yang kuat.
+                    Aksara ini digunakan oleh beberapa suku Batak, seperti Toba, Karo, Simalungun, Pakpak/Dairi, dan Mandailing, dengan bentuk yang disesuaikan menurut dialek masing-masing. Setiap aksara dibangun dari konsonan dasar yang dimodifikasi tanda vokal, sehingga memiliki keunikan tersendiri meski tetap mempertahankan struktur fonetik yang sama.
                 </p>
                 <p class="text-muted">
                     Hari ini, Aksara Batak kembali dipelajari untuk memperkuat identitas budaya lokal dan diwariskan ke generasi muda sebagai bagian dari pelestarian kearifan lokal.
