@@ -35,28 +35,44 @@
 </header>
 
 <!-- About Aksara Batak -->
-<section class="page-section bg-light" id="pengenalan">
+<section class="page-section bg-light py-5" id="pengenalan" style="background: linear-gradient(to right, #ffffff, #f3f3f3);">
     <div class="container px-4 px-lg-5">
         <div class="row gx-5 gy-4 align-items-center">
+            <!-- Ilustrasi Placeholder -->
+           
+
             <!-- Teks Penjelasan -->
-            <div class="col-lg-6">
-                <h2 class="mt-0 text-center text-lg-start">Mengenal Aksara Batak</h2>
+            <div class="col-lg-6 order-lg-1">
+                <!-- Judul -->
+                <h2 class="text-center text-lg-start">
+                    <span style="color:#7B241C">Mengenal Aksara Batak</span> 
+                </h2>
                 <hr class="divider my-3" />
+
+                <!-- Paragraf -->
                 <p class="text-muted">
-                    <strong>Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>, adalah sistem penulisan kuno yang telah digunakan oleh masyarakat Batak di Sumatera Utara sejak berabad-abad lalu. Aksara ini tak hanya berfungsi sebagai alat komunikasi, namun juga merefleksikan nilai spiritual, adat, dan filsafat hidup suku Batak.
+                    <strong style="color:#7B241C">Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>,
+                    adalah sistem penulisan kuno yang digunakan masyarakat Batak di Sumatera Utara sejak berabad-abad
+                    silam. Aksara ini tidak hanya menjadi alat komunikasi, tapi juga mencerminkan nilai-nilai spiritual,
+                    adat, dan filosofi hidup suku Batak.
                 </p>
                 <p class="text-muted">
                     Aksara ini digunakan oleh beberapa suku Batak, seperti Toba, Karo, Simalungun, Pakpak/Dairi, dan Mandailing, dengan bentuk yang disesuaikan menurut dialek masing-masing. Setiap aksara dibangun dari konsonan dasar yang dimodifikasi tanda vokal, sehingga memiliki keunikan tersendiri meski tetap mempertahankan struktur fonetik yang sama.
                 </p>
                 <p class="text-muted">
-                    Hari ini, Aksara Batak kembali dipelajari untuk memperkuat identitas budaya lokal dan diwariskan ke generasi muda sebagai bagian dari pelestarian kearifan lokal.
+                    Aksara Batak tetap dipelajari dan dilestarikan sebagai bagian tak terpisahkan dari budaya Batak, memperkuat identitas lokal, khususnya bagi generasi muda.
                 </p>
-            </div>
-            <div class="col-lg-6 text-center">
-                <img src="assets/img/aksarabatakhah.png" alt="Ilustrasi Aksara Batak" style="max-height: 420px; width: 100%; object-fit: contain;" />
+
+                <!-- Fakta Menarik -->
+                <div style="background-color: #7B241C; color: #ffffff; padding: 1rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="mt-4">
+                     Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
+                </div>
             </div>
         </div>
     </div>
+</section>
+
+
 
     <!-- Box dan Card Info Tambahan -->
     <div class="row mt-5">
