@@ -26,8 +26,8 @@ body {
     /* Line height lebih lebar untuk keterbacaan */
     color: var(--text-muted);
     background-color: var(--light-orange);
-    font-size: 1.1rem;
-    /* Ukuran font dasar yang lebih besar */
+    font-size: 1.2rem;
+    /* Increased base font size */
 }
 
 h1,
@@ -43,6 +43,98 @@ h6 {
 /* Mengatasi masalah offset scroll karena navbar tetap */
 html {
     scroll-padding-top: var(--navbar-height);
+}
+
+/* Animation Keyframes */
+
+/* Text Animation */
+.fade-in-text {
+    animation: fadeIn 20s ease-in-out;
+    /* Apply fade-in animation */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 4;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe for Image Floating */
+/* Image Styling */
+.animated-image {
+    width: 100%;
+    /* Make image responsive within column */
+    max-width: 600px;
+    /* Increased max width for larger image */
+    height: auto;
+    /* Maintain aspect ratio */
+    object-fit: cover;
+    /* Cover the container without distortion */
+    border-radius: 10px;
+    /* Add rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    animation: pulse 5s infinite alternate ease-in-out;
+    /* Continuous animation */
+}
+
+/* Keyframes for Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Modified Styling */
+.col-lg-6 {
+    display: flex;
+    flex-direction: column;
+    /* Stack content vertically */
+    justify-content: center;
+    /* Vertically center content */
+    align-items: center;
+    /* Horizontally center content */
+    padding: 20px;
+    /* Add padding for spacing */
+}
+
+/* Text Styling */
+.text-left {
+    text-align: justify;
+    /* Justify text for better readability */
+}
+
+.text-left h2 {
+    font-size: 2.8rem;
+    /* Adjust font size for heading */
+    margin-bottom: 15px;
+    /* Add spacing below heading */
+    color: var(--heading-color);
+    /* Use heading color variable */
+}
+
+.text-left p {
+    font-size: 1.3rem;
+    /* Increased text size */
+    line-height: 1.7;
+    /* Adjust line height for readability */
+    color: var(--text-muted);
+    /* Use text color variable */
 }
 
 /* Masthead Styles */
@@ -79,6 +171,20 @@ html {
     font-size: 4.5rem;
     /* Lebih besar untuk dampak visual */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    animation: wobble 5s infinite alternate ease-in-out;
+    /* Apply wobble animation */
+}
+
+@keyframes wobble {
+    0% {
+        transform: translateY(-5px);
+        /* Move up */
+    }
+
+    100% {
+        transform: translateY(5px);
+        /* Move down */
+    }
 }
 
 .masthead p {
@@ -184,15 +290,56 @@ html {
 }
 
 /* Styling untuk Box Sejarah */
+/* Styling for the "Sejarah Aksara Batak" Section */
+.sejarah-aksara-batak {
+    padding: 2rem;
+    /* Reduced padding */
+    background-color: #f9f9f9;
+    /* Light background for contrast */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    margin-bottom: 2rem;
+    /* Add spacing below the section */
+    max-width: 100%;
+    /* Take full width, remove the length of the text */
+}
+
+.sejarah-aksara-batak h2 {
+    font-size: 2rem;
+    /* Reduced heading size */
+    margin-bottom: 1rem;
+    /* Spacing below heading */
+    color: var(--heading-color);
+    /* Use heading color variable */
+    text-align: left;
+    /* Align heading to the left */
+}
+
+.sejarah-aksara-batak p {
+    font-size: 1.1rem;
+    /* Adjust paragraph size */
+    line-height: 1.5;
+    /* Adjust line height for readability */
+    color: var(--text-muted);
+    /* Use text color variable */
+}
+
+.sejarah-aksara-batak a {
+    color: var(--primary-color);
+    /* Primary color for the link */
+    text-decoration: none;
+}
+
+/* History-box styling */
 .history-box {
-    background-color: #fff;
+    background-color: #e9ecef;
+    /* Light gray background */
     border-radius: 1.2rem;
-    /* Radius yang lebih besar */
     padding: 2.5rem;
-    /* Padding lebih besar */
     margin-top: 2.5rem;
     margin-bottom: 2.5rem;
-    /* Margin bottom yang sama */
     box-shadow: var(--box-shadow);
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease, background-color var(--transition-duration) ease;
     text-align: left;
@@ -208,22 +355,18 @@ html {
     /* Warna latar belakang yang berbeda saat hover */
 }
 
-.history-box h3 {
+.history-box h4 {
     color: var(--heading-color);
     margin-bottom: 1.5rem;
-    /* Margin lebih besar */
     position: relative;
     z-index: 1;
     font-size: 1.8rem;
-    /* Ukuran heading yang lebih besar */
 }
 
 .history-box p {
     color: var(--text-muted);
     font-size: 1.2rem;
-    /* Ukuran font yang lebih besar */
     line-height: 1.8;
-    /* Line height yang lebih lebar */
     position: relative;
     z-index: 1;
 }
@@ -234,14 +377,14 @@ html {
     display: block;
     height: 100%;
     position: relative;
-    /* Menjadikan tautan sebagai konteks positioning */
     z-index: 2;
-    /* Menempatkan tautan di atas elemen-elemen lain */
 }
 
 /* Styling Tambahan untuk Kartu Sejarah */
 .history-card {
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+    background-color: #f8f9fa;
+    /* Very light gray */
 }
 
 .history-card:hover {
@@ -251,58 +394,60 @@ html {
 
 .card-link {
     text-decoration: none;
-    /* Menghilangkan garis bawah tautan */
     color: inherit;
-    /* Mewarisi warna teks dari kartu */
     display: block;
-    /* Memastikan tautan mengisi seluruh area kartu */
     height: 100%;
-    /* Memastikan tautan mengisi seluruh area kartu */
 }
 
 /* Media Queries for Responsiveness */
-/* Extra small devices (phones, less than 576px) */
-@media (max-width: 575.98px) {
-    .masthead h1 {
-        font-size: 3.5rem;
-        /* Dikecilkan sedikit untuk mobile */
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .col-md-6 {
+        width: 100%;
+        /* Stack the cards on top of each other */
     }
 
-    .masthead p {
-        font-size: 1.4rem;
-        /* Dikecilkan sedikit untuk mobile */
-    }
-
-    .page-section {
-        padding: 5rem 0;
-        /* Padding yang lebih kecil untuk mobile */
-    }
-
-    .page-section h2 {
-        font-size: 2.5rem;
-        /* Dikecilkan sedikit untuk mobile */
-    }
-
-    /* History Box Responsif */
     .history-box {
         padding: 1.75rem;
-        margin-top: 1.75rem;
     }
 
-    .history-box h3 {
+    .history-box h4 {
         font-size: 1.5rem;
-        /* Dikecilkan sedikit untuk mobile */
     }
 
     .history-box p {
         font-size: 1.1rem;
-        /* Dikecilkan sedikit untuk mobile */
         line-height: 1.6;
     }
 
-    body {
-        font-size: 1rem;
-        /* Ukuran font dasar di mobile */
+    .masthead h1 {
+        font-size: 3.0rem;
+    }
+
+    .masthead p {
+        font-size: 1.4rem;
+    }
+
+    .text-left h2 {
+        font-size: 2.2rem;
+    }
+
+    .text-left p {
+        font-size: 1.1rem;
+    }
+
+    .animated-image {
+        max-width: 100%;
+        animation: none;
+    }
+
+    .col-lg-6 {
+        padding: 10px;
+    }
+
+    .animated-image:hover {
+        transform: scale(1);
+        filter: none;
     }
 }
 
@@ -359,7 +504,7 @@ html {
     }
 }
 
-/* Extra large devices (large desktops, 1200px and up) */
+/* Extra large devices (large desktops, 1200px) */
 @media (min-width: 1200px) {
     .page-section h2 {
         font-size: 3rem;
