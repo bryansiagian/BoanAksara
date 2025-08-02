@@ -39,13 +39,13 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-5 gy-4 align-items-center">
             <!-- Ilustrasi Placeholder -->
-           
+
 
             <!-- Teks Penjelasan -->
             <div class="col-lg-6 order-lg-1">
                 <!-- Judul -->
                 <h2 class="text-center text-lg-start">
-                    <span style="color:#7B241C">Mengenal Aksara Batak</span> 
+                    <span style="color:#7B241C">Mengenal Aksara Batak</span>
                 </h2>
                 <hr class="divider my-3" />
 
@@ -65,7 +65,7 @@
 
                 <!-- Fakta Menarik -->
                 <div style="background-color: #7B241C; color: #ffffff; padding: 1rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="mt-4">
-                     Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
+                    Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
                 </div>
             </div>
         </div>
@@ -74,48 +74,48 @@
 
 
 
-    <!-- Box dan Card Info Tambahan -->
-    <div class="row mt-5">
-        <div class="col-md-12 mb-4">
-            <div class="bg-white rounded shadow history-box">
-                <a href="sejarah.html" class="text-decoration-none text-dark">
-                    <h4 class="fw-bold">Sejarah Aksara Batak</h4>
-                    <p>
-                        Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli, namun berbagai naskah kuno telah membuktikan bahwa aksara ini telah digunakan dalam ritual keagamaan, surat-menyurat, dan pelestarian adat sejak abad ke-18.
-                        <br><br>
-                        <em>[Klik untuk membaca selengkapnya]</em>
-                    </p>
-                </a>
-            </div>
-        </div>
-
-        <div class="col-md-6 mb-4">
-            <a href="sejarah.html" class="card-link">
-                <div class="card h-100 shadow-sm border-0 history-card">
-                    <div class="card-body text-center">
-                        <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
-                        <h5 class="card-title fw-bold">Sejarah dan Filosofi</h5>
-                        <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang melatarinya. Setiap guratan huruf memiliki makna mendalam dalam struktur sosial dan religius Batak.</p>
-                    </div>
-                </div>
+<!-- Box dan Card Info Tambahan -->
+<div class="row mt-5">
+    <div class="col-md-12 mb-4">
+        <div class="bg-white rounded shadow history-box">
+            <a href="sejarah.html" class="text-decoration-none text-dark">
+                <h4 class="fw-bold">Sejarah Aksara Batak</h4>
+                <p>
+                    Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli, namun berbagai naskah kuno telah membuktikan bahwa aksara ini telah digunakan dalam ritual keagamaan, surat-menyurat, dan pelestarian adat sejak abad ke-18.
+                    <br><br>
+                    <em>[Klik untuk membaca selengkapnya]</em>
+                </p>
             </a>
         </div>
+    </div>
 
-        <div class="col-md-6 mb-4">
-            <div class="card h-100 shadow-sm border-0">
+    <div class="col-md-6 mb-4">
+        <a href="sejarah.html" class="card-link">
+            <div class="card h-100 shadow-sm border-0 history-card">
                 <div class="card-body text-center">
-                    <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                    <h5 class="card-title fw-bold">Struktur Aksara</h5>
-                    <p class="card-text text-muted">Struktur aksara Batak terdiri dari 19 huruf dasar, tanda vokal (diakritik), dan beberapa tanda baca. Pemahaman ini penting dalam proses transliterasi dan pembacaan teks kuno.</p>
+                    <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title fw-bold">Sejarah dan Filosofi</h5>
+                    <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang melatarinya. Setiap guratan huruf memiliki makna mendalam dalam struktur sosial dan religius Batak.</p>
                 </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="col-md-6 mb-4">
+        <div class="card h-100 shadow-sm border-0">
+            <div class="card-body text-center">
+                <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                <h5 class="card-title fw-bold">Struktur Aksara</h5>
+                <p class="card-text text-muted">Struktur aksara Batak terdiri dari 19 huruf dasar, tanda vokal (diakritik), dan beberapa tanda baca. Pemahaman ini penting dalam proses transliterasi dan pembacaan teks kuno.</p>
             </div>
         </div>
     </div>
+</div>
 
-    <div class="text-center mt-4">
-        <a class="btn btn-maroon btn-xl" href="#fitur">Jelajahi Fitur</a>
-    </div>
-    </div>
+<div class="text-center mt-4">
+    <a class="btn btn-maroon btn-xl" href="#fitur">Jelajahi Fitur</a>
+</div>
+</div>
 </section>
 
 <!-- Fitur-Fitur -->
@@ -195,58 +195,58 @@
 <!-- Portfolio -->
 <div id="portfolio">
     <div class="container-fluid p-0">
-        <div class="row g-0">
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{{ asset('assets/img/portfolio/fullsize/1.jpg') }}" title="Project Name">
-                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/1.jpg') }}" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+        <div class="portfolio-grid"> <!-- Ubah jadi grid -->
+            <div class="portfolio-item">
+                <a class="portfolio-link" href="{{ asset('assets/img/portfolio/fullsize/1.jpg') }}" title="Project Name">
+                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/1.jpg') }}" alt="Project 1" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-category">Category</div>
+                        <div class="portfolio-name">Project Name</div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{{ asset('assets/img/portfolio/fullsize/2.jpg') }}" title="Project Name">
-                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/2.jpg') }}" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+            <div class="portfolio-item">
+                <a class="portfolio-link" href="{{ asset('assets/img/portfolio/fullsize/2.jpg') }}" title="Project Name">
+                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/2.jpg') }}" alt="Project 2" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-category">Category</div>
+                        <div class="portfolio-name">Project Name</div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{{ asset('assets/img/portfolio/fullsize/3.jpg') }}" title="Project Name">
-                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/3.jpg') }}" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+            <div class="portfolio-item">
+                <a class="portfolio-link" href="{{ asset('assets/img/portfolio/fullsize/3.jpg') }}" title="Project Name">
+                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/3.jpg') }}" alt="Project 3" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-category">Category</div>
+                        <div class="portfolio-name">Project Name</div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{{ asset('assets/img/portfolio/fullsize/4.jpg') }}" title="Project Name">
-                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/4.jpg') }}" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+            <div class="portfolio-item">
+                <a class="portfolio-link" href="{{ asset('assets/img/portfolio/fullsize/4.jpg') }}" title="Project Name">
+                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/4.jpg') }}" alt="Project 4" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-category">Category</div>
+                        <div class="portfolio-name">Project Name</div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{{ asset('assets/img/portfolio/fullsize/5.jpg') }}" title="Project Name">
-                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/5.jpg') }}" alt="..." />
-                    <div class="portfolio-box-caption">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+            <div class="portfolio-item">
+                <a class="portfolio-link" href="{{ asset('assets/img/portfolio/fullsize/5.jpg') }}" title="Project Name">
+                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/5.jpg') }}" alt="Project 5" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-category">Category</div>
+                        <div class="portfolio-name">Project Name</div>
                     </div>
                 </a>
             </div>
-            <div class="col-lg-4 col-sm-6">
-                <a class="portfolio-box" href="{{ asset('assets/img/portfolio/fullsize/6.jpg') }}" title="Project Name">
-                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/6.jpg') }}" alt="..." />
-                    <div class="portfolio-box-caption p-3">
-                        <div class="project-category text-white-50">Category</div>
-                        <div class="project-name">Project Name</div>
+            <div class="portfolio-item">
+                <a class="portfolio-link" href="{{ asset('assets/img/portfolio/fullsize/6.jpg') }}" title="Project Name">
+                    <img class="img-fluid" src="{{ asset('assets/img/portfolio/thumbnails/6.jpg') }}" alt="Project 6" />
+                    <div class="portfolio-caption">
+                        <div class="portfolio-category">Category</div>
+                        <div class="portfolio-name">Project Name</div>
                     </div>
                 </a>
             </div>

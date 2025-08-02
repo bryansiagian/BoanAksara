@@ -5,29 +5,22 @@
     --text-muted: #6c757d;
     --light-orange: #fff8f0;
     --primary-color: #dc3545;
-    /* Warna merah */
     --primary-color-hover: #c82333;
-    /* Warna merah lebih gelap saat hover */
     --masthead-overlay: rgba(0, 0, 0, 0.1);
     --box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     --box-shadow-hover: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
     --transition-duration: 0.3s;
-    /* Durasi transisi yang lebih mudah diubah */
     --section-padding: 8rem;
-    /* Padding default untuk section */
     --heading-margin-bottom: 2.5rem;
-    /* Margin bawah untuk heading */
 }
 
 /* General Styles */
 body {
     font-family: var(--primary-font);
     line-height: 1.7;
-    /* Line height lebih lebar untuk keterbacaan */
     color: var(--text-muted);
     background-color: var(--light-orange);
     font-size: 1.2rem;
-    /* Increased base font size */
 }
 
 h1,
@@ -40,17 +33,13 @@ h6 {
     color: var(--heading-color);
 }
 
-/* Mengatasi masalah offset scroll karena navbar tetap */
 html {
     scroll-padding-top: var(--navbar-height);
 }
 
 /* Animation Keyframes */
-
-/* Text Animation */
 .fade-in-text {
-    animation: fadeIn 20s ease-in-out;
-    /* Apply fade-in animation */
+    animation: fadeIn 2s ease-in-out; /* Lebih cepat */
 }
 
 @keyframes fadeIn {
@@ -60,43 +49,29 @@ html {
     }
 
     to {
-        opacity: 4;
+        opacity: 1;  /* Opacity normal */
         transform: translateY(0);
     }
 }
 
-/* Keyframe for Image Floating */
-/* Image Styling */
 .animated-image {
     width: 100%;
-    /* Make image responsive within column */
     max-width: 600px;
-    /* Increased max width for larger image */
     height: auto;
-    /* Maintain aspect ratio */
     object-fit: cover;
-    /* Cover the container without distortion */
     border-radius: 10px;
-    /* Add rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Add subtle shadow */
     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
     animation: pulse 5s infinite alternate ease-in-out;
-    /* Continuous animation */
 }
 
-/* Keyframes for Pulse Animation */
 @keyframes pulse {
     0% {
         transform: scale(1);
     }
 
-    50% {
-        transform: scale(1.05);
-    }
-
     100% {
-        transform: scale(1);
+        transform: scale(1.05); /* Lebih halus */
     }
 }
 
@@ -104,44 +79,32 @@ html {
 .col-lg-6 {
     display: flex;
     flex-direction: column;
-    /* Stack content vertically */
     justify-content: center;
-    /* Vertically center content */
     align-items: center;
-    /* Horizontally center content */
     padding: 20px;
-    /* Add padding for spacing */
 }
 
 /* Text Styling */
 .text-left {
     text-align: justify;
-    /* Justify text for better readability */
 }
 
 .text-left h2 {
     font-size: 2.8rem;
-    /* Adjust font size for heading */
     margin-bottom: 15px;
-    /* Add spacing below heading */
     color: var(--heading-color);
-    /* Use heading color variable */
 }
 
 .text-left p {
     font-size: 1.3rem;
-    /* Increased text size */
     line-height: 1.7;
-    /* Adjust line height for readability */
     color: var(--text-muted);
-    /* Use text color variable */
 }
 
 /* Masthead Styles */
 .masthead {
     padding: 12rem 0;
     background: linear-gradient(to bottom, rgba(220, 53, 69, 0.8) 0%, rgba(220, 53, 69, 0.8) 100%), url('https://source.unsplash.com/1920x1080/?culture');
-    /* Linear gradient merah */
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -169,27 +132,22 @@ html {
 
 .masthead h1 {
     font-size: 4.5rem;
-    /* Lebih besar untuk dampak visual */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     animation: wobble 5s infinite alternate ease-in-out;
-    /* Apply wobble animation */
 }
 
 @keyframes wobble {
     0% {
         transform: translateY(-5px);
-        /* Move up */
     }
 
     100% {
         transform: translateY(5px);
-        /* Move down */
     }
 }
 
 .masthead p {
     font-size: 1.75rem;
-    /* Lebih besar untuk dibaca */
     font-weight: 300;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 }
@@ -197,12 +155,10 @@ html {
 /* Page Section Styles */
 .page-section {
     padding: var(--section-padding) 0;
-    /* Padding lebih besar untuk spasi yang lebih baik */
 }
 
 .page-section h2 {
     font-size: 3rem;
-    /* Ukuran heading yang lebih besar */
     margin-bottom: var(--heading-margin-bottom);
     color: var(--heading-color);
     text-align: center;
@@ -211,7 +167,6 @@ html {
 /* Divider Styles */
 .divider {
     display: none;
-    /* Menghilangkan elemen divider */
 }
 
 /* Button Styles */
@@ -220,7 +175,6 @@ html {
     border-color: var(--primary-color);
     font-weight: 600;
     padding: 1.2rem 2.5rem;
-    /* Padding yang lebih besar */
     font-size: 1.4rem;
     transition: all var(--transition-duration) ease;
     box-shadow: var(--box-shadow);
@@ -230,7 +184,6 @@ html {
     background-color: var(--primary-color-hover);
     border-color: var(--primary-color-hover);
     transform: translateY(-3px);
-    /* Efek hover lebih dramatis */
     box-shadow: var(--box-shadow-hover);
 }
 
@@ -238,31 +191,26 @@ html {
 .feature-item {
     text-align: center;
     padding: 2.5rem;
-    /* Padding lebih besar */
     border-radius: 1.2rem;
     background-color: #fff;
     box-shadow: var(--box-shadow);
     transition: all var(--transition-duration) ease;
     margin-bottom: 3rem;
-    /* Margin bottom yang sama */
 }
 
 .feature-item:hover {
     transform: translateY(-7px);
-    /* Efek hover lebih besar */
     box-shadow: var(--box-shadow-hover);
 }
 
 .feature-item i {
     color: var(--primary-color);
     font-size: 3.5em;
-    /* Ikon yang lebih besar */
     margin-bottom: 1.2rem;
 }
 
 .feature-item h4 {
     font-size: 1.7rem;
-    /* Ukuran heading yang lebih besar */
     margin-bottom: 1.2rem;
     color: var(--heading-color);
 }
@@ -278,64 +226,45 @@ html {
     transition: all var(--transition-duration) ease;
     border: none;
     box-shadow: var(--box-shadow);
-    /* Remove card border */
     margin-bottom: 2rem;
-    /* Margin bottom yang sama */
 }
 
 .card:hover {
     transform: translateY(-5px);
-    /* Efek hover lebih besar */
     box-shadow: var(--box-shadow-hover);
 }
 
 /* Styling untuk Box Sejarah */
-/* Styling for the "Sejarah Aksara Batak" Section */
 .sejarah-aksara-batak {
     padding: 2rem;
-    /* Reduced padding */
     background-color: #f9f9f9;
-    /* Light background for contrast */
     border-radius: 10px;
-    /* Rounded corners */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
     margin-bottom: 2rem;
-    /* Add spacing below the section */
     max-width: 100%;
-    /* Take full width, remove the length of the text */
 }
 
 .sejarah-aksara-batak h2 {
     font-size: 2rem;
-    /* Reduced heading size */
     margin-bottom: 1rem;
-    /* Spacing below heading */
     color: var(--heading-color);
-    /* Use heading color variable */
     text-align: left;
-    /* Align heading to the left */
 }
 
 .sejarah-aksara-batak p {
     font-size: 1.1rem;
-    /* Adjust paragraph size */
     line-height: 1.5;
-    /* Adjust line height for readability */
     color: var(--text-muted);
-    /* Use text color variable */
 }
 
 .sejarah-aksara-batak a {
     color: var(--primary-color);
-    /* Primary color for the link */
     text-decoration: none;
 }
 
 /* History-box styling */
 .history-box {
     background-color: #e9ecef;
-    /* Light gray background */
     border-radius: 1.2rem;
     padding: 2.5rem;
     margin-top: 2.5rem;
@@ -349,10 +278,8 @@ html {
 
 .history-box:hover {
     transform: translateY(-7px);
-    /* Efek hover lebih besar */
     box-shadow: var(--box-shadow-hover);
     background-color: var(--light-orange);
-    /* Warna latar belakang yang berbeda saat hover */
 }
 
 .history-box h4 {
@@ -384,7 +311,6 @@ html {
 .history-card {
     transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
     background-color: #f8f9fa;
-    /* Very light gray */
 }
 
 .history-card:hover {
@@ -399,12 +325,116 @@ html {
     height: 100%;
 }
 
+/* Contact Section Styles */
+#contact .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(230, 145, 56, 0.25);
+}
+
+#contact .form-floating>label {
+    color: #6c757d;
+}
+
+#contact .form-floating:focus-within>label {
+    color: #495057;
+}
+
+#contact i {
+    transition: color 0.2s ease-in-out;
+}
+
+#contact i:hover {
+    color: #e69138;
+    transition: color 0.2s ease-in-out;
+}
+
+/* Portfolio Styles (Gabungan) */
+#portfolio {
+    padding: 4rem 0;
+    background-color: #f8f9fa; /* Latar belakang yang lebih netral */
+}
+
+.portfolio-grid {
+    display: flex; /* Menggunakan Flexbox untuk animasi slider */
+    overflow-x: auto; /* Membuat slider horizontal */
+    scroll-snap-type: x mandatory; /* Efek snap saat scroll */
+    padding-bottom: 1rem; /* Ruang untuk bayangan */
+    -webkit-overflow-scrolling: touch; /* Untuk scrolling yang lebih halus di iOS */
+}
+
+.portfolio-item {
+    flex: 0 0 300px; /* Ukuran item, sesuaikan dengan kebutuhan */
+    width: 300px;
+    height: 250px; /* Tinggi fix agar gambar proporsional */
+    margin-right: 1rem;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow);
+    scroll-snap-align: start; /* Item berhenti di awal */
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+.portfolio-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Memastikan gambar mengisi area dengan proporsi yang benar */
+    transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.1); /* Efek zoom halus saat dihover */
+}
+
+.portfolio-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px; /* Mengikuti border item */
+}
+
+.portfolio-item:hover .portfolio-caption {
+    opacity: 1;
+}
+
+.portfolio-category {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.portfolio-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
 /* Media Queries for Responsiveness */
+
 /* Extra small devices (phones, less than 768px) */
 @media (max-width: 767.98px) {
     .col-md-6 {
         width: 100%;
-        /* Stack the cards on top of each other */
     }
 
     .history-box {
@@ -449,12 +479,39 @@ html {
         transform: scale(1);
         filter: none;
     }
+
+    /* Portfolio Responsiveness */
+    .portfolio-grid {
+        display: flex; /* Menggunakan Flexbox untuk animasi slider */
+        overflow-x: auto; /* Membuat slider horizontal */
+        scroll-snap-type: x mandatory; /* Efek snap saat scroll */
+        padding-bottom: 1rem; /* Ruang untuk bayangan */
+        -webkit-overflow-scrolling: touch; /* Untuk scrolling yang lebih halus di iOS */
+    }
+
+    .portfolio-item {
+        flex: 0 0 60%; /* Ukuran item, sesuaikan dengan kebutuhan */
+        width: 60%;
+        height: 150px; /* Tinggi fix agar gambar proporsional */
+        margin-right: 1rem;
+        position: relative;
+        border-radius: 10px;
+        box-shadow: var(--box-shadow);
+        scroll-snap-align: start; /* Item berhenti di awal */
+        overflow: hidden;
+        transition: transform 0.3s ease;
+    }
 }
 
 /* Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {
     .masthead h1 {
         font-size: 4rem;
+    }
+
+    .portfolio-item {
+        flex: 0 0 40%; /* Ukuran item, sesuaikan dengan kebutuhan */
+        width: 40%;
     }
 }
 
@@ -468,7 +525,6 @@ html {
         width: 100%;
     }
 
-    /* History Box Responsif */
     .history-box {
         padding: 2rem;
         margin-top: 2rem;
@@ -481,6 +537,14 @@ html {
     .history-box p {
         font-size: 1.15rem;
     }
+
+     /* Portfolio Responsiveness */
+
+     .portfolio-item {
+        flex: 0 0 40%; /* Ukuran item, sesuaikan dengan kebutuhan */
+        width: 40%;
+        height: 200px; /* Tinggi fix agar gambar proporsional */
+    }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -489,7 +553,6 @@ html {
         font-size: 2.9rem;
     }
 
-    /* History Box Responsif */
     .history-box {
         padding: 2.25rem;
         margin-top: 2.25rem;
@@ -510,7 +573,6 @@ html {
         font-size: 3rem;
     }
 
-    /* History Box Responsif */
     .history-box {
         padding: 2.5rem;
         margin-top: 2.5rem;
@@ -523,32 +585,4 @@ html {
     .history-box p {
         font-size: 1.2rem;
     }
-}
-
-/* Contact Section Styles */
-#contact .form-control:focus {
-    border-color: var(--primary-color);
-    /* Warna primer saat fokus */
-    box-shadow: 0 0 0 0.2rem rgba(230, 145, 56, 0.25);
-    /* Efek shadow saat fokus */
-}
-
-#contact .form-floating>label {
-    color: #6c757d;
-    /* Warna label */
-}
-
-#contact .form-floating:focus-within>label {
-    color: #495057;
-    /* Warna label saat input fokus */
-}
-
-#contact i {
-    transition: color 0.2s ease-in-out;
-}
-
-#contact i:hover {
-    color: #e69138;
-    transition: color 0.2s ease-in-out;
-    /* Efek transisi untuk perubahan warna */
 }
