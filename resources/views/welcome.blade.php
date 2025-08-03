@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 mb-5">Selamat datang di Boan Aksara! Jelajahi keindahan dan kekayaan aksara Batak, warisan budaya yang tak ternilai harganya. Mulai perjalanan Anda sekarang dan lestarikan bersama!</p>
-                <a class="btn btn-maroon btn-xl" href="#pengenalan">Pelajari Aksara</a>
+                <a class="btn btn-maroon btn-xl" href="#about">Pelajari Aksara</a>
             </div>
         </div>
     </div>
@@ -35,41 +35,116 @@
 </header>
 
 <!-- About Aksara Batak -->
-<section class="page-section bg-light py-5" id="pengenalan" style="background: linear-gradient(to right, #ffffff, #f3f3f3);">
-    <div class="container px-4 px-lg-5">
-        <div class="row gx-5 gy-4 align-items-center">
-            <!-- Ilustrasi Placeholder -->
-
-
-            <!-- Teks Penjelasan -->
-            <div class="col-lg-6 order-lg-1">
-                <!-- Judul -->
-                <h2 class="text-center text-lg-start">
-                    <span style="color:#7B241C">Mengenal Aksara Batak</span>
-                </h2>
-                <hr class="divider my-3" />
-
-                <!-- Paragraf -->
-                <p class="text-muted">
-                    <strong style="color:#7B241C">Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>,
-                    adalah sistem penulisan kuno yang digunakan masyarakat Batak di Sumatera Utara sejak berabad-abad
-                    silam. Aksara ini tidak hanya menjadi alat komunikasi, tapi juga mencerminkan nilai-nilai spiritual,
-                    adat, dan filosofi hidup suku Batak.
-                </p>
-                <p class="text-muted">
-                    Aksara ini digunakan oleh beberapa suku Batak, seperti Toba, Karo, Simalungun, Pakpak/Dairi, dan Mandailing, dengan bentuk yang disesuaikan menurut dialek masing-masing. Setiap aksara dibangun dari konsonan dasar yang dimodifikasi tanda vokal, sehingga memiliki keunikan tersendiri meski tetap mempertahankan struktur fonetik yang sama.
-                </p>
-                <p class="text-muted">
-                    Aksara Batak tetap dipelajari dan dilestarikan sebagai bagian tak terpisahkan dari budaya Batak, memperkuat identitas lokal, khususnya bagi generasi muda.
-                </p>
-
-                <!-- Fakta Menarik -->
-                <div style="background-color: #7B241C; color: #ffffff; padding: 1rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="mt-4">
-                    Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
-                </div>
-            </div>
+<section class="page-section bg-light py-5" id="about" style="background: linear-gradient(to right, #ffffff, #f3f3f3);">
+  <div class="container px-4 px-lg-5">
+    <div class="row gx-5 gy-4 align-items-center">
+      <!-- Kolom Kiri: Teks -->
+      <div class="col-lg-6 order-lg-1">
+        <h2 class="text-center text-lg-start">
+          <span style="color:#7B241C">Mengenal Aksara Batak</span>
+        </h2>
+        <hr class="divider my-3" />
+        <p class="text-muted">
+          <strong style="color:#7B241C">Aksara Batak</strong>, atau dikenal sebagai <em>Surat Batak</em>, adalah sistem penulisan kuno yang digunakan masyarakat Batak di Sumatera Utara sejak berabad-abad silam. Aksara ini tidak hanya menjadi alat komunikasi, tapi juga mencerminkan nilai-nilai spiritual, adat, dan filosofi hidup suku Batak.
+        </p>
+        <p class="text-muted">
+          Aksara ini digunakan oleh beberapa suku Batak, seperti Toba, Karo, Simalungun, Pakpak/Dairi, dan Mandailing, dengan bentuk yang disesuaikan menurut dialek masing-masing. Setiap aksara dibangun dari konsonan dasar yang dimodifikasi tanda vokal, sehingga memiliki keunikan tersendiri meski tetap mempertahankan struktur fonetik yang sama.
+        </p>
+        <p class="text-muted">
+          Aksara Batak tetap dipelajari dan dilestarikan sebagai bagian tak terpisahkan dari budaya Batak, memperkuat identitas lokal, khususnya bagi generasi muda.
+        </p>
+        <div style="background-color: #7B241C; color: #ffffff; padding: 1rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="mt-4">
+          Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
         </div>
+      </div>
+      
+      <!-- Kolom Kanan: Slider -->
+      <div class="col-lg-6 order-lg-2 d-flex flex-column align-items-center">
+        <div class="slider-container">
+          <img id="sliderImage" src="assets/img/suratpertama.png" alt="Ilustrasi Aksara Batak" class="slider-image" />
+        </div>
+        <div class="dots-container mt-3">
+          <!-- Dots akan dibuat via JS -->
+        </div>
+      </div>
     </div>
+  </div>
+
+  <!-- Script Slider -->
+  <script>
+    const images = [
+      "assets/img/suratpertama.png",
+      "assets/img/suratkedua.png",
+      "assets/img/suratketiga.png"
+    ];
+    let currentIndex = 0;
+    const sliderImage = document.getElementById("sliderImage");
+    const dotsContainer = document.querySelector(".dots-container");
+
+    // Buat dots
+    images.forEach((_, index) => {
+      const dot = document.createElement("span");
+      dot.classList.add("dot");
+      if (index === 0) dot.classList.add("active");
+      dot.addEventListener("click", () => {
+        currentIndex = index;
+        updateSlider();
+      });
+      dotsContainer.appendChild(dot);
+    });
+
+    const dots = document.querySelectorAll(".dot");
+
+    function updateSlider() {
+      sliderImage.style.opacity = 0;
+      setTimeout(() => {
+        sliderImage.src = images[currentIndex];
+        sliderImage.style.opacity = 1;
+      }, 150);
+      dots.forEach(dot => dot.classList.remove("active"));
+      dots[currentIndex].classList.add("active");
+    }
+
+    // Auto slide
+    setInterval(() => {
+      currentIndex = (currentIndex + 1) % images.length;
+      updateSlider();
+    }, 5000);
+  </script>
+
+  <style>
+    .slider-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .slider-image {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: opacity 0.3s ease;
+    }
+    .dots-container {
+      display: flex;
+      gap: 8px;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+    .dot {
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .dot.active {
+      background-color: #7B241C;
+    }
+  </style>
 </section>
 
 
