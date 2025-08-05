@@ -20,3 +20,11 @@ Route::get('/', function () {
 Route::get('/about', function () {
     return view('about.index');
 })->name('about');
+
+Route::get('/history', function () {
+    return view('history.index');
+})->name('history');
+
+Route::get('/course', function () {
+    return view('course.index');
+})->name('course');

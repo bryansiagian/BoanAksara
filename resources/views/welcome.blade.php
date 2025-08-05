@@ -57,7 +57,7 @@
           Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
         </div>
       </div>
-      
+
       <!-- Kolom Kanan: Slider -->
       <div class="col-lg-6 order-lg-2 d-flex flex-column align-items-center">
         <div class="slider-container">
@@ -147,49 +147,47 @@
   </style>
 </section>
 
-
-
 <!-- Box dan Card Info Tambahan -->
-<div class="row mt-5">
-    <div class="col-md-12 mb-4">
-        <div class="bg-white rounded shadow history-box">
-            <a href="sejarah.html" class="text-decoration-none text-dark">
-                <h4 class="fw-bold">Sejarah Aksara Batak</h4>
-                <p>
-                    Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli, namun berbagai naskah kuno telah membuktikan bahwa aksara ini telah digunakan dalam ritual keagamaan, surat-menyurat, dan pelestarian adat sejak abad ke-18.
-                    <br><br>
-                    <em>[Klik untuk membaca selengkapnya]</em>
-                </p>
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-12 mb-4">
+            <div class="bg-white rounded shadow history-box">
+                <a href="sejarah.html" class="text-decoration-none text-dark">
+                    <h4 class="fw-bold">Sejarah Aksara Batak</h4>
+                    <p>
+                        Asal-usul aksara Batak masih menjadi perdebatan di kalangan ahli, namun berbagai naskah kuno telah membuktikan bahwa aksara ini telah digunakan dalam ritual keagamaan, surat-menyurat, dan pelestarian adat sejak abad ke-18.
+                        <br><br>
+                        <em>[Klik untuk membaca selengkapnya]</em>
+                    </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-6 mb-4">
+            <a href="sejarah.html" class="card-link">
+                <div class="card h-100 shadow-sm border-0 history-card">
+                    <div class="card-body text-center">
+                        <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
+                        <h5 class="card-title fw-bold">Sejarah dan Filosofi</h5>
+                        <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang melatarinya. Setiap guratan huruf memiliki makna mendalam dalam struktur sosial dan religius Batak.</p>
+                    </div>
+                </div>
             </a>
         </div>
-    </div>
 
-    <div class="col-md-6 mb-4">
-        <a href="sejarah.html" class="card-link">
-            <div class="card h-100 shadow-sm border-0 history-card">
+        <div class="col-md-6 mb-4">
+            <div class="card h-100 shadow-sm border-0">
                 <div class="card-body text-center">
-                    <i class="fas fa-scroll fa-3x text-primary mb-3"></i>
-                    <h5 class="card-title fw-bold">Sejarah dan Filosofi</h5>
-                    <p class="card-text text-muted">Pelajari sejarah panjang aksara Batak dan filosofi yang melatarinya. Setiap guratan huruf memiliki makna mendalam dalam struktur sosial dan religius Batak.</p>
-                </div>
-            </div>
-        </a>
-    </div>
-
-    <div class="col-md-6 mb-4">
-        <div class="card h-100 shadow-sm border-0">
-            <div class="card-body text-center">
-                <i class="fas fa-code fa-3x text-primary mb-3"></i>
-                <h5 class="card-title fw-bold">Struktur Aksara</h5>
-                <p class="card-text text-muted">Struktur aksara Batak terdiri dari 19 huruf dasar, tanda vokal (diakritik), dan beberapa tanda baca. Pemahaman ini penting dalam proses transliterasi dan pembacaan teks kuno.</p>
+                    <i class="fas fa-code fa-3x text-primary mb-3"></i>
+                    <h5 class="card-title fw-bold">Struktur Aksara</h5>
+                    <p class="card-text text-muted">Struktur aksara Batak terdiri dari 19 huruf dasar, tanda vokal (diakritik), dan beberapa tanda baca. Pemahaman ini penting dalam proses transliterasi dan pembacaan teks kuno.</p>
             </div>
         </div>
     </div>
-</div>
 
-<div class="text-center mt-4">
-    <a class="btn btn-maroon btn-xl" href="#fitur">Jelajahi Fitur</a>
-</div>
+    <div class="text-center mt-4">
+        <a class="btn btn-maroon btn-xl" href="#fitur">Jelajahi Fitur</a>
+    </div>
 </div>
 </section>
 
@@ -638,16 +636,8 @@
             pilihan: ['ga', 'ha', 'ja', 'ka']
         },
         {
-            pertanyaan: 'Jika Anda ingin menulis "pa", aksara apa yang Anda gunakan?',
-            jawabanBenar: 'ᯇ',
-            pilihan: ['ᯇ', 'ᯎ', 'ᯏ', 'ᯐ']
-        },
-        {
-            pertanyaan: 'Aksara manakah yang bunyinya "sa"?',
-            jawabanBenar: 'ᯘ',
-            pilihan: ['ᯘ', 'ᯙ', 'ᯚ', 'ᯛ']
-        }
-    ];
+            pertanyaan: 'Jika Anda ingin menulis "pa", aksara apa
+        }];
 
     let nomorSoal = 0;
     let jawabanDipilih = null;
