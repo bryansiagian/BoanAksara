@@ -34,34 +34,186 @@
                             <th>Toba</th>
                             <th>Simalungun</th>
                             <th>Karo</th>
-                            <th>Pakpak</th>
-                            <th>... (Lainnya)</th>
+                            <th>Pakpak/Dairi</th>
+                            <th>Mandailing</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
+                         <tr>
                             <td>a</td>
                             <td>ᯀ</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
+                            <td>ᯀ</td>
+                            <td>ᯀ</td>
+                            <td>ᯀ</td>
+                            <td>ᯀ</td>
+                        </tr>
+                         <tr>
+                            <td>i</td>
+                            <td>ᯪ</td>
+                            <td>ᯪ</td>
+                            <td>ᯪ</td>
+                            <td>ᯪ</td>
+                            <td>ᯪ</td>
+                        </tr>
+                         <tr>
+                            <td>u</td>
+                            <td>ᯮ</td>
+                            <td>ᯮ</td>
+                            <td>ᯮ</td>
+                            <td>ᯮ</td>
+                            <td>ᯮ</td>
+                        </tr>
+                         <tr>
+                            <td>e</td>
+                            <td>ᯇᯩ</td>
+                            <td>ᯇᯩ</td>
+                            <td>ᯇᯩ</td>
+                            <td>ᯇᯩ</td>
+                            <td>ᯇᯩ</td>
+                        </tr>
+                         <tr>
+                            <td>o</td>
+                            <td>ᯅᯬ</td>
+                            <td>ᯅᯬ</td>
+                            <td>ᯅᯬ</td>
+                            <td>ᯅᯬ</td>
+                            <td>ᯅᯬ</td>
                         </tr>
                         <tr>
                             <td>ba</td>
                             <td>ᯅ</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
+                            <td>ᯅ</td>
+                            <td>ᯅ</td>
+                            <td>ᯅ</td>
+                            <td>ᯅ</td>
+                        </tr>
+                        <tr>
+                            <td>ca</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                        </tr>
+                        <tr>
+                            <td>da</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                        </tr>
+                        <tr>
+                            <td>ga</td>
+                            <td>ᯎ</td>
+                            <td>ᯎ</td>
+                            <td>ᯎ</td>
+                            <td>ᯎ</td>
+                            <td>ᯎ</td>
+                        </tr>
+                        <tr>
+                            <td>ha</td>
+                            <td>ᯄ</td>
+                            <td>ᯄ</td>
+                            <td>ᯄ</td>
+                            <td>ᯄ</td>
+                            <td>ᯄ</td>
+                        </tr>
+                        <tr>
+                            <td>ja</td>
+                            <td>ᯐ</td>
+                            <td>ᯐ</td>
+                            <td>ᯐ</td>
+                            <td>ᯐ</td>
+                            <td>ᯐ</td>
                         </tr>
                         <tr>
                             <td>ka</td>
                             <td>ᯂ</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
+                            <td>ᯂ</td>
+                            <td>ᯂ</td>
+                            <td>ᯂ</td>
+                            <td>ᯂ</td>
+                        </tr>
+                        <tr>
+                            <td>la</td>
+                            <td>ᯞ</td>
+                            <td>ᯞ</td>
+                            <td>ᯞ</td>
+                            <td>ᯞ</td>
+                            <td>ᯞ</td>
+                        </tr>
+                        <tr>
+                            <td>ma</td>
+                            <td>ᯔ</td>
+                            <td>ᯔ</td>
+                            <td>ᯔ</td>
+                            <td>ᯔ</td>
+                            <td>ᯔ</td>
+                        </tr>
+                        <tr>
+                            <td>na</td>
+                            <td>ᯉ</td>
+                            <td>ᯉ</td>
+                            <td>ᯉ</td>
+                            <td>ᯉ</td>
+                            <td>ᯉ</td>
+                        </tr>
+                        <tr>
+                            <td>pa</td>
+                            <td>ᯇ</td>
+                            <td>ᯇ</td>
+                            <td>ᯇ</td>
+                            <td>ᯇ</td>
+                            <td>ᯇ</td>
+                        </tr>
+                        <tr>
+                            <td>ra</td>
+                            <td>ᯒ</td>
+                            <td>ᯒ</td>
+                            <td>ᯒ</td>
+                            <td>ᯒ</td>
+                            <td>ᯒ</td>
+                        </tr>
+                        <tr>
+                            <td>sa</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                            <td>ᯘ</td>
+                        </tr>
+                        <tr>
+                            <td>ta</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                            <td>ᯖ</td>
+                        </tr>
+                         <tr>
+                            <td>wa</td>
+                            <td>ᯋ</td>
+                            <td>ᯋ</td>
+                            <td>ᯋ</td>
+                            <td>ᯋ</td>
+                            <td>ᯋ</td>
+                        </tr>
+                         <tr>
+                            <td>ya</td>
+                            <td>ᯛ</td>
+                            <td>ᯛ</td>
+                            <td>ᯛ</td>
+                            <td>ᯛ</td>
+                            <td>ᯛ</td>
+                        </tr>
+                         <tr>
+                            <td>za</td>
+                            <td>ᯗ</td>
+                            <td>ᯗ</td>
+                            <td>ᯗ</td>
+                            <td>ᯗ</td>
+                            <td>ᯗ</td>
                         </tr>
                         <!-- Tambahkan baris lainnya sesuai kebutuhan -->
                     </tbody>
@@ -133,65 +285,11 @@
     <script>
         // Data Aksara Batak (perlu dilengkapi dengan lengkap)
         const aksaraMap = {
-            'a': 'ᯀ',
-            'b': 'ᯅ',
-            'c': 'ᯘ',
-            'd': 'ᯖ',
-            'g': 'ᯎ',
-            'h': 'ᯄ',
-            'j': 'ᯐ',
-            'k': 'ᯂ',
-            'l': 'ᯞ',
-            'm': 'ᯔ',
-            'n': 'ᯉ',
-            'p': 'ᯇ',
-            'r': 'ᯒ',
-            's': 'ᯘ',
-            't': 'ᯖ',
-            'w': 'ᯋ',
-            'y': 'ᯛ',
-            'z': 'ᯗ',
+           'a': 'ᯀ',
             'i': 'ᯪ',
             'u': 'ᯮ',
             'e': 'ᯇᯩ',
             'o': 'ᯅᯬ',
-            'ai': 'ᯅᯤ',
-            'au': 'ᯅᯥ',
-            'ang': 'ᯀᯰ',
-            'ing': 'ᯪᯰ',
-            'ung': 'ᯮᯰ',
-            'eng': 'ᯇᯩᯰ',
-            'ong': 'ᯅᯬᯰ',
-            'ar': 'ᯀᯒ᯲',
-            'ir': 'ᯪᯒ᯲',
-            'ur': 'ᯮᯒ᯲',
-            'er': 'ᯇᯩᯒ᯲',
-            'or': 'ᯅᯬᯒ᯲',
-
-            //Konsonan ganda (dengan фонетическим приближением)
-            'bb': 'ᯅᯅ',
-            'cc': 'ᯘᯘ',
-            'dd': 'ᯖᯖ',
-            'ff': 'ᯇᯇ',
-            'gg': 'ᯎᯎ',
-            'hh': 'ᯄᯄ',
-            'jj': 'ᯐᯐ',
-            'kk': 'ᯂᯂ',
-            'll': 'ᯞᯞ',
-            'mm': 'ᯔᯔ',
-            'nn': 'ᯉᯉ',
-            'pp': 'ᯇᯇ',
-            'qq': 'ᯂᯂ',
-            'rr': 'ᯒᯒ',
-            'ss': 'ᯘᯘ',
-            'tt': 'ᯖᯖ',
-            'vv': 'ᯋᯋ',
-            'ww': 'ᯋᯋ',
-            'xx': 'ᯂᯘ',
-            'yy': 'ᯛᯛ',
-            'zz': 'ᯗᯗ',
-
-            //Kombinasi konsonan dengan vokal
             'ba': 'ᯅ',
             'ca': 'ᯘ',
             'da': 'ᯖ',
@@ -210,78 +308,11 @@
             'ya': 'ᯛ',
             'za': 'ᯗ',
 
-            'bi': 'ᯅᯪ',
-            'ci': 'ᯘᯪ',
+            // Diakritik (tanda vokal)
             'di': 'ᯖᯪ',
-            'gi': 'ᯎᯪ',
-            'hi': 'ᯄᯪ',
-            'ji': 'ᯐᯪ',
-            'ki': 'ᯂᯪ',
-            'li': 'ᯞᯪ',
-            'mi': 'ᯔᯪ',
-            'ni': 'ᯉᯪ',
-            'pi': 'ᯇᯪ',
-            'ri': 'ᯒᯪ',
-            'si': 'ᯘᯪ',
-            'ti': 'ᯖᯪ',
-            'wi': 'ᯋᯪ',
-            'yi': 'ᯛᯪ',
-            'zi': 'ᯗᯪ',
-
-            'bu': 'ᯅᯮ',
-            'cu': 'ᯘᯮ',
             'du': 'ᯖᯮ',
-            'gu': 'ᯎᯮ',
-            'hu': 'ᯄᯮ',
-            'ju': 'ᯐᯮ',
-            'ku': 'ᯂᯮ',
-            'lu': 'ᯞᯮ',
-            'mu': 'ᯔᯮ',
-            'nu': 'ᯉᯮ',
-            'pu': 'ᯇᯮ',
-            'ru': 'ᯒᯮ',
-            'su': 'ᯘᯮ',
-            'tu': 'ᯖᯮ',
-            'wu': 'ᯋᯮ',
-            'yu': 'ᯛᯮ',
-            'zu': 'ᯗᯮ',
-
-            'be': 'ᯅᯇᯩ',
-            'ce': 'ᯘᯇᯩ',
             'de': 'ᯖᯇᯩ',
-            'ge': 'ᯎᯇᯩ',
-            'he': 'ᯄᯇᯩ',
-            'je': 'ᯐᯇᯩ',
-            'ke': 'ᯂᯇᯩ',
-            'le': 'ᯞᯇᯩ',
-            'me': 'ᯔᯇᯩ',
-            'ne': 'ᯉᯇᯩ',
-            'pe': 'ᯇᯇᯩ',
-            're': 'ᯒᯇᯩ',
-            'se': 'ᯘᯇᯩ',
-            'te': 'ᯖᯇᯩ',
-            'we': 'ᯋᯇᯩ',
-            'ye': 'ᯛᯇᯩ',
-            'ze': 'ᯗᯇᯩ',
-
-            'bo': 'ᯅᯬ',
-            'co': 'ᯘᯬ',
             'do': 'ᯖᯬ',
-            'go': 'ᯎᯬ',
-            'ho': 'ᯄᯬ',
-            'jo': 'ᯐᯬ',
-            'ko': 'ᯂᯬ',
-            'lo': 'ᯞᯬ',
-            'mo': 'ᯔᯬ',
-            'no': 'ᯉᯬ',
-            'po': 'ᯇᯬ',
-            'ro': 'ᯒᯬ',
-            'so': 'ᯘᯬ',
-            'to': 'ᯖᯬ',
-            'wo': 'ᯋᯬ',
-            'yo': 'ᯛᯬ',
-            'zo': 'ᯗᯬ',
-
             //Inffixes (sisipan)
             'in': 'ᯪᯉ᯲',
             'um': 'ᯮᯔ᯲',
@@ -306,18 +337,12 @@
         function transliterasi(text) {
             let hasil = '';
             text = text.toLowerCase();
-            for (let i = 0; i < text.length; i++) {
+            for (let i = 0,l = text.length; i < l; i++) {
                 let char = text[i];
-                let nextChar = (i + 1 < text.length) ? text[i + 1] : '';
-                let kombinasi = char + nextChar;
-
-                if (aksaraMap[kombinasi]) {
-                    hasil += aksaraMap[kombinasi];
-                    i++; // Lewati karakter berikutnya
-                } else if (aksaraMap[char]) {
+                if (aksaraMap[char]) {
                     hasil += aksaraMap[char];
                 } else {
-                    hasil += char; // Karakter tidak dikenal
+                    hasil += char;
                 }
             }
             return hasil;
