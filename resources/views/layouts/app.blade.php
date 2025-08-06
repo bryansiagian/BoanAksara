@@ -49,7 +49,7 @@
                     <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
                     <li class="nav-item"><a class="nav-link" href="/history">History</a></li>
                     <li class="nav-item"><a class="nav-link" href="/course">Course</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
                 </ul>
             </div>
         </div>
@@ -60,7 +60,7 @@
     <!-- Footer-->
     <footer class="bg-light py-5">
         <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright © 2023 - Company Name</div>
+            <div class="small text-center text-muted">Copyright © 2025 - Company Name</div>
         </div>
     </footer>
     <!-- Bootstrap core JS-->

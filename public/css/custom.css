@@ -39,7 +39,8 @@ html {
 
 /* Animation Keyframes */
 .fade-in-text {
-    animation: fadeIn 2s ease-in-out; /* Lebih cepat */
+    animation: fadeIn 2s ease-in-out;
+    /* Lebih cepat */
 }
 
 @keyframes fadeIn {
@@ -49,30 +50,40 @@ html {
     }
 
     to {
-        opacity: 1;  /* Opacity normal */
+        opacity: 1;
+        /* Opacity normal */
         transform: translateY(0);
     }
 }
 
-.animated-image {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-    animation: pulse 5s infinite alternate ease-in-out;
+/* Styling untuk Kolom yang Berisi Gambar */
+.col-lg-6.gambar-full {
+    /* Class tambahan untuk mempermudah penargetan */
+    display: flex;
+    align-items: stretch;
+    /* Gambar mengisi ketinggian kolom */
+    padding: 0;
+    /* Hilangkan padding pada kolom */
 }
 
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
+/* Styling untuk Gambar */
+.animated-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Gambar memenuhi area dengan memotong jika perlu */
+    border-radius: 0;
+    /* Hilangkan border radius */
+    box-shadow: none;
+    /* Hilangkan box shadow */
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+    animation: none;
+    /* Hilangkan animasi pulse */
+}
 
-    100% {
-        transform: scale(1.05); /* Lebih halus */
-    }
+.animated-image:hover {
+    transform: scale(1.02);
+    /* Zoom tipis saat di-hover */
 }
 
 /* Modified Styling */
@@ -332,7 +343,7 @@ html {
 }
 
 #contact .form-floating>label {
-    color: #6c757d;
+    color: #e69138;
 }
 
 #contact .form-floating:focus-within>label {
@@ -351,26 +362,35 @@ html {
 /* Portfolio Styles (Gabungan) */
 #portfolio {
     padding: 4rem 0;
-    background-color: #f8f9fa; /* Latar belakang yang lebih netral */
+    background-color: #f8f9fa;
+    /* Latar belakang yang lebih netral */
 }
 
 .portfolio-grid {
-    display: flex; /* Menggunakan Flexbox untuk animasi slider */
-    overflow-x: auto; /* Membuat slider horizontal */
-    scroll-snap-type: x mandatory; /* Efek snap saat scroll */
-    padding-bottom: 1rem; /* Ruang untuk bayangan */
-    -webkit-overflow-scrolling: touch; /* Untuk scrolling yang lebih halus di iOS */
+    display: flex;
+    /* Menggunakan Flexbox untuk animasi slider */
+    overflow-x: auto;
+    /* Membuat slider horizontal */
+    scroll-snap-type: x mandatory;
+    /* Efek snap saat scroll */
+    padding-bottom: 1rem;
+    /* Ruang untuk bayangan */
+    -webkit-overflow-scrolling: touch;
+    /* Untuk scrolling yang lebih halus di iOS */
 }
 
 .portfolio-item {
-    flex: 0 0 300px; /* Ukuran item, sesuaikan dengan kebutuhan */
+    flex: 0 0 300px;
+    /* Ukuran item, sesuaikan dengan kebutuhan */
     width: 300px;
-    height: 250px; /* Tinggi fix agar gambar proporsional */
+    height: 250px;
+    /* Tinggi fix agar gambar proporsional */
     margin-right: 1rem;
     position: relative;
     border-radius: 10px;
     box-shadow: var(--box-shadow);
-    scroll-snap-align: start; /* Item berhenti di awal */
+    scroll-snap-align: start;
+    /* Item berhenti di awal */
     overflow: hidden;
     transition: transform 0.3s ease;
 }
@@ -390,12 +410,14 @@ html {
 .portfolio-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Memastikan gambar mengisi area dengan proporsi yang benar */
+    object-fit: cover;
+    /* Memastikan gambar mengisi area dengan proporsi yang benar */
     transition: transform 0.3s ease;
 }
 
 .portfolio-item:hover img {
-    transform: scale(1.1); /* Efek zoom halus saat dihover */
+    transform: scale(1.1);
+    /* Efek zoom halus saat dihover */
 }
 
 .portfolio-caption {
@@ -412,7 +434,8 @@ html {
     align-items: center;
     opacity: 0;
     transition: opacity 0.3s ease;
-    border-radius: 10px; /* Mengikuti border item */
+    border-radius: 10px;
+    /* Mengikuti border item */
 }
 
 .portfolio-item:hover .portfolio-caption {
@@ -429,6 +452,7 @@ html {
     font-size: 1.2rem;
     font-weight: bold;
 }
+
 /* Media Queries for Responsiveness */
 
 /* Extra small devices (phones, less than 768px) */
@@ -482,22 +506,30 @@ html {
 
     /* Portfolio Responsiveness */
     .portfolio-grid {
-        display: flex; /* Menggunakan Flexbox untuk animasi slider */
-        overflow-x: auto; /* Membuat slider horizontal */
-        scroll-snap-type: x mandatory; /* Efek snap saat scroll */
-        padding-bottom: 1rem; /* Ruang untuk bayangan */
-        -webkit-overflow-scrolling: touch; /* Untuk scrolling yang lebih halus di iOS */
+        display: flex;
+        /* Menggunakan Flexbox untuk animasi slider */
+        overflow-x: auto;
+        /* Membuat slider horizontal */
+        scroll-snap-type: x mandatory;
+        /* Efek snap saat scroll */
+        padding-bottom: 1rem;
+        /* Ruang untuk bayangan */
+        -webkit-overflow-scrolling: touch;
+        /* Untuk scrolling yang lebih halus di iOS */
     }
 
     .portfolio-item {
-        flex: 0 0 60%; /* Ukuran item, sesuaikan dengan kebutuhan */
+        flex: 0 0 60%;
+        /* Ukuran item, sesuaikan dengan kebutuhan */
         width: 60%;
-        height: 150px; /* Tinggi fix agar gambar proporsional */
+        height: 150px;
+        /* Tinggi fix agar gambar proporsional */
         margin-right: 1rem;
         position: relative;
         border-radius: 10px;
         box-shadow: var(--box-shadow);
-        scroll-snap-align: start; /* Item berhenti di awal */
+        scroll-snap-align: start;
+        /* Item berhenti di awal */
         overflow: hidden;
         transition: transform 0.3s ease;
     }
@@ -510,7 +542,8 @@ html {
     }
 
     .portfolio-item {
-        flex: 0 0 40%; /* Ukuran item, sesuaikan dengan kebutuhan */
+        flex: 0 0 40%;
+        /* Ukuran item, sesuaikan dengan kebutuhan */
         width: 40%;
     }
 }
@@ -538,12 +571,14 @@ html {
         font-size: 1.15rem;
     }
 
-     /* Portfolio Responsiveness */
+    /* Portfolio Responsiveness */
 
-     .portfolio-item {
-        flex: 0 0 40%; /* Ukuran item, sesuaikan dengan kebutuhan */
+    .portfolio-item {
+        flex: 0 0 40%;
+        /* Ukuran item, sesuaikan dengan kebutuhan */
         width: 40%;
-        height: 200px; /* Tinggi fix agar gambar proporsional */
+        height: 200px;
+        /* Tinggi fix agar gambar proporsional */
     }
 }
 
@@ -567,22 +602,6 @@ html {
     }
 }
 
-/* Extra large devices (large desktops, 1200px) */
-@media (min-width: 1200px) {
-    .page-section h2 {
-        font-size: 3rem;
-    }
 
-    .history-box {
-        padding: 2.5rem;
-        margin-top: 2.5rem;
-    }
-
-    .history-box h3 {
-        font-size: 1.8rem;
-    }
-
-    .history-box p {
-        font-size: 1.2rem;
-    }
 }
+

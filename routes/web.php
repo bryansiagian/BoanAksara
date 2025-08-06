@@ -28,3 +28,7 @@ Route::get('/history', function () {
 Route::get('/course', function () {
     return view('course.index');
 })->name('course');
+
+Route::get('/contact', function () {
+    return view('contact.index');
+})->name('contact');
