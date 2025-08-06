@@ -24,6 +24,7 @@
     <!-- Slick CSS -->
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- jQuery (required) -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -58,11 +59,29 @@
     @yield('content')
 
     <!-- Footer-->
-    <footer class="bg-light py-5">
-        <div class="container px-4 px-lg-5">
-            <div class="small text-center text-muted">Copyright © 2025 - Company Name</div>
-        </div>
-    </footer>
+<footer style="background-color: #4b1c1c; color: white; padding: 2rem 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      
+      <!-- Logo dan Nama -->
+      <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+  <h4 class="mb-1 text-white">BoanAksara</h4>
+  <small>© 2025 BoanAksara. All rights reserved.</small>
+</div>
+
+
+      <!-- Navigasi Cepat -->
+      <div class="col-md-6 text-center text-md-end">
+        <a href="#about" style="color: white; margin-right: 15px; text-decoration: none;">About</a>
+        <a href="#history" style="color: white; margin-right: 15px; text-decoration: none;">History</a>
+        <a href="#course" style="color: white; margin-right: 15px; text-decoration: none;">Course</a>
+        <a href="#contact" style="color: white; text-decoration: none;">Contact</a>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
     <!-- Bootstrap core JS-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- SimpleLightbox plugin JS-->
