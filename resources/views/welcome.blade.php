@@ -117,14 +117,19 @@
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: center; /* Geser ke kanan */
+      width: 100%;
+      background: transparent;
     }
     .slider-image {
       width: 100%;
-      max-width: 500px;
-      border-radius: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      max-width: 450px; /* Semua foto ukuran sama */
+      height: 400px;     /* Tinggi seragam */
+      object-fit: contain; /* Potong proporsional */
+      border-radius: 0px;
+      box-shadow: none;
       transition: opacity 0.3s ease;
+      background: none;
     }
     .dots-container {
       display: flex;
@@ -146,6 +151,7 @@
     }
   </style>
 </section>
+
 <!-- Fitur Utama -->
 <section class="py-5 bg-white" id="fitur-utama">
   <div class="container px-4 px-lg-5">
