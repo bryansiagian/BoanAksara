@@ -144,26 +144,6 @@
               }
             </style>
           </section>
-=======
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-6">
-        <h2 style="color:#7B241C;">Mengenal Aksara Batak</h2>
-        <p>
-          <strong>Aksara Batak</strong> adalah sistem tulisan tradisional yang digunakan oleh masyarakat Batak di Sumatera Utara.
-          Aksara ini dipakai selama berabad-abad untuk menulis naskah adat, hukum, cerita rakyat, hingga catatan pribadi.
-          Setiap wilayah Batak seperti Toba, Karo, Mandailing, Simalungun, dan Pakpak memiliki variasi bentuk huruf yang unik,
-          namun semuanya berbasis pada prinsip fonetik yang sama.
-        </p>
-        <p>
-          Media tulis yang digunakan pun beragam, mulai dari bambu, kulit kayu, hingga tulang kerbau. Bentuk dan goresan
-          hurufnya tidak hanya sebagai alat komunikasi, tetapi juga mencerminkan keindahan seni ukir masyarakat Batak.
-        </p>
-      </div>
-      <div class="col-lg-6 text-center">
-        <img src="assets/img/aksarabatak.png" alt="Ilustrasi Aksara Batak" class="animated-image">
-      </div>
-    </div>
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
 
     <!-- Pelestarian di Masa Kini -->
     <div class="row align-items-center flex-row-reverse">
