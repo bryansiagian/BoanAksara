@@ -25,7 +25,6 @@
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-
   <!-- jQuery (required) -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <!-- Slick JS -->
@@ -61,42 +60,42 @@
   @yield('content')
 
   <!-- Footer Section -->
-  <footer style="background: #7B2F28; color: white; padding: 30px 20px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; font-family: 'Segoe UI', sans-serif;">
-    <div style="flex: 1; min-width: 250px; margin: 10px;">
-      <h3 style="color: #ded396ff;">BoanAksara</h3>
-      <p>BoanAksara adalah platform edukasi budaya Batak, khususnya dalam pelestarian dan pembelajaran Aksara Batak secara digital dan interaktif.</p>
-    </div>
+<footer style="background: #7B2F28; color: white; padding: 30px 20px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; font-family: 'Segoe UI', sans-serif;">
+  <div style="flex: 1; min-width: 250px; margin: 10px;">
+    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">BoanAksara</h3>
+    <p>BoanAksara adalah platform edukasi budaya Batak, khususnya dalam pelestarian dan pembelajaran Aksara Batak secara digital dan interaktif.</p>
+  </div>
 
-    <div style="flex: 1; min-width: 200px; margin: 10px;">
-      <h3 style="color: #ded396ff;">Navigasi</h3>
-      <a href="{{ route('home') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Beranda</a>
-      <a href="{{ route('about') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Tentang Kami</a>
-      <a href="{{ route('history') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Sejarah Aksara</a>
-      <a href="{{ route('course') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Kursus</a>
-      <a href="{{ route('contact') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Kontak</a>
-    </div>
+  <div style="flex: 1; min-width: 200px; margin: 10px;">
+    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">Navigasi</h3>
+    <a href="{{ route('home') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Beranda</a>
+    <a href="{{ route('about') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Tentang Kami</a>
+    <a href="{{ route('history') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Sejarah Aksara</a>
+    <a href="{{ route('course') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Kursus</a>
+    <a href="{{ route('contact') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Kontak</a>
+  </div>
 
-    <div style="flex: 1; min-width: 200px; margin: 10px;">
-      <h3 style="color: #ded396ff;">Layanan</h3>
-      <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Belajar Online</a>
-      <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Download Font Aksara</a>
-      <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Konversi Teks</a>
-      <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Forum Diskusi</a>
-    </div>
+  <div style="flex: 1; min-width: 200px; margin: 10px;">
+    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">Layanan</h3>
+    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Belajar Online</a>
+    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Download Font Aksara</a>
+    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Konversi Teks</a>
+    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Forum Diskusi</a>
+  </div>
 
-    <div style="flex: 1; min-width: 200px; margin: 10px;">
-      <h3 style="color: #ded396ff;">Hubungi Kami</h3>
-      <p>Email: boanaksara@gmail.com</p>
-     
+  <div style="flex: 1; min-width: 200px; margin: 10px;">
+    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">Hubungi Kami</h3>
+    <p>Email: boanaksara@gmail.com</p>
 
-      <div style="display: flex; gap: 10px; margin-top: 10px;">
-        <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
-        <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-youtube"></i></a>
-        <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-whatsapp"></i></a>
-        <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-facebook"></i></a>
-      </div>
+    <div style="display: flex; gap: 10px; margin-top: 10px;">
+      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-whatsapp"></i></a>
+      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-facebook"></i></a>
     </div>
-  </footer>
+  </div>
+</footer>
+
 
   <div style="width: 100%; text-align: center; padding: 10px; background: #5C1D1B; color: white; font-size: 14px;">
     © 2025 | BoanAksara - Melestarikan Budaya Lewat Teknologi

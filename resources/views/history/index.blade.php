@@ -16,14 +16,14 @@
                         Telusuri sejarah aksara Batak, dari asal-usul hingga perkembangannya di era modern.
                         Kenali bagaimana aksara ini menjadi bagian tak terpisahkan dari identitas budaya Batak.
                     </p>
-                    <a class="btn btn-maroon btn-xl" href="#asal-usul">Mulai Menjelajah</a>
+                    <a class="btn btn-maroon btn-xl" href="#asalusul">Mulai Menjelajah</a>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- Masa Awal -->
-<section class="page-section bg-light py-5" id="masa-awal" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+<section class="page-section bg-light py-5" id="asalusul" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
@@ -107,7 +107,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a18.png') }}" alt="Masa Kemunduran Aksara Batak" />
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a19.png') }}" alt="Masa Kemunduran Aksara Batak" />
             </div>
             <div class="col-lg-6">
                 <div class="p-3">
@@ -129,7 +129,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
-                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/pelestarian-modern.jpg') }}" alt="Pelestarian Modern Aksara Batak" />
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a20.png') }}" alt="Pelestarian Modern Aksara Batak" />
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-3">
