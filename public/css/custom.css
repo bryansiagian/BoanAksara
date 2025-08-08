@@ -604,6 +604,16 @@ html {
 .text-maroon {
     color: #7B241C;
 }
+#about p {
+  color: #444;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+#about img {
+  max-height: 350px;
+  object-fit: contain;
+}
 
 
 

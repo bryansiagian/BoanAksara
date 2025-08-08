@@ -22,78 +22,136 @@
         </div>
     </header>
 
-    <!-- Sejarah Aksara Batak -->
-    <section class="page-section bg-light py-5" id="asal-usul" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/sejarah1.jpg') }}" alt="Ilustrasi Naskah Batak Kuno" />
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-3">
-                        <h2 class="text-center text-lg-start"><span style="color:#7B241C">Asal-Usul dan Perkembangan</span></h2>
-                        <hr class="divider my-4" />
-                        <p class="text-muted">
-                            Aksara Batak diperkirakan berasal dari aksara Pallawa yang dibawa oleh pedagang dan pendeta dari India ke Sumatera pada abad ke-13. Aksara ini kemudian mengalami perkembangan dan adaptasi sesuai dengan kebutuhan bahasa dan budaya masyarakat Batak.
-                        </p>
-                        <p class="text-muted">
-                            Setiap kelompok etnis Batak (Toba, Karo, Simalungun, Pakpak, Mandailing) mengembangkan variasi aksara mereka sendiri, meskipun dengan dasar yang sama.
-                        </p>
-                    </div>
+    <!-- Masa Awal -->
+<section class="page-section bg-light py-5" id="masa-awal" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a13.png') }}" alt="Ilustrasi Masa Awal Aksara Batak" />
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-3">
+                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Awal (Sebelum Abad ke-13)</span></h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted">
+                        Aksara Batak diperkirakan berasal dari turunan aksara Pallawa yang berkembang di India Selatan sekitar abad ke-4 M.
+                        Masuknya aksara ke tanah Batak kemungkinan dibawa oleh pedagang dan penyebar agama Hindu-Buddha melalui jalur perdagangan maritim di Sumatra.
+                        Bentuk awalnya belum disebut “Aksara Batak”, melainkan varian lokal dari Aksara Kawi.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Penggunaan Aksara Batak -->
-    <section class="page-section bg-white py-5" id="penggunaan">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-lg-6">
-                    <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/sejarah2.jpg') }}" alt="Penggunaan Aksara Batak pada Bambu" />
-                </div>
-                <div class="col-lg-6">
-                    <div class="p-3">
-                        <h2 class="text-center text-lg-start"><span style="color:#7B241C">Penggunaan dalam Kehidupan</span></h2>
-                        <hr class="divider my-4" />
-                        <p class="text-muted">
-                            Aksara Batak digunakan dalam berbagai aspek kehidupan tradisional, termasuk:
-                        </p>
+<!-- Perkembangan di Masyarakat Batak -->
+<section class="page-section bg-white py-5" id="perkembangan">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a17.png') }}" alt="Perkembangan Aksara Batak" />
+            </div>
+            <div class="col-lg-6">
+                <div class="p-3">
+                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Perkembangan di Masyarakat Batak (Abad ke-13 – 16)</span></h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted">
+                        Aksara mulai digunakan untuk menulis bahasa daerah di wilayah Toba, Mandailing, Karo, Simalungun, Pakpak-Dairi.
+                        Penulisan dilakukan di kulit kayu (laklak), bambu, tanduk kerbau, atau tulang.
+                    </p>
+                    <p class="text-muted">
+                        Fungsi utama:
                         <ul>
-                            <li>Surat-menyurat</li>
-                            <li>Catatan sejarah dan silsilah</li>
-                            <li>Manuskrip keagamaan dan magis</li>
-                            <li>Ukiran pada artefak budaya</li>
+                            <li>Surat-menyurat (disebut surat tanda)</li>
+                            <li>Naskah adat dan hukum</li>
+                            <li>Catatan ramalan & mantra (penggunaan oleh datu/paranormal adat)</li>
                         </ul>
-                        <p class="text-muted">
-                            Naskah-naskah Batak kuno, yang sering ditulis pada kulit kayu atau bambu, merupakan sumber informasi penting tentang adat, hukum, dan kepercayaan masyarakat Batak.
-                        </p>
-                    </div>
+                        Masing-masing sub-suku Batak mengembangkan variasi aksara sendiri, walau inti bentuk hurufnya mirip.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Era Modern dan Pelestarian -->
-    <section class="page-section bg-light py-5" id="pelestarian" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
-        <div class="container px-4 px-lg-5">
-            <div class="row gx-4 gx-lg-5 align-items-center">
-                <div class="col-lg-6 order-lg-2">
-                    <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/sejarah3.jpg') }}" alt="Upaya Pelestarian Aksara Batak" />
-                </div>
-                <div class="col-lg-6 order-lg-1">
-                    <div class="p-3">
-                        <h2 class="text-center text-lg-start"><span style="color:#7B241C">Aksara Batak di Era Modern</span></h2>
-                        <hr class="divider my-4" />
-                        <p class="text-muted">
-                            Penggunaan aksara Batak semakin berkurang seiring dengan masuknya pengaruh bahasa Latin dan teknologi modern.
-                        </p>
-                        <p class="text-muted">
-                            Namun, berbagai upaya pelestarian terus dilakukan oleh komunitas, akademisi, dan pemerintah untuk menjaga warisan budaya ini tetap hidup. BoanAksara adalah salah satu inisiatif untuk mendukung pelestarian aksara Batak melalui pendidikan dan teknologi.
-                        </p>
-                    </div>
+<!-- Masa Keemasan -->
+<section class="page-section bg-light py-5" id="masa-keemasan" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/hukumadat.png') }}" alt="Masa Keemasan Aksara Batak" />
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-3">
+                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Keemasan (Abad ke-17 – 19)</span></h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted">
+                        Aksara Batak mencapai puncak penggunaannya dan digunakan untuk menulis:
+                        <ul>
+                            <li>Hukum adat (uhum)</li>
+                            <li>Silsilah marga</li>
+                            <li>Surat pribadi antar kampung</li>
+                            <li>Doa dan mantra ritual</li>
+                        </ul>
+                        Muncul perbedaan gaya antar daerah: Batak Toba, Batak Mandailing/Angkola, Batak Karo, Batak Simalungun, dan Batak Pakpak-Dairi.
+                        Di masa ini, aksara Batak menjadi bagian penting dalam kehidupan sosial, adat, dan keagamaan.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<!-- Masa Kemunduran -->
+<section class="page-section bg-white py-5" id="masa-kemunduran">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-lg-6">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a18.png') }}" alt="Masa Kemunduran Aksara Batak" />
+            </div>
+            <div class="col-lg-6">
+                <div class="p-3">
+                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Kemunduran (Akhir Abad ke-19 – Pertengahan Abad ke-20)</span></h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted">
+                        Masuknya misionaris Kristen dan kolonial Belanda memperkenalkan huruf Latin yang dianggap lebih praktis untuk percetakan dan administrasi.
+                        Banyak naskah aksara Batak dibakar atau ditinggalkan karena dianggap berkaitan dengan praktik kepercayaan lama.
+                        Generasi baru mulai meninggalkan penggunaan aksara tradisional.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Masa Pelestarian dan Kebangkitan Kembali -->
+<section class="page-section bg-light py-5" id="pelestarian-modern" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+    <div class="container px-4 px-lg-5">
+        <div class="row gx-4 gx-lg-5 align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/pelestarian-modern.jpg') }}" alt="Pelestarian Modern Aksara Batak" />
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="p-3">
+                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Pelestarian dan Kebangkitan Kembali (Akhir Abad ke-20 – Sekarang)</span></h2>
+                    <hr class="divider my-4" />
+                    <p class="text-muted">
+                        Upaya dokumentasi oleh peneliti, filolog, dan budayawan mengumpulkan naskah-naskah Batak.
+                        Aksara Batak mulai diajarkan di sekolah-sekolah di beberapa daerah Sumatera Utara sebagai muatan lokal dan masuk ke Unicode (versi 6.0, tahun 2010) sehingga bisa digunakan di komputer dan internet.
+                    </p>
+                    <p class="text-muted">
+                        Muncul gerakan pelestarian seperti:
+                        <ul>
+                            <li>Workshop penulisan aksara Batak</li>
+                            <li>Pameran di museum</li>
+                            <li>Desain modern (kaos, mural, logo)</li>
+                        </ul>
+                        Media sosial dan teknologi ikut membantu memperkenalkan kembali aksara Batak pada generasi muda.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 @endsection

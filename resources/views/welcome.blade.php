@@ -41,7 +41,7 @@
       <!-- Kolom Kiri: Teks -->
       <div class="col-lg-6 order-lg-1">
         <h2 class="text-center text-lg-start">
-          <span style="color:#7B241C">Mengenal Aksara Batak</span>
+          <span style="color:#7B241C">Aksara Batak</span>
         </h2>
         <hr class="divider my-3" />
         <p class="text-muted">

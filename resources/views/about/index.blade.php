@@ -22,43 +22,52 @@
     </div>
 </header>
 
-<!-- Services -->
-<section class="page-section" id="services">
-    <div class="container px-4 px-lg-5">
-        <h2 class="text-center mt-0">BoanAksara</h2>
-        <hr class="divider" />
-        <div class="row gx-4 gx-lg-5">
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-gem fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Kaya Budaya</h3>
-                    <p class="text-muted mb-0">Aksara Batak adalah bagian dari kekayaan budaya Indonesia.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-laptop fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Up to Date</h3>
-                    <p class="text-muted mb-0">Konten dan materi selalu diperbarui secara berkala.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-globe fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Siap Dipelajari</h3>
-                    <p class="text-muted mb-0">Desain responsif dan mudah diakses siapa pun.</p>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-6 text-center">
-                <div class="mt-5">
-                    <div class="mb-2"><i class="bi-heart fs-1 text-primary"></i></div>
-                    <h3 class="h4 mb-2">Dengan Cinta</h3>
-                    <p class="text-muted mb-0">Dibuat dengan cinta terhadap budaya Batak.</p>
-                </div>
-            </div>
-        </div>
+<section id="about" style="background: linear-gradient(to bottom, #ffffff, #fff); padding: 60px 0;">
+  <div class="container">
+
+    <!-- Mengenal Aksara Batak -->
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <h2 style="color:#7B241C;">Mengenal Aksara Batak</h2>
+        <p>
+          <strong>Aksara Batak</strong> adalah sistem tulisan tradisional yang digunakan oleh masyarakat Batak di Sumatera Utara.
+          Aksara ini dipakai selama berabad-abad untuk menulis naskah adat, hukum, cerita rakyat, hingga catatan pribadi.
+          Setiap wilayah Batak—seperti Toba, Karo, Mandailing, Simalungun, dan Pakpak—memiliki variasi bentuk huruf yang unik,
+          namun semuanya berbasis pada prinsip fonetik yang sama.
+        </p>
+        <p>
+          Media tulis yang digunakan pun beragam, mulai dari bambu, kulit kayu, hingga tulang kerbau. Bentuk dan goresan
+          hurufnya tidak hanya sebagai alat komunikasi, tetapi juga mencerminkan keindahan seni ukir masyarakat Batak.
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="assets/img/aksarabatak.png" alt="Ilustrasi Aksara Batak" 
+      </div>
     </div>
+
+    <!-- Pelestarian di Masa Kini -->
+    <div class="row align-items-center flex-row-reverse">
+      <div class="col-lg-6">
+        <h2 style="color:#7B241C;">Pelestarian di Masa Kini</h2>
+        <p>
+          Di era modern, penggunaan Aksara Batak mulai berkurang karena dominasi huruf latin.
+          Namun, berbagai upaya pelestarian terus dilakukan oleh komunitas budaya, akademisi, dan pemerintah daerah.
+          Aksara Batak kini dipelajari di sekolah, dikenalkan melalui pelatihan daring, dan digunakan dalam desain grafis,
+          papan nama, hingga produk kreatif.
+        </p>
+        <p>
+          Pelestarian ini bukan hanya menjaga bentuk tulisannya, tetapi juga mewariskan identitas budaya
+          dan rasa bangga akan warisan leluhur. Dengan teknologi, aksara ini dapat terus hidup dan berkembang di masa depan.
+        </p>
+      </div>
+      <div class="col-lg-6 text-center">
+        <img src="assets/img/masakini.jpg" alt="Pelestarian Aksara Batak" class="img-fluid rounded shadow">
+      </div>
+    </div>
+
+  </div>
 </section>
+
 
 <!-- Galeri Aksara Batak -->
 <section class="page-section bg-light" id="galeri">
