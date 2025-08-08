@@ -14,7 +14,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline" data-aos="fade-up" data-aos-delay="100">
                 <p class="text-white-75 mb-5">
-                    Tertarik mempelajari sejarah aksara Batak lebih dalam? Jangan ragu untuk menghubungi kami!
+                    Mari Terhubung dan Jaga Warisan Batak Bersama!
                 </p>
                 <a class="btn btn-maroon btn-xl" href="#kontak">Hubungi Kami</a>
             </div>
@@ -27,7 +27,7 @@
     <div class="container" data-aos="fade-up">
         <div class="text-center mb-5">
             <h2 class="fw-bold">Hubungi Kami</h2>
-            <p class="text-muted">Kami siap menjawab pertanyaan Anda seputar Aksara Batak dan sejarahnya.</p>
+            <p class="text-muted">Horas! Mari kita diskusikan Aksara Batak bersama - apa yang kami tahu akan kami bagi dengan senang hati!</p>
         </div>
 
         <div class="row g-5">
@@ -37,12 +37,8 @@
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-3">Informasi Kontak</h5>
                         <p>
-                            <i class="bi bi-geo-alt-fill text-maroon me-2"></i>
-                            <a href="https://maps.google.com/?q=Jl.%20Budaya%20Batak%20No.%20123,%20Sumatera%20Utara" target="_blank" class="text-decoration-none text-dark">Jl. Budaya Batak No. 123, Sumatera Utara</a>
-                        </p>
-                        <p>
                             <i class="bi bi-envelope-fill text-maroon me-2"></i>
-                            <a href="mailto:info@aksarabatak.id" class="text-decoration-none text-dark">info@aksarabatak.id</a>
+                            <a href="mailto:boanaksara@gmail.com" class="text-decoration-none text-dark">boanaksara@gmail.com</a>
                         </p>
                         <p>
                             <i class="bi bi-globe text-maroon me-2"></i>
@@ -51,15 +47,12 @@
 
                         <div class="mt-4">
                             <h6 class="fw-bold">Ikuti Kami:</h6>
-                            <a href="#" class="text-decoration-none me-3"><i class="bi bi-facebook text-primary fa-2x"></i></a>
-                            <a href="#" class="text-decoration-none me-3"><i class="bi bi-instagram text-danger fa-2x"></i></a>
-                            <a href="#" class="text-decoration-none"><i class="bi bi-youtube text-danger fa-2x"></i></a>
-                        </div>
-                    </div>
-
-                    <div class="card-footer bg-transparent border-top p-4">
-                        <div class="d-grid">
-                            <a href="https://wa.me/YOUR_WHATSAPP_NUMBER" target="_blank" class="btn btn-success"><i class="bi bi-whatsapp me-2"></i> Hubungi Kami Via WhatsApp</a>
+                            <a href="https://www.instagram.com/boanaksara/" target="_blank" class="text-decoration-none me-3">
+                                <i class="bi bi-instagram text-danger fa-2x"></i>
+                            </a>
+                            <a href="https://www.youtube.com/@BoanAksara" target="_blank" class="text-decoration-none">
+                                <i class="bi bi-youtube text-danger fa-2x"></i>
+                            </a>
                         </div>
                     </div>
                 </div>

@@ -86,8 +86,8 @@
 
     <div style="flex: 1; min-width: 200px; margin: 10px;">
       <h3 style="color: #ded396ff;">Hubungi Kami</h3>
-      <p>Email: boanaksara@budaya.id</p>
-      <p>Alamat: Jl. Pustaha Batak No.12, Balige, Sumatera Utara</p>
+      <p>Email: boanaksara@gmail.com</p>
+     
 
       <div style="display: flex; gap: 10px; margin-top: 10px;">
         <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
