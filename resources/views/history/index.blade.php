@@ -3,7 +3,7 @@
 @section('title', 'Sejarah Aksara Batak')
 
 @section('content')
-<<<<<<< HEAD
+
     <!-- Masthead (Header) -->
     <header class="masthead">
         <div class="container px-4 px-lg-5 h-100">
@@ -19,48 +19,13 @@
                     </p>
                     <a class="btn btn-maroon btn-xl" href="#asalusul">Mulai Menjelajah</a>
                 </div>
-=======
-<!-- Masthead (Header) -->
-<header class="masthead">
-    <div class="container px-4 px-lg-5 h-100">
-        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end">
-                <h1 class="text-white font-weight-bold">Jejak Panjang Aksara Batak</h1>
-                <hr class="divider" />
-            </div>
-            <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 mb-5">
-                    Telusuri sejarah aksara Batak, dari asal-usul hingga perkembangannya di era modern.
-                    Kenali bagaimana aksara ini menjadi bagian tak terpisahkan dari identitas budaya Batak.
-                </p>
-                <a class="btn btn-maroon btn-xl" href="#asal-usul">Mulai Menjelajah</a>
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
             </div>
         </div>
     </div>
 </header>
 
-<<<<<<< HEAD
     <!-- Masa Awal -->
 <section class="page-section bg-light py-5" id="asalusul" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
-=======
-<style>
-    /* CSS Animation for Images */
-    .animated-image {
-        transition: transform 10s ease-in-out;
-        /* Adjust duration as needed */
-    }
-
-    .animated-image:hover {
-        transform: scale(1.05);
-        /* Optional: slight zoom on hover */
-    }
-</style>
-
-<!-- Masa Awal -->
-<section class="page-section bg-light py-5" id="masa-awal"
-    style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
@@ -156,12 +121,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6">
-<<<<<<< HEAD
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a19.png') }}" alt="Masa Kemunduran Aksara Batak" />
-=======
-                <img class="img-fluid rounded mb-4 mb-lg-0 animated-image" src="{{ asset('assets/img/a18.png') }}"
-                    alt="Masa Kemunduran Aksara Batak" />
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
             </div>
             <div class="col-lg-6">
                 <div class="p-3">
@@ -187,12 +147,7 @@
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2">
-<<<<<<< HEAD
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a20.png') }}" alt="Pelestarian Modern Aksara Batak" />
-=======
-                <img class="img-fluid rounded mb-4 mb-lg-0 animated-image"
-                    src="{{ asset('assets/img/pelestarian-modern.jpg') }}" alt="Pelestarian Modern Aksara Batak" />
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="p-3">

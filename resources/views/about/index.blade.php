@@ -6,7 +6,6 @@
 
 <!-- Header -->
 <header class="masthead">
-<<<<<<< HEAD
     <div class="container px-4 px-lg-5 h-100">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end" data-aos="fade-down">
@@ -20,20 +19,6 @@
                 <a class="btn btn-maroon btn-xl" href="#telusuri">Telusuri</a>
             </div>
         </div>
-=======
-  <div class="container px-4 px-lg-5 h-100">
-    <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-      <div class="col-lg-10 align-self-end" data-aos="fade-down">
-        <h1 class="text-white font-weight-bold">Pengenalan Aksara</h1>
-        <hr class="divider" />
-      </div>
-      <div class="col-lg-8 align-self-baseline" data-aos="fade-up" data-aos-delay="100">
-        <p class="text-white-75 mb-5">
-          Tertarik mempelajari sejarah aksara Batak lebih dalam? Jangan ragu untuk menghubungi kami!
-        </p>
-        <a class="btn btn-maroon btn-xl" href="#kontak">Telusuri</a>
-      </div>
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
     </div>
   </div>
 </header>
@@ -42,7 +27,6 @@
   <div class="container">
 
     <!-- Mengenal Aksara Batak -->
-<<<<<<< HEAD
           <section class="page-section py-5" id="telusuri" style="background: linear-gradient(to right, #ffffff); min-height: 100vh; background-attachment: local;">
       <div class="container px-4 px-lg-5 h-100">
          <div class="row gx-5 gy-4 align-items-center h-100">
@@ -197,11 +181,7 @@
         </p>
       </div>
       <div class="col-lg-6 text-center">
-<<<<<<< HEAD
         <img src="assets/img/museum.jpg" width="450" height="auto" alt="Pelestarian Aksara Batak" class="img-fluid rounded shadow">
-=======
-        <img src="assets/img/masakini.jpg" alt="Pelestarian Aksara Batak" class="img-fluid rounded shadow animated-image">
->>>>>>> da50c37779a00e920baae68d2ce0d046cb47af0d
       </div>
     </div>
 
