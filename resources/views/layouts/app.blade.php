@@ -59,51 +59,50 @@
 
   @yield('content')
 
-  <!-- Footer Section -->
-<footer style="background: #7B2F28; color: white; padding: 30px 20px; display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; font-family: 'Segoe UI', sans-serif;">
-  <div style="flex: 1; min-width: 250px; margin: 10px;">
-    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">BoanAksara</h3>
-    <p>BoanAksara adalah platform edukasi budaya Batak, khususnya dalam pelestarian dan pembelajaran Aksara Batak secara digital dan interaktif.</p>
-  </div>
+  <footer style="background: #7B2F28; color: rgba(255,255,255,0.85); font-family: 'Segoe UI', sans-serif;">
+    <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; padding: 30px 20px;">
 
-  <div style="flex: 1; min-width: 200px; margin: 10px;">
-    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">Navigasi</h3>
-    <a href="{{ route('home') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Beranda</a>
-    <a href="{{ route('about') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Tentang Kami</a>
-    <a href="{{ route('history') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Sejarah Aksara</a>
-    <a href="{{ route('course') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Kursus</a>
-    <a href="{{ route('contact') }}" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Kontak</a>
-  </div>
+      <div style="flex: 1; min-width: 250px; margin: 10px;">
+        <h3 style="color: #FFFFFF; font-weight: bold; margin-bottom: 10px;">BoanAksara</h3>
+        <p>BoanAksara adalah platform edukasi budaya Batak, khususnya dalam pelestarian dan pembelajaran Aksara Batak secara digital dan interaktif.</p>
+      </div>
 
-  <div style="flex: 1; min-width: 200px; margin: 10px;">
-    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">Layanan</h3>
-    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Belajar Online</a>
-    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Download Font Aksara</a>
-    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Konversi Teks</a>
-    <a href="#" style="color: white; text-decoration: none; display: block; margin-bottom: 5px;">Forum Diskusi</a>
-  </div>
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3 style="color: #FFFFFF; font-weight: bold; margin-bottom: 10px;">Navigasi</h3>
+        <a href="{{ route('home') }}" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Beranda</a>
+        <a href="{{ route('about') }}" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Tentang Kami</a>
+        <a href="{{ route('history') }}" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Sejarah Aksara</a>
+        <a href="{{ route('course') }}" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Kursus</a>
+        <a href="{{ route('contact') }}" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Kontak</a>
+      </div>
 
-  <div style="flex: 1; min-width: 200px; margin: 10px;">
-    <h3 style="color: #5C1D1B; background-color: white; display: inline-block; padding: 5px 10px;">Hubungi Kami</h3>
-    <p>Email: boanaksara@gmail.com</p>
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3 style="color: #FFFFFF; font-weight: bold; margin-bottom: 10px;">Layanan</h3>
+        <a href="#" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Belajar Online</a>
+        <a href="#" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Download Font Aksara</a>
+        <a href="#" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Konversi Teks</a>
+        <a href="#" style="color: rgba(255,255,255,0.85); text-decoration: none; display: block; margin-bottom: 5px;">Forum Diskusi</a>
+      </div>
 
-    <div style="display: flex; gap: 10px; margin-top: 10px;">
-      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-instagram"></i></a>
-      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-youtube"></i></a>
-      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-whatsapp"></i></a>
-      <a href="#" target="_blank" style="color: white; font-size: 20px;"><i class="fab fa-facebook"></i></a>
+      <div style="flex: 1; min-width: 200px; margin: 10px;">
+        <h3 style="color: #FFFFFF; font-weight: bold; margin-bottom: 10px;">Hubungi Kami</h3>
+        <p>Email: <a href="mailto:boanaksara@gmail.com" style="color: rgba(255,255,255,0.85); text-decoration: none;">boanaksara@gmail.com</a></p>
+        <p>WhatsApp: <a href="https://wa.me/6282163526363" target="_blank" style="color: rgba(255,255,255,0.85); text-decoration: none;">+6282163526363</a></p>
+        <p>Instagram: <a href="https://instagram.com/boanaksara" target="_blank" style="color: rgba(255,255,255,0.85); text-decoration: none;">@boanaksara</a></p>
+
+        <div style="display: flex; gap: 10px; margin-top: 10px;">
+          <a href="https://instagram.com/boanaksara" target="_blank" style="color: #FFFFFF; font-size: 20px;"><i class="fab fa-instagram"></i></a>
+          <a href="#" target="_blank" style="color: #FFFFFF; font-size: 20px;"><i class="fab fa-youtube"></i></a>
+          <a href="https://wa.me/6282163526363" target="_blank" style="color: #FFFFFF; font-size: 20px;"><i class="fab fa-whatsapp"></i></a>
+          <a href="#" target="_blank" style="color: #FFFFFF; font-size: 20px;"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
     </div>
-  </div>
-</footer>
 
-
-  <div style="width: 100%; text-align: center; padding: 10px; background: #5C1D1B; color: white; font-size: 14px;">
-    © 2025 | BoanAksara - Melestarikan Budaya Lewat Teknologi
-  </div>
-
-
-
-
+    <div style="width: 100%; text-align: center; padding: 10px; background: #5C1D1B; color: white; font-size: 14px; border-top: 1px solid rgba(255,255,255,0.2);">
+      © 2025 | BoanAksara - Melestarikan Budaya Lewat Teknologi
+    </div>
+  </footer>
 
 
   <!-- Bootstrap core JS-->
