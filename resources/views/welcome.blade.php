@@ -78,11 +78,9 @@
     </div>
 </section>
 
-    
-    <!-- Ornamen Bawah -->
-   <!-- Ornamen Bawah - Solid Maroon dengan Motif Ulos -->
+
 <section class="about-section" 
-         style="background: white; padding: 5rem 0; position: relative;">
+         style="background: #7B241C; padding: 5rem 0; position: relative;">
 </div>
 </section>   
 
