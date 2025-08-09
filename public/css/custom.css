@@ -615,7 +615,28 @@ html {
   object-fit: contain;
 }
 
+.animated-image {
+    animation: zoomInOut 5s ease-in-out infinite;
+}
 
+.animated-image {
+    animation: zoomInOut 8s ease-in-out infinite;
+    /* Perpanjang durasi menjadi 8 detik */
+}
 
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1);
+    }
 
+    50% {
+        /* Pindahkan perubahan skala ke tengah animasi */
+        transform: scale(1.02);
+        /* Kurangi besar zoom menjadi 1.02 */
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
 
