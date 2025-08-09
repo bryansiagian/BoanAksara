@@ -803,16 +803,13 @@
     @push('scripts')
         <script>
             // Data Aksara Batak (kamus kita sekarang lebih rapi dan terstruktur)
-            // Data Aksara Batak (kamus kita sekarang lebih rapi dan terstruktur)
             const aksaraMap = {
-                // INI YANG DIUBAH - Vokal Mandiri dan Anak ni Surat kini memiliki nama kunci yang jelas
-                // untuk menghindari kebingungan.
                 // Vokal Mandiri (digunakan di awal kata, tidak setelah konsonan)
                 'a_independent': 'ᯀ',
                 'i_independent': 'ᯤ',
-                'u_independent': 'ᯮ',
-                'e_independent': 'ᯧ',
-                'o_independent': 'ᯥ',
+                'u_independent': 'ᯥ',
+                'e_independent': 'ᯀᯩ',
+                'o_independent': 'ᯀᯬ',
 
                 // Anak ni Surat (Tanda untuk mengubah vokal, diletakkan setelah aksara konsonan)
                 'i_vowel_sign': 'ᯪ',
@@ -838,6 +835,9 @@
                 'w': 'ᯋ',
                 'y': 'ᯛ',
                 'z': 'ᯗ',
+
+                // INI YANG DIUBAH - Suku kata 'nga' kini ditambahkan sebagai entri terpisah
+                'nga_consonant': 'ᯝ',
 
                 // Pangolat (Tanda pemati vokal)
                 'pangolat': '᯲',
@@ -870,10 +870,7 @@
                 while (i < len) {
                     let matched = false;
 
-                    // INI YANG DIUBAH
-                    // Langkah 1: Prioritas paling tinggi adalah Vokal Mandiri di awal kata.
-                    // Jika karakter saat ini (i) adalah 0 (awal kata) dan merupakan vokal,
-                    // kita langsung pakai aksara vokal mandiri.
+                    // INI YANG DIUBAH - Langkah 1: Cek vokal mandiri di awal kata
                     if (i === 0 && vowels.includes(textLower.charAt(i))) {
                         const char = textLower.charAt(i);
                         hasil += aksaraMap[`${char}_independent`];
@@ -881,7 +878,26 @@
                         matched = true;
                     }
 
-                    // Langkah 2: Cek apakah ada suku kata yang lebih dari satu huruf
+                    // INI YANG DIUBAH - Langkah 2: Prioritaskan pencarian suku kata khusus 3 huruf
+                    // Suku kata 'nga' dan 'ngi', 'ngo', 'ngu' harus diproses sebagai satu kesatuan.
+                    if (!matched && i + 2 < len) {
+                        const tigaHuruf = textLower.substring(i, i + 3);
+                        if (tigaHuruf.startsWith('ng') && vowels.includes(tigaHuruf.charAt(2))) {
+                            const vokal = tigaHuruf.charAt(2);
+                            // Untuk suku kata 'nga', aksara dasarnya ᯝ
+                            if (vokal === 'a') {
+                                hasil += aksaraMap['nga_consonant'];
+                            }
+                            // Untuk 'ngo', 'ngi', 'ngu', gunakan aksara dasar ᯝ + anak ni surat
+                            else {
+                                hasil += aksaraMap['nga_consonant'] + aksaraMap[`${vokal}_vowel_sign`];
+                            }
+                            i += 3;
+                            matched = true;
+                        }
+                    }
+
+                    // Langkah 3: Cek kombinasi 'ng' (khusus untuk di akhir suku kata)
                     if (!matched && i + 1 < len) {
                         const duaHuruf = textLower.substring(i, i + 2);
                         if (duaHuruf === 'ng') {
@@ -891,18 +907,15 @@
                         }
                     }
 
-                    // Langkah 3: Cek kombinasi konsonan + vokal (ini untuk Anak ni Surat)
+                    // Langkah 4: Cek kombinasi konsonan + vokal (ini untuk Anak ni Surat)
                     if (!matched && i + 1 < len) {
                         const konsonan = textLower.charAt(i);
                         const vokal = textLower.charAt(i + 1);
 
                         if (consonants.includes(konsonan) && vowels.includes(vokal)) {
-                            // Jika vokal adalah 'a', langsung gunakan Ina ni Surat karena sudah mengandung 'a'
                             if (vokal === 'a') {
                                 hasil += aksaraMap[konsonan];
-                            }
-                            // Jika vokal lainnya, gunakan Ina ni Surat + Anak ni Surat
-                            else {
+                            } else {
                                 hasil += aksaraMap[konsonan] + aksaraMap[`${vokal}_vowel_sign`];
                             }
                             i += 2;
@@ -910,21 +923,16 @@
                         }
                     }
 
-                    // Langkah 4: Jika tidak ada yang cocok, periksa per karakter
+                    // Langkah 5: Jika tidak ada yang cocok, periksa per karakter
                     if (!matched) {
                         const char = textLower.charAt(i);
 
-                        // Jika karakternya konsonan tunggal (di akhir kata atau tidak diikuti vokal)
+                        // Jika karakternya konsonan tunggal
                         if (consonants.includes(char)) {
                             hasil += aksaraMap[char] + aksaraMap['pangolat'];
                         }
-                        // Jika karakternya vokal tunggal di tengah atau akhir kata
+                        // Jika vokal tunggal di tengah atau akhir kata
                         else if (vowels.includes(char)) {
-                            // Karena kita sudah menangani vokal di awal kata di langkah 1,
-                            // vokal di sini tidak mungkin vokal mandiri. Jadi, kita harus
-                            // mencari tahu aksara sebelumnya untuk menambahkan Anak ni Surat yang benar.
-                            // Logika ini masih perlu penyempurnaan, tapi untuk sementara kita
-                            // perlakukan vokal tunggal sebagai Vokal Mandiri.
                             hasil += aksaraMap[`${char}_independent`];
                         }
                         // Jika bukan vokal atau konsonan (seperti spasi, tanda baca)
@@ -949,6 +957,7 @@
                     alert('Teks Aksara Batak telah disalin!');
                 });
             }
+            
             tampilkanSoal();
 
             // Kuis
