@@ -13,7 +13,7 @@
             </div>
             <div class="col-lg-8 align-self-baseline">
                 <p class="text-white-75 mb-5">Selamat datang di Boan Aksara! Jelajahi keindahan dan kekayaan aksara Batak, warisan budaya yang tak ternilai harganya. Mulai perjalanan Anda sekarang dan lestarikan bersama!</p>
-                <a class="btn btn-maroon btn-xl" href="#home">Pelajari Aksara</a>
+                <a class="btn btn-maroon btn-xl" href="#home">Jelajahi</a>
             </div>
         </div>
     </div>
@@ -35,18 +35,21 @@
 </header>
 
 <!-- About Aksara Batak -->
-  <!-- Tentang Boan Aksara Section - Teks Kiri -->
-<section class="about-section" style="background: white; padding: 5rem 0; position: relative; border-top: 1px solid rgba(128,0,0,0.2); border-bottom: 1px solid rgba(128,0,0,0.2);">
+<section id="home"    class="about-section" 
+         style="background: white; padding: 5rem 0; position: relative;">
+
     <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
         <div class="about-content" style="display: flex; flex-wrap: wrap; align-items: center; gap: 4rem;">
+            
             <!-- Kolom Teks (Kiri) -->
-<div class="text-content" style="flex: 1; min-width: 300px; padding-right: 2rem;">
-    <h2 style="font-family: Arial, sans-serif; color: #800000; font-size: 2.5rem; margin-bottom: 1.8rem; position: relative; line-height: 1.3; font-weight: bold;">
-        <span style="display: inline-block; position: relative;">
-            Tentang Boan Aksara
+            <div class="text-content" style="flex: 1; min-width: 300px; padding-right: 2rem;">
+                <h2 style="font-family: Arial, sans-serif; color: #800000; font-size: 2.5rem; margin-bottom: 1.8rem; position: relative; line-height: 1.3; font-weight: bold;">
+                    <span style="display: inline-block; position: relative;">
+                        Tentang Boan Aksara
+                    </span>
                 </h2>
                 <p style="font-size: 1.1rem; line-height: 1.8; color: #333; margin-bottom: 2rem;">
-                    <strong style="color: #800000; ">BoanAksara</strong> adalah platform digital yang didedikasikan untuk melestarikan dan mempromosikan Aksara Batak, warisan budaya leluhur yang tak ternilai. Kami menghadirkan metode pembelajaran interaktif yang mudah dipahami untuk semua kalangan.
+                    <strong style="color: #800000;">BoanAksara</strong> adalah platform digital yang didedikasikan untuk melestarikan dan mempromosikan Aksara Batak, warisan budaya leluhur yang tak ternilai. Kami menghadirkan metode pembelajaran interaktif yang mudah dipahami untuk semua kalangan.
                 </p>
                 <div class="highlight-box" style="background: #FFF0F0; border-left: 4px solid #800000; padding: 1.2rem; margin: 2rem 0; border-radius: 0 8px 8px 0;">
                     <p style="margin: 0; font-style: italic; color: #500000;">
@@ -60,28 +63,26 @@
                 </div>
             </div>
             
-            <!-- Kolom Gambar (Kanan) -->
-            <div class="image-content" style="flex: 1; min-width: 300px; position: relative;">
-                <div style="border: 8px solid white; border-radius: 4px; box-shadow: 0 10px 30px rgba(128,0,0,0.15); overflow: hidden;">
-                    <img src="https://via.placeholder.com/500x350/FFFFFF/800000?text=Contoh+Aksara+Batak" alt="Contoh Aksara Batak" style="width: 100%; height: auto; display: block; transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.02)'" onmouseout="this.style.transform='scale(1)'">
-                </div>
-                <div style="position: absolute; bottom: -15px; right: 30px; background: #800000; color: white; padding: 0.5rem 1.5rem; border-radius: 50px; font-size: 0.9rem; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
-                    Warisan Budaya
+            <!-- Gambar (Kanan) -->
+            <div class="image-content" style="flex: 1; min-width: 300px; position: relative; align-self: center;">
+                <div style="border-radius: 8px; overflow: hidden;">
+            <img src="assets/img/horasi.png" 
+     alt="Contoh Aksara Batak" 
+     style="width: 100%; max-width: 450px; height: auto; display: block; margin: 0 auto; transform: translateY(-100px);">
+
+
                 </div>
             </div>
+
         </div>
     </div>
+</section>
+
     
     <!-- Ornamen Bawah -->
    <!-- Ornamen Bawah - Solid Maroon dengan Motif Ulos -->
-<div style="position: absolute; bottom: 0; left: 0; width: 100%; height: 12px; background: #800000; overflow: hidden;">
-    <!-- Motif Garis Ulos -->
-    <div style="width: 100%; height: 100%; position: relative;">        
-        <!-- Motif Segitiga (Inspirasi Gorga) -->
-        <div style="position: absolute; top: 50%; left: 10%; transform: translateY(-50%); width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 6px solid #500000;"></div>
-        <div style="position: absolute; top: 50%; left: 30%; transform: translateY(-50%); width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-top: 6px solid #500000;"></div>
-        <div style="position: absolute; top: 50%; right: 10%; transform: translateY(-50%); width: 0; height: 0; border-left: 8px solid transparent; border-right: 8px solid transparent; border-bottom: 6px solid #500000;"></div>
-    </div>
+<section class="about-section" 
+         style="background: white; padding: 5rem 0; position: relative;">
 </div>
 </section>   
 
@@ -198,42 +199,55 @@
     </div>
 
     <div class="row g-5">
-        <!-- Foto 1 -->
-        <div class="col-md-6">
-            <img src="images/koleksi-aksara.jpg" alt="Koleksi Aksara" class="img-fluid rounded shadow-lg" style="height: 400px; object-fit: cover; width: 100%;" />
-            <p class="mt-3 text-center fw-semibold" style="color: #7B241C; font-size: 1.2rem;">Koleksi Aksara Batak Lengkap</p>
-            <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
-                Fitur ini menampilkan berbagai varian aksara Batak untuk dipelajari dengan detail dan gambar pendukung.
-            </p>
-        </div>
+       <!-- Foto 1 - Koleksi Aksara -->
+<div class="col-md-6">
+    <div class="feature-image-container" style="height: 400px; background: #f8f9fa; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+        <img src="assets/img/kamus.png" alt="Koleksi Aksara" 
+             class="img-fluid" 
+             style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;" />
+    </div>
+    <p class="mt-3 text-center fw-semibold" style="color: #7B241C; font-size: 1.2rem;">Koleksi Aksara Batak</p>
+    <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
+        Fitur ini menampilkan berbagai varian aksara Batak untuk dipelajari dengan detail dan gambar pendukung.
+    </p>
+</div>
 
         <!-- Foto 2 -->
-        <div class="col-md-6">
-            <img src="images/transliterasi.jpg" alt="Transliterasi" class="img-fluid rounded shadow-lg" style="height: 400px; object-fit: cover; width: 100%;" />
-            <p class="mt-3 text-center fw-semibold" style="color: #1a5276; font-size: 1.2rem;">Fitur Transliterasi Otomatis</p>
-            <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
-                Mengubah teks Latin menjadi aksara Batak secara instan dengan akurasi tinggi.
-            </p>
-        </div>
-
-        <!-- Foto 3 -->
-        <div class="col-md-6">
-            <img src="images/kuis.jpg" alt="Kuis Interaktif" class="img-fluid rounded shadow-lg" style="height: 400px; object-fit: cover; width: 100%;" />
-            <p class="mt-3 text-center fw-semibold" style="color: #28a745; font-size: 1.2rem;">Kuis Interaktif Mengasah Pengetahuan</p>
-            <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
-                Uji kemampuan Anda dengan kuis yang menantang dan menyenangkan tentang aksara Batak.
-            </p>
-        </div>
-
-        <!-- Foto 4 -->
-        <div class="col-md-6">
-            <img src="images/canvas-menulis.jpg" alt="Canvas Menulis" class="img-fluid rounded shadow-lg" style="height: 400px; object-fit: cover; width: 100%;" />
-            <p class="mt-3 text-center fw-semibold" style="color: #9b59b6; font-size: 1.2rem;">Latihan Menulis Digital</p>
-            <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
-                Praktik menulis aksara Batak secara digital dengan fitur yang interaktif dan mudah digunakan.
-            </p>
-        </div>
+<div class="col-md-6">
+    <div class="feature-image-container" style="height: 400px; background: #f8f9fa; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+        <img src="assets/img/transliterasi.png" alt="Transliterasi" 
+             class="img-fluid" 
+             style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;" />
     </div>
+    <p class="mt-3 text-center fw-semibold" style="color: #1a5276; font-size: 1.2rem;">Fitur Transliterasi Otomatis</p>
+    <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
+        Mengubah teks Latin menjadi aksara Batak secara instan dengan akurasi tinggi.
+    </p>
+</div>
+        <!-- Foto 3 - Kuis Interaktif -->
+<div class="col-md-6">
+    <div class="feature-image-container" style="height: 400px; background: #f8f9fa; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+        <img src="assets/img/kuis.png" alt="Kuis Interaktif" 
+             class="img-fluid" 
+             style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;" />
+    </div>
+    <p class="mt-3 text-center fw-semibold" style="color: #28a745; font-size: 1.2rem;">Kuis Interaktif Mengasah Pengetahuan</p>
+    <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
+        Uji kemampuan Anda dengan kuis yang menantang dan menyenangkan tentang aksara Batak.
+    </p>
+</div>
+       <!-- Foto 4 - Canvas Menulis -->
+<div class="col-md-6">
+    <div class="feature-image-container" style="height: 400px; background: #f8f9fa; border-radius: 10px; overflow: hidden; display: flex; justify-content: center; align-items: center; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+        <img src="assets/img/canva.png" alt="Canvas Menulis" 
+             class="img-fluid" 
+             style="max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain;" />
+    </div>
+    <p class="mt-3 text-center fw-semibold" style="color: #9b59b6; font-size: 1.2rem;">Latihan Menulis Digital</p>
+    <p class="text-center text-muted" style="font-size: 0.9rem; max-width: 90%; margin: 0 auto;">
+        Praktik menulis aksara Batak secara digital dengan fitur yang interaktif dan mudah digunakan.
+    </p>
+</div>
 </section>
 
 <style>
