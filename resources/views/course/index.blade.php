@@ -3,40 +3,37 @@
 @section('title', 'Belajar Aksara Batak')
 
 @section('content')
+    {{-- Konsolidasi semua link dan style ke dalam satu blok style --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Batak&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            /* Menggunakan font Poppins */
             color: #333;
-            /* Warna teks abu-abu kehitaman */
         }
 
-        .masthead {
-            margin-top: -6rem;
+        /* Masthead tidak lagi memiliki margin negatif di sini, biarkan tema utama menanganinya */
+        /* .masthead {
             position: relative;
-        }
+        } */
 
-        /* Perbaikan: Gaya untuk kanvas dengan garis dan ikon pensil */
         .drawing-canvas {
             width: 100%;
-            height: 400px;
+            height: 400px; /* Penting agar canvas punya tinggi yang jelas */
             background-color: #f8f9fa;
-            /* Latar belakang abu-abu muda */
             border: 1px solid #ddd;
             border-radius: 8px;
-            /* Sudut membulat */
-            touch-action: none;
+            touch-action: none; /* Mencegah default touch behavior seperti scrolling */
             cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.067 15.341l-2.062 2.062-1.938-1.938 2.062-2.062 1.938 1.938zm-3.082 3.082l2.361-2.361 2.938 2.938-2.361 2.361-2.938-2.938zm-1.768 1.768l2.938-2.938 2.361 2.361-2.938 2.938z" fill="%23a84232"/><path d="M14.005 5.518l-1.938 1.938 2.062 2.062 1.938-1.938-2.062-2.062zm-4.329 4.329l-3.328 3.328 1.938 1.938 3.328-3.328-1.938-1.938zm-1.895 1.895l-3.328 3.328 1.938 1.938 3.328-3.328-1.938-1.938z" fill="%23a84232"/><path d="M17.172 13.067l-2.062 2.062-1.938-1.938 2.062-2.062 1.938 1.938zm-3.082 3.082l-2.361 2.361 2.938 2.938-2.361 2.361-2.938-2.938z" fill="%23a84232"/><path d="M22.029 4.808l-2.188-2.188c-1.125-1.125-2.956-1.125-4.081 0l-12.75 12.75c-1.125 1.125-1.125 2.956 0 4.081l2.188 2.188c1.125 1.125 2.956 1.125 4.081 0l12.75-12.75c1.125-1.125 1.125-2.956 0-4.081zm-10.428 13.91l-4.14-4.14-1.938 1.938 4.14 4.14 1.938-1.938zm-2.062-2.062l-1.938 1.938-2.062-2.062 1.938-1.938 2.062 2.062zm-1.938-1.938l-4.14-4.14 1.938-1.938 4.14 4.14-1.938 1.938zm-1.768-1.768l-2.938-2.938 2.361-2.361 2.938 2.938-2.361 2.361zm11.233-11.233l2.938 2.938-2.361 2.361-2.938-2.938 2.361-2.361z" fill="%23a84232"/></svg>') 12 12, auto;
             position: relative;
         }
 
         .drawing-canvas::before {
-            content: "\f244";
-            /* Ikon pensil dari FontAwesome */
+            content: "\f244"; /* Ikon pensil dari FontAwesome */
             font-family: 'Font Awesome 5 Free';
             font-weight: 900;
             position: absolute;
@@ -133,19 +130,16 @@
         }
 
         .target-aksara {
+            font-family: 'Noto Sans Batak', serif;
             font-size: 4rem;
-            /* Ukuran lebih besar */
             font-weight: bold;
             color: #a84232;
-            /* Warna aksara target */
             margin-bottom: 1.5rem;
         }
 
         .progress-bar {
             background-color: #28a745;
-            /* Warna hijau untuk progress bar */
             transition: width 0.5s ease-in-out;
-            /* Animasi halus */
         }
 
         .progress-text {
@@ -176,7 +170,6 @@
 
         .btn-success {
             background-color: #28a745;
-            /* Hijau */
             border-color: #28a745;
         }
 
@@ -187,7 +180,6 @@
 
         .btn-danger {
             background-color: #dc3545;
-            /* Merah */
             border-color: #dc3545;
         }
 
@@ -199,7 +191,6 @@
         .btn-secondary,
         .btn-info {
             background-color: #6c757d;
-            /* Warna netral */
             border-color: #6c757d;
             color: #fff;
         }
@@ -208,9 +199,22 @@
         .btn-info:hover {
             background-color: #5a6268;
             border-color: #545b62;
+            color: #fff;
+        }
+        .btn-outline-secondary {
+            color: #6c757d;
+            background-color: transparent;
+        }
+        .btn-outline-info {
+            color: #17a2b8;
+            background-color: transparent;
+            border-color: #17a2b8;
+        }
+        .btn-outline-info:hover {
+            background-color: #17a2b8;
+            color: #fff;
         }
 
-        /* Tambahan CSS untuk animasi confetti */
         .confetti-animation {
             position: fixed;
             top: 0;
@@ -226,15 +230,15 @@
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-white font-weight-bold">Mulai Belajar Aksara Batak</h1>
+                    <h1 class="text-white font-weight-bold" id="mastheadTitle">Mulai Belajar Aksara Batak</h1>
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">
+                    <p class="text-white-75 mb-5" id="mastheadText">
                         Selamat datang di halaman pembelajaran Aksara Batak!
                         Gunakan fitur-fitur di bawah ini untuk memperdalam pengetahuan Anda.
                     </p>
-                    <a class="btn btn-maroon btn-xl" href="#kamus">Lihat Kamus Aksara</a>
+                    <a class="btn btn-maroon btn-xl" href="#kamus" id="mastheadButton">Lihat Kamus Aksara</a>
                 </div>
             </div>
         </div>
@@ -242,8 +246,8 @@
 
     <section id="kamus" class="page-section bg-white py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Kamus Aksara Batak</h2>
-            <div class="table-responsive">
+            <h2 class="text-center mb-4" id="kamusTitle">Kamus Aksara Batak</h2>
+            <div class="table-responsive" id="kamusTable">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -256,182 +260,28 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>a</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                        </tr>
-                        <tr>
-                            <td>i</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                        </tr>
-                        <tr>
-                            <td>u</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                        </tr>
-                        <tr>
-                            <td>e</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                        </tr>
-                        <tr>
-                            <td>o</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                        </tr>
-                        <tr>
-                            <td>ba</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                        </tr>
-                        <tr>
-                            <td>ca</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                        </tr>
-                        <tr>
-                            <td>da</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                        </tr>
-                        <tr>
-                            <td>ga</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                        </tr>
-                        <tr>
-                            <td>ha</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                        </tr>
-                        <tr>
-                            <td>ja</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                        </tr>
-                        <tr>
-                            <td>ka</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                        </tr>
-                        <tr>
-                            <td>la</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                        </tr>
-                        <tr>
-                            <td>ma</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                        </tr>
-                        <tr>
-                            <td>na</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                        </tr>
-                        <tr>
-                            <td>pa</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                        </tr>
-                        <tr>
-                            <td>ra</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                        </tr>
-                        <tr>
-                            <td>sa</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                        </tr>
-                        <tr>
-                            <td>ta</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                        </tr>
-                        <tr>
-                            <td>wa</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                        </tr>
-                        <tr>
-                            <td>ya</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                        </tr>
-                        <tr>
-                            <td>za</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                        </tr>
+                        <tr> <td>a</td> <td>ᯀ</td> <td>ᯀ</td> <td>ᯀ</td> <td>ᯀ</td> <td>ᯀ</td> </tr>
+                        <tr> <td>i</td> <td>ᯪ</td> <td>ᯪ</td> <td>ᯪ</td> <td>ᯪ</td> <td>ᯪ</td> </tr>
+                        <tr> <td>u</td> <td>ᯮ</td> <td>ᯮ</td> <td>ᯮ</td> <td>ᯮ</td> <td>ᯮ</td> </tr>
+                        <tr> <td>e</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> </tr>
+                        <tr> <td>o</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> </tr>
+                        <tr> <td>ba</td> <td>ᯅ</td> <td>ᯅ</td> <td>ᯅ</td> <td>ᯅ</td> <td>ᯅ</td> </tr>
+                        <tr> <td>ca</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> </tr>
+                        <tr> <td>da</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> </tr>
+                        <tr> <td>ga</td> <td>ᯎ</td> <td>ᯎ</td> <td>ᯎ</td> <td>ᯎ</td> <td>ᯎ</td> </tr>
+                        <tr> <td>ha</td> <td>ᯄ</td> <td>ᯄ</td> <td>ᯄ</td> <td>ᯄ</td> <td>ᯄ</td> </tr>
+                        <tr> <td>ja</td> <td>ᯐ</td> <td>ᯐ</td> <td>ᯐ</td> <td>ᯐ</td> <td>ᯐ</td> </tr>
+                        <tr> <td>ka</td> <td>ᯂ</td> <td>ᯂ</td> <td>ᯂ</td> <td>ᯂ</td> <td>ᯂ</td> </tr>
+                        <tr> <td>la</td> <td>ᯞ</td> <td>ᯞ</td> <td>ᯞ</td> <td>ᯞ</td> <td>ᯞ</td> </tr>
+                        <tr> <td>ma</td> <td>ᯔ</td> <td>ᯔ</td> <td>ᯔ</td> <td>ᯔ</td> <td>ᯔ</td> </tr>
+                        <tr> <td>na</td> <td>ᯉ</td> <td>ᯉ</td> <td>ᯉ</td> <td>ᯉ</td> <td>ᯉ</td> </tr>
+                        <tr> <td>pa</td> <td>ᯇ</td> <td>ᯇ</td> <td>ᯇ</td> <td>ᯇ</td> <td>ᯇ</td> </tr>
+                        <tr> <td>ra</td> <td>ᯒ</td> <td>ᯒ</td> <td>ᯒ</td> <td>ᯒ</td> <td>ᯒ</td> </tr>
+                        <tr> <td>sa</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> </tr>
+                        <tr> <td>ta</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> </tr>
+                        <tr> <td>wa</td> <td>ᯋ</td> <td>ᯋ</td> <td>ᯋ</td> <td>ᯋ</td> <td>ᯋ</td> </tr>
+                        <tr> <td>ya</td> <td>ᯛ</td> <td>ᯛ</td> <td>ᯛ</td> <td>ᯛ</td> <td>ᯛ</td> </tr>
+                        <tr> <td>za</td> <td>ᯗ</td> <td>ᯗ</td> <td>ᯗ</td> <td>ᯗ</td> <td>ᯗ</td> </tr>
                     </tbody>
                 </table>
             </div>
@@ -440,16 +290,16 @@
 
     <section id="transliterasi" class="page-section bg-light py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Transliterasi Latin ke Aksara Batak</h2>
+            <h2 class="text-center mb-4" id="transliterasiTitle">Transliterasi Latin ke Aksara Batak</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card card-custom p-4">
+                    <div class="card card-custom p-4" id="transliterasiCard">
                         <div class="card-body">
                             <label for="latinInput" class="form-label d-flex align-items-center">
                                 <i class="fas fa-keyboard me-2"></i>
                                 Masukkan Teks Latin:
                             </label>
-                            <div class="input-group-custom mb-4">
+                            <div class="input-group-custom mb-4 position-relative">
                                 <input type="text" class="form-control" id="latinInput" placeholder="Contoh: Horas"
                                     oninput="updateTransliterasi()">
                                 <button type="button" class="clear-input" onclick="clearInput()"
@@ -477,11 +327,11 @@
 
     <section id="quiz" class="page-section bg-white py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Kuis Tebak Aksara</h2>
-            <p class="text-center">Uji pengetahuan Anda tentang Aksara Batak!</p>
+            <h2 class="text-center mb-4" id="quizTitle">Kuis Tebak Aksara</h2>
+            <p class="text-center" id="quizSubtitle">Uji pengetahuan Anda tentang Aksara Batak!</p>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card card-custom p-4">
+                    <div class="card card-custom p-4" id="quizCard">
                         <div class="card-body">
                             <div id="soalKuis"></div>
                             <div class="mt-3 text-center">
@@ -498,13 +348,13 @@
 
     <section id="latihan-menulis" class="page-section bg-light py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Belajar Menulis Aksara Batak</h2>
-            <p class="text-center">
+            <h2 class="text-center mb-4" id="writingTitle">Belajar Menulis Aksara Batak</h2>
+            <p class="text-center" id="writingSubtitle">
                 Gunakan mouse atau jari Anda (di perangkat seluler) untuk berlatih menulis aksara.
             </p>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="card card-custom p-4">
+                    <div class="card card-custom p-4" id="writingCard">
                         <div class="card-body">
                             <div class="d-flex justify-content-center mb-3">
                                 <button id="modeGuidedButton" class="btn btn-primary me-2"
@@ -547,12 +397,146 @@
         </div>
     </section>
 
-    @push('scripts')
+    {{-- Script untuk GSAP, Confetti, HTML2Canvas, dan semua fungsionalitas halaman --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const aksaraMap = {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // --- GSAP Animations ---
+            // Animasi Masthead (Saat halaman dimuat pertama kali)
+            gsap.fromTo("#mastheadTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: ".masthead",
+                    start: "top 80%", // Mulai animasi saat bagian atas masthead masuk 80% dari viewport
+                    markers: false, // Set false untuk produksi
+                    once: true // Animasi hanya berjalan sekali
+                }
+            });
+            gsap.fromTo("#mastheadText", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1, delay: 0.5,
+                scrollTrigger: {
+                    trigger: ".masthead",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#mastheadButton", { opacity: 0, scale: 0 }, {
+                opacity: 1, scale: 1, duration: 0.75, delay: 1, ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: ".masthead",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+            // Animasi Kamus
+            gsap.fromTo("#kamusTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#kamus",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#kamusTable", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 1, ease: "power3.out", delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#kamusTable",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+            // Animasi Transliterasi
+            gsap.fromTo("#transliterasiTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#transliterasi",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#transliterasiCard", { opacity: 0, x: -100 }, {
+                opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#transliterasiCard",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+            // Animasi Kuis
+            gsap.fromTo("#quizTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#quiz",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#quizSubtitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8, delay: 0.2,
+                scrollTrigger: {
+                    trigger: "#quiz",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#quizCard", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)", delay: 0.4,
+                scrollTrigger: {
+                    trigger: "#quizCard",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+            // Animasi Latihan Menulis
+            gsap.fromTo("#writingTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#latihan-menulis",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#writingSubtitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8, delay: 0.2,
+                scrollTrigger: {
+                    trigger: "#latihan-menulis",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#writingCard", { opacity: 0, x: 100 }, {
+                opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.4,
+                scrollTrigger: {
+                    trigger: "#writingCard",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+
+            // --- Logika Asli Fitur-fitur (Tidak Diubah) ---
+            const aksaraMap = {
                     'a_independent': 'ᯀ',
                     'i_independent': 'ᯤ',
                     'u_independent': 'ᯥ',
@@ -1155,5 +1139,4 @@
 
             });
         </script>
-    @endpush
 @endsection
