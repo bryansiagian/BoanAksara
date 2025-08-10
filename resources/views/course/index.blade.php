@@ -1150,7 +1150,6 @@
             });
         </script>
     @endpush
-@endsection
 <style>
     /* Animasi khusus untuk kuis */
     .card {
