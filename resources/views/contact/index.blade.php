@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'Sejarah Aksara Batak')
+@section('title', 'Kontak Kami') {{-- Mengubah title agar lebih sesuai dengan halaman kontak --}}
 
 @section('content')
 
@@ -8,31 +8,31 @@
 <header class="masthead">
     <div class="container px-4 px-lg-5 h-100">
         <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-            <div class="col-lg-10 align-self-end" data-aos="fade-down">
-                <h1 class="text-white font-weight-bold">Kontak Kami</h1>
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-white font-weight-bold" id="contactMastheadTitle">Kontak Kami</h1>
                 <hr class="divider" />
             </div>
-            <div class="col-lg-8 align-self-baseline" data-aos="fade-up" data-aos-delay="100">
-                <p class="text-white-75 mb-5">
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5" id="contactMastheadText">
                     Mari Terhubung dan Jaga Warisan Batak Bersama!
                 </p>
-                <a class="btn btn-maroon btn-xl" href="#kontak">Hubungi Kami</a>
+                <a class="btn btn-maroon btn-xl" href="#kontak" id="contactMastheadButton">Hubungi Kami</a>
             </div>
         </div>
     </div>
 </header>
 
 <!-- Kontak -->
-<section id="kontak" class="py-5 bg-light">
-    <div class="container" data-aos="fade-up">
+<section id="kontak" class="py-5 bg-light page-section"> {{-- Menambahkan class page-section untuk animasi umum --}}
+    <div class="container">
         <div class="text-center mb-5">
-            <h2 class="fw-bold">Hubungi Kami</h2>
-            <p class="text-muted">Horas! Mari kita diskusikan Aksara Batak bersama - apa yang kami tahu akan kami bagi dengan senang hati!</p>
+            <h2 class="fw-bold" id="contactSectionTitle">Hubungi Kami</h2>
+            <p class="text-muted" id="contactSectionSubtitle">Horas! Mari kita diskusikan Aksara Batak bersama - apa yang kami tahu akan kami bagi dengan senang hati!</p>
         </div>
 
         <div class="row g-5">
             <!-- Info Kontak -->
-            <div class="col-md-6" data-aos="fade-right">
+            <div class="col-md-6" id="contactInfoCard">
                 <div class="card shadow rounded h-100 d-flex flex-column justify-content-between">
                     <div class="card-body p-4">
                         <h5 class="fw-bold mb-3">Informasi Kontak</h5>
@@ -59,7 +59,7 @@
             </div>
 
             <!-- Google Maps -->
-            <div class="col-md-6" data-aos="fade-left">
+            <div class="col-md-6" id="googleMapsCard">
                 <div class="card shadow rounded h-100">
                     <div class="card-body p-0">
                         <iframe
@@ -76,5 +76,62 @@
         </div>
     </div>
 </section>
+
+{{-- GSAP and ScrollTrigger CDN --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- Animasi Masthead (Saat halaman dimuat) ---
+        gsap.fromTo("#contactMastheadTitle", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
+        gsap.fromTo("#contactMastheadText", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, delay: 0.5 });
+        gsap.fromTo("#contactMastheadButton", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.75, delay: 1, ease: "back.out(1.7)" });
+
+        // --- Animasi Bagian "Kontak Kami" ---
+        gsap.fromTo("#contactSectionTitle", { opacity: 0, y: 50 }, {
+            opacity: 1, y: 0, duration: 0.8,
+            scrollTrigger: {
+                trigger: "#kontak",
+                start: "top 80%",
+                markers: false,
+                once: true
+            }
+        });
+        gsap.fromTo("#contactSectionSubtitle", { opacity: 0, y: 50 }, {
+            opacity: 1, y: 0, duration: 0.8, delay: 0.2,
+            scrollTrigger: {
+                trigger: "#kontak",
+                start: "top 80%",
+                markers: false,
+                once: true
+            }
+        });
+
+        // Animasi Kartu Info Kontak (muncul dari kiri)
+        gsap.fromTo("#contactInfoCard", { opacity: 0, x: -100 }, {
+            opacity: 1, x: 0, duration: 1, ease: "power3.out",
+            scrollTrigger: {
+                trigger: "#contactInfoCard",
+                start: "top 80%",
+                markers: false,
+                once: true
+            }
+        });
+
+        // Animasi Google Maps Card (muncul dari kanan)
+        gsap.fromTo("#googleMapsCard", { opacity: 0, x: 100 }, {
+            opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.3, // Sedikit delay agar ada efek staggered
+            scrollTrigger: {
+                trigger: "#googleMapsCard",
+                start: "top 80%",
+                markers: false,
+                once: true
+            }
+        });
+    });
+</script>
 
 @endsection

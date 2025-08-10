@@ -4,35 +4,34 @@
 
 @section('content')
 
-    <!-- Masthead (Header) -->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
-                    <h1 class="text-white font-weight-bold">Jejak Panjang Aksara Batak</h1>
-                    <hr class="divider" />
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">
-                        Telusuri sejarah aksara Batak, dari asal-usul hingga perkembangannya di era modern.
-                        Kenali bagaimana aksara ini menjadi bagian tak terpisahkan dari identitas budaya Batak.
-                    </p>
-                    <a class="btn btn-maroon btn-xl" href="#asalusul">Mulai Menjelajah</a>
-                </div>
+<!-- Masthead (Header) -->
+<header class="masthead">
+    <div class="container px-4 px-lg-5 h-100">
+        <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-white font-weight-bold" id="historyTitle">Jejak Panjang Aksara Batak</h1>
+                <hr class="divider" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 mb-5" id="historyText">
+                    Telusuri sejarah aksara Batak, dari asal-usul hingga perkembangannya di era modern.
+                    Kenali bagaimana aksara ini menjadi bagian tak terpisahkan dari identitas budaya Batak.
+                </p>
+                <a class="btn btn-maroon btn-xl" href="#asalusul" id="historyButton">Mulai Menjelajah</a>
             </div>
         </div>
     </div>
 </header>
 
-    <!-- Masa Awal -->
+<!-- Masa Awal -->
 <section class="page-section bg-light py-5" id="asalusul" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-lg-6 order-lg-2">
+            <div class="col-lg-6 order-lg-2 history-image">
                 <img class="img-fluid rounded mb-4 mb-lg-0 animated-image" src="{{ asset('assets/img/a13.png') }}"
                     alt="Ilustrasi Masa Awal Aksara Batak" />
             </div>
-            <div class="col-lg-6 order-lg-1">
+            <div class="col-lg-6 order-lg-1 history-content">
                 <div class="p-3">
                     <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Awal (Sebelum Abad ke-13)</span>
                     </h2>
@@ -54,11 +53,11 @@
 <section class="page-section bg-white py-5" id="perkembangan">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 history-image">
                 <img class="img-fluid rounded mb-4 mb-lg-0 animated-image" src="{{ asset('assets/img/a17.png') }}"
                     alt="Perkembangan Aksara Batak" />
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 history-content">
                 <div class="p-3">
                     <h2 class="text-center text-lg-start"><span style="color:#7B241C">Perkembangan di Masyarakat Batak
                             (Abad ke-13 – 16)</span></h2>
@@ -88,11 +87,11 @@
     style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-lg-6 order-lg-2">
+            <div class="col-lg-6 order-lg-2 history-image">
                 <img class="img-fluid rounded mb-4 mb-lg-0 animated-image" src="{{ asset('assets/img/hukumadat.png') }}"
                     alt="Masa Keemasan Aksara Batak" />
             </div>
-            <div class="col-lg-6 order-lg-1">
+            <div class="col-lg-6 order-lg-1 history-content">
                 <div class="p-3">
                     <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Keemasan (Abad ke-17 – 19)</span>
                     </h2>
@@ -120,10 +119,10 @@
 <section class="page-section bg-white py-5" id="masa-kemunduran">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-lg-6">
+            <div class="col-lg-6 history-image">
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a19.png') }}" alt="Masa Kemunduran Aksara Batak" />
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-6 history-content">
                 <div class="p-3">
                     <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Kemunduran (Akhir Abad ke-19 –
                             Pertengahan Abad ke-20)</span></h2>
@@ -146,10 +145,10 @@
     style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
-            <div class="col-lg-6 order-lg-2">
+            <div class="col-lg-6 order-lg-2 history-image">
                 <img class="img-fluid rounded mb-4 mb-lg-0" src="{{ asset('assets/img/a20.png') }}" alt="Pelestarian Modern Aksara Batak" />
             </div>
-            <div class="col-lg-6 order-lg-1">
+            <div class="col-lg-6 order-lg-1 history-content">
                 <div class="p-3">
                     <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Pelestarian dan Kebangkitan
                             Kembali (Akhir Abad ke-20 – Sekarang)</span></h2>
@@ -173,5 +172,93 @@
         </div>
     </div>
 </section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+<script>
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Animasi Masthead
+    gsap.fromTo("#historyTitle", { opacity: 0, y: 50 }, {
+        opacity: 1, y: 0, duration: 1,
+        scrollTrigger: {
+            trigger: "#historyTitle",
+            start: "top 80%",
+            end: "bottom 20%",
+            markers: false,
+            scrub: false,
+            once: true
+        }
+    });
+
+    gsap.fromTo("#historyText", { opacity: 0, y: 50 }, {
+        opacity: 1, y: 0, duration: 1, delay: 0.5,
+        scrollTrigger: {
+            trigger: "#historyText",
+            start: "top 80%",
+            end: "bottom 20%",
+            markers: false,
+            scrub: false,
+            once: true
+        }
+    });
+
+    gsap.fromTo("#historyButton", { opacity: 0, scale: 0 }, {
+        opacity: 1, scale: 1, duration: 0.75, delay: 1, ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: "#historyButton",
+            start: "top 80%",
+            end: "bottom 20%",
+            markers: false,
+            scrub: false,
+            once: true
+        }
+    });
+
+    // Animasi setiap section
+    gsap.utils.toArray(".page-section").forEach(section => {
+        gsap.fromTo(section, { opacity: 0, y: 50 }, {
+            opacity: 1, y: 0, duration: 0.75,
+            scrollTrigger: {
+                trigger: section,
+                start: "top 80%",
+                end: "bottom 20%",
+                markers: false,
+                scrub: false,
+                once: true
+            }
+        });
+    });
+
+    // Animasi gambar di setiap section
+    gsap.utils.toArray(".history-image").forEach(image => {
+        gsap.fromTo(image, { opacity: 0, x: -50 }, {
+            opacity: 1, x: 0, duration: 0.75,
+            scrollTrigger: {
+                trigger: image,
+                start: "top 80%",
+                end: "bottom 20%",
+                markers: false,
+                scrub: false,
+                once: true
+            }
+        });
+    });
+
+    // Animasi konten di setiap section
+    gsap.utils.toArray(".history-content").forEach(content => {
+        gsap.fromTo(content, { opacity: 0, x: 50 }, {
+            opacity: 1, x: 0, duration: 0.75,
+            scrollTrigger: {
+                trigger: content,
+                start: "top 80%",
+                end: "bottom 20%",
+                markers: false,
+                scrub: false,
+                once: true
+            }
+        });
+    });
+</script>
 
 @endsection
