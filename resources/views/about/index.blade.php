@@ -22,16 +22,16 @@
     </div>
 </header>
 
-<section id="about" style="background: linear-gradient(to bottom, #ffffff, #fff); padding: 60px 0;">
+<section id="about" class="about-main-section">
   <div class="container">
 
     <!-- Mengenal Aksara Batak -->
-          <section class="page-section py-5" id="mengenal-aksara" style="background: linear-gradient(to right, #ffffff); min-height: 100vh; background-attachment: local;">
+    <section class="page-section py-5" id="mengenal-aksara">
       <div class="container px-4 px-lg-5 h-100">
          <div class="row gx-5 gy-4 align-items-center h-100">
                 <!-- Kolom Kiri: Teks -->
                 <div class="col-lg-6 order-lg-1" id="mengenalAksaraTextContent">
-                  <h2 class="text-center text-lg-start">
+                  <h2 class="text-center text-lg-start mengenal-aksara-title">
                     <span style="color:#7B241C">Mengenal Aksara Batak</span>
                   </h2>
                   <hr class="divider my-3" />
@@ -44,7 +44,7 @@
                   <p class="text-muted">
                     Aksara Batak tetap dipelajari dan dilestarikan sebagai bagian tak terpisahkan dari budaya Batak, memperkuat identitas lokal, khususnya bagi generasi muda.
                   </p>
-                  <div id="mengenalAksaraHighlight" style="background-color: #7B241C; color: #ffffff; padding: 1rem 1.25rem; border-radius: 0.5rem; box-shadow: 0 2px 6px rgba(0,0,0,0.1);" class="mt-4">
+                  <div id="mengenalAksaraHighlight" class="mt-4 mengenal-aksara-highlight-box">
                     Aksara Batak dahulu ditulis di atas bambu, kulit kayu, bahkan tulang!
                   </div>
                 </div>
@@ -103,51 +103,12 @@
                 updateSlider();
               }, 5000);
             </script>
-
-            <style>
-              .slider-container {
-                position: relative;
-                display: flex;
-                align-items: center;
-                justify-content: center; /* Geser ke kanan */
-                width: 100%;
-                background: transparent;
-              }
-              .slider-image {
-                width: 100%;
-                max-width: 450px; /* Semua foto ukuran sama */
-                height: 400px;     /* Tinggi seragam */
-                object-fit: contain; /* Potong proporsional */
-                border-radius: 0px;
-                box-shadow: none;
-                transition: opacity 0.3s ease;
-                background: none;
-              }
-              .dots-container {
-                display: flex;
-                gap: 8px;
-                justify-content: center;
-                align-items: center;
-                margin-top: 10px;
-              }
-              .dot {
-                width: 12px;
-                height: 12px;
-                background-color: #ccc;
-                border-radius: 50%;
-                cursor: pointer;
-                transition: background-color 0.3s ease;
-              }
-              .dot.active {
-                background-color: #7B241C;
-              }
-            </style>
           </section>
 
     <!-- Pelestarian di Masa Kini -->
     <div class="row align-items-center flex-row-reverse py-5" id="pelestarianMasaKini">
       <div class="col-lg-6" id="pelestarianTextContent">
-        <h2 style="color:#7B241C;">Pelestarian di Masa Kini</h2>
+        <h2 class="pelestarian-title">Pelestarian di Masa Kini</h2>
         <p>
           Di era modern, penggunaan Aksara Batak mulai berkurang karena dominasi huruf latin.
           Namun, berbagai upaya pelestarian terus dilakukan oleh komunitas budaya, akademisi, dan pemerintah daerah.
@@ -160,7 +121,7 @@
         </p>
       </div>
       <div class="col-lg-6 text-center" id="pelestarianImageContainer">
-        <img src="{{ asset('assets/img/museum.jpg') }}" width="450" height="auto" alt="Pelestarian Aksara Batak" class="img-fluid rounded shadow">
+        <img src="{{ asset('assets/img/museum.jpg') }}" alt="Pelestarian Aksara Batak" class="img-fluid rounded shadow pelestarian-image">
       </div>
     </div>
 
@@ -172,54 +133,6 @@
   <div class="container">
     <h2 class="text-center mb-4" id="galeriTitle">Galeri Aksara Batak</h2>
     <hr class="divider mb-5" />
-
-    <style>
-      .galeri-card .card {
-        border: none;
-        border-radius: 0.75rem;
-        overflow: hidden;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-      }
-
-      .galeri-card:hover .card {
-        transform: translateY(-5px);
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-      }
-
-      .galeri-card .card-img-top {
-        height: 220px;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-      }
-
-      .galeri-card:hover .card-img-top {
-        transform: scale(1.03);
-      }
-
-      .lihat-detail-btn {
-        position: absolute;
-        bottom: 10px;
-        right: 10px;
-        font-size: 0.75rem;
-        padding: 4px 8px;
-      }
-
-      .card-body p {
-        font-size: 0.9rem;
-        font-weight: 500;
-        color: #333;
-      }
-
-      @media (max-width: 576px) {
-        .galeri-card .card-img-top {
-          height: 180px;
-        }
-      }
-    </style>
 
     @php
     $galeri = [
@@ -280,9 +193,9 @@
         <p class="text-muted">Pelajari sejarah dan perkembangan Aksara Batak melalui video interaktif berikut.</p>
       </div>
       <div class="col-lg-6" id="videoEdukasiEmbed">
-        <div class="ratio ratio-16x9 rounded"> <!-- Menambahkan class 'rounded' di sini -->
+        <div class="ratio ratio-16x9 rounded">
           <iframe
-            src="https://www.youtube.com/embed/RhegSv9joMM?autoplay=1&mute=1" <!-- Menambahkan parameter autoplay dan mute -->
+            src="https://www.youtube.com/embed/RhegSv9joMM?autoplay=1&mute=1"
             title="Video Aksara Batak"
             allowfullscreen
             ></iframe>
@@ -292,8 +205,195 @@
   </div>
 </section>
 
+<!-- Custom CSS untuk Responsivitas dan Gaya -->
+<style>
+    /* Styling umum */
+    .masthead {
+        background-image: url('{{ asset('assets/img/masthead-bg.jpg') }}'); /* Ganti dengan path gambar yang relevan jika ada */
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        position: relative;
+    }
 
-<!-- Lightbox2 JS dan CSS (pastikan ini diatur di layouts/app.blade.php jika digunakan secara global) -->
+    .about-main-section {
+      background: linear-gradient(to bottom, #ffffff, #fff);
+      padding: 60px 0;
+    }
+
+    /* Mengenal Aksara Batak Section */
+    #mengenal-aksara {
+        background: linear-gradient(to right, #ffffff);
+        /* Hapus min-height: 100vh; agar section menyesuaikan konten */
+        background-attachment: local;
+    }
+
+    .mengenal-aksara-highlight-box {
+      background-color: #7B241C;
+      color: #ffffff;
+      padding: 1rem 1.25rem;
+      border-radius: 0.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .slider-container {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        background: transparent;
+        /* Gunakan padding-bottom untuk rasio aspek jika slider image memiliki ukuran tetap */
+        padding-bottom: 75%; /* Contoh 4:3 ratio. Sesuaikan dengan rasio gambar Anda */
+        overflow: hidden; /* Penting untuk gambar di dalamnya */
+    }
+    .slider-image {
+        position: absolute; /* Posisikan absolut di dalam container */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Isi penuh container */
+        max-width: 450px; /* Pertahankan max-width untuk desktop */
+        object-fit: contain;
+        border-radius: 0px;
+        box-shadow: none;
+        transition: opacity 0.3s ease;
+        background: none;
+    }
+    .dots-container {
+        display: flex;
+        gap: 8px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        position: absolute; /* Agar dot tidak menggeser konten saat slider container padding-bottom */
+        bottom: -20px; /* Atur posisi dot di bawah slider */
+        width: 100%; /* Lebar penuh */
+    }
+    .dot {
+        width: 12px;
+        height: 12px;
+        background-color: #ccc;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .dot.active {
+        background-color: #7B241C;
+    }
+
+    /* Pelestarian di Masa Kini Section */
+    .pelestarian-image {
+        /* Hapus width/height dari HTML, biarkan img-fluid yang mengatur */
+        max-width: 100%;
+        height: auto;
+    }
+    .pelestarian-title {
+        color: #7B241C;
+    }
+
+    /* Galeri Aksara Batak Section */
+    .galeri-card .card {
+        border: none;
+        border-radius: 0.75rem;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .galeri-card:hover .card {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+    }
+    .galeri-card .card-img-top {
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+    .galeri-card:hover .card-img-top {
+        transform: scale(1.03);
+    }
+    .card-body p {
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #333;
+    }
+
+    /* ==================================== */
+    /* Media Queries untuk Responsivitas */
+    /* ==================================== */
+
+    @media (max-width: 991.98px) { /* Medium devices (tablets) and down */
+        /* Mengenal Aksara Batak */
+        #mengenal-aksara .container .row {
+            flex-direction: column-reverse; /* Balik urutan: Slider di atas, Teks di bawah */
+        }
+        #mengenalAksaraTextContent,
+        #mengenalAksaraSlider {
+            text-align: center; /* Pusatkan teks dan konten */
+        }
+        .mengenal-aksara-title,
+        .mengenal-aksara-highlight-box {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 90%; /* Sesuaikan lebar */
+        }
+        .slider-container {
+            padding-bottom: 90%; /* Sesuaikan rasio aspek untuk mobile jika perlu, lebih tinggi */
+            margin-bottom: 2rem; /* Beri jarak setelah slider */
+        }
+        .dots-container {
+            bottom: -30px; /* Sesuaikan posisi dot di mobile */
+        }
+
+        /* Pelestarian di Masa Kini */
+        #pelestarianMasaKini .col-lg-6 {
+            text-align: center; /* Pusatkan teks dan gambar */
+        }
+        #pelestarianImageContainer {
+            margin-bottom: 1.5rem; /* Tambah margin di bawah gambar saat menumpuk */
+        }
+
+        /* Video Edukasi */
+        #videoEdukasiTextContent,
+        #videoEdukasiEmbed {
+            text-align: center; /* Pusatkan teks dan video */
+        }
+    }
+
+    @media (max-width: 767.98px) { /* Small devices (phones) and down */
+        .page-section {
+            padding: 30px 0 !important; /* Kurangi padding section */
+        }
+        .container {
+            padding: 0 15px !important; /* Kurangi padding container */
+        }
+        .mengenal-aksara-title, .pelestarian-title, #galeriTitle, #videoEdukasiTextContent h2 {
+            font-size: 1.8rem; /* Kurangi ukuran font judul */
+        }
+        .text-muted {
+            font-size: 0.9rem; /* Kurangi ukuran font paragraf */
+        }
+        .galeri-card .card-img-top {
+            height: 180px; /* Sesuai dengan media query yang sudah ada */
+        }
+        .slider-container {
+            padding-bottom: 100%; /* Mungkin 1:1 di ponsel kecil */
+        }
+    }
+
+    @media (max-width: 575.98px) { /* Extra small devices (portrait phones) */
+        .galeri-card .card-img-top {
+            height: 160px; /* Lebih kecil lagi untuk ponsel sangat kecil */
+        }
+    }
+
+</style>
+
+{{-- Lightbox2 JS dan CSS (pastikan ini diatur di layouts/app.blade.php jika digunakan secara global) --}}
 <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 
@@ -305,30 +405,56 @@
     document.addEventListener('DOMContentLoaded', function() {
         gsap.registerPlugin(ScrollTrigger);
 
+        // Define a breakpoint for animations
+        const LG_BREAKPOINT = 991.98; // Matches Bootstrap's 'lg' breakpoint
+
         // --- Animasi Masthead (Saat halaman dimuat) ---
         gsap.fromTo("#aboutMastheadTitle", { opacity: 0, y: -50 }, { opacity: 1, y: 0, duration: 1 });
         gsap.fromTo("#aboutMastheadText", { opacity: 0, y: 50 }, { opacity: 1, y: 0, duration: 1, delay: 0.5 });
         gsap.fromTo("#aboutMastheadButton", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.75, delay: 1, ease: "back.out(1.7)" });
 
         // --- Animasi "Mengenal Aksara Batak" ---
-        gsap.fromTo("#mengenalAksaraTextContent", { opacity: 0, x: -100 }, {
-            opacity: 1, x: 0, duration: 1,
-            scrollTrigger: {
-                trigger: "#mengenal-aksara",
-                start: "top 80%", // Animasi dimulai saat 80% dari section terlihat
-                markers: false,
-                once: true // Animasi hanya terjadi sekali
-            }
-        });
-        gsap.fromTo("#mengenalAksaraSlider", { opacity: 0, x: 100 }, {
-            opacity: 1, x: 0, duration: 1, delay: 0.3,
-            scrollTrigger: {
-                trigger: "#mengenal-aksara",
-                start: "top 80%",
-                markers: false,
-                once: true
-            }
-        });
+        if (window.innerWidth > LG_BREAKPOINT) {
+            gsap.fromTo("#mengenalAksaraTextContent", { opacity: 0, x: -100 }, {
+                opacity: 1, x: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: "#mengenal-aksara",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#mengenalAksaraSlider", { opacity: 0, x: 100 }, {
+                opacity: 1, x: 0, duration: 1, delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#mengenal-aksara",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+        } else {
+            // Animasi vertikal untuk mobile agar tidak bertabrakan dengan layout column stack
+            gsap.fromTo("#mengenalAksaraTextContent", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: "#mengenal-aksara",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#mengenalAksaraSlider", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1, delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#mengenal-aksara",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+        }
+
         gsap.fromTo("#mengenalAksaraHighlight", { opacity: 0, y: 50 }, {
             opacity: 1, y: 0, duration: 0.8, delay: 0.6,
             scrollTrigger: {
@@ -340,24 +466,46 @@
         });
 
         // --- Animasi "Pelestarian di Masa Kini" ---
-        gsap.fromTo("#pelestarianTextContent", { opacity: 0, x: 100 }, {
-            opacity: 1, x: 0, duration: 1,
-            scrollTrigger: {
-                trigger: "#pelestarianMasaKini",
-                start: "top 80%",
-                markers: false,
-                once: true
-            }
-        });
-        gsap.fromTo("#pelestarianImageContainer", { opacity: 0, x: -100 }, {
-            opacity: 1, x: 0, duration: 1, delay: 0.3,
-            scrollTrigger: {
-                trigger: "#pelestarianMasaKini",
-                start: "top 80%",
-                markers: false,
-                once: true
-            }
-        });
+        if (window.innerWidth > LG_BREAKPOINT) {
+            gsap.fromTo("#pelestarianTextContent", { opacity: 0, x: 100 }, {
+                opacity: 1, x: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: "#pelestarianMasaKini",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#pelestarianImageContainer", { opacity: 0, x: -100 }, {
+                opacity: 1, x: 0, duration: 1, delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#pelestarianMasaKini",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+        } else {
+            gsap.fromTo("#pelestarianTextContent", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: "#pelestarianMasaKini",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#pelestarianImageContainer", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1, delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#pelestarianMasaKini",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+        }
+
 
         // --- Animasi Galeri Aksara Batak ---
         gsap.fromTo("#galeriTitle", { opacity: 0, y: -50 }, {
@@ -371,7 +519,7 @@
         });
         gsap.utils.toArray(".galeri-card").forEach((card, index) => {
             gsap.fromTo(card, { opacity: 0, scale: 0.8 }, {
-                opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)", delay: index * 0.1, // Stagger effect
+                opacity: 1, scale: 1, duration: 0.7, ease: "back.out(1.7)", delay: index * 0.1,
                 scrollTrigger: {
                     trigger: card,
                     start: "top 85%",
@@ -382,24 +530,45 @@
         });
 
         // --- Animasi Video Edukasi Aksara Batak ---
-        gsap.fromTo("#videoEdukasiTextContent", { opacity: 0, x: -100 }, {
-            opacity: 1, x: 0, duration: 1,
-            scrollTrigger: {
-                trigger: "#video-edukasi",
-                start: "top 80%",
-                markers: false,
-                once: true
-            }
-        });
-        gsap.fromTo("#videoEdukasiEmbed", { opacity: 0, x: 100 }, {
-            opacity: 1, x: 0, duration: 1, delay: 0.3,
-            scrollTrigger: {
-                trigger: "#video-edukasi",
-                start: "top 80%",
-                markers: false,
-                once: true
-            }
-        });
+        if (window.innerWidth > LG_BREAKPOINT) {
+            gsap.fromTo("#videoEdukasiTextContent", { opacity: 0, x: -100 }, {
+                opacity: 1, x: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: "#video-edukasi",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#videoEdukasiEmbed", { opacity: 0, x: 100 }, {
+                opacity: 1, x: 0, duration: 1, delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#video-edukasi",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+        } else {
+            gsap.fromTo("#videoEdukasiTextContent", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: "#video-edukasi",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#videoEdukasiEmbed", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1, delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#video-edukasi",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+        }
     });
 </script>
 

@@ -24,7 +24,7 @@
 </header>
 
 <!-- Masa Awal -->
-<section class="page-section bg-light py-5" id="asalusul" style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+<section class="page-section history-section-bg-light py-5" id="asalusul">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2 history-image">
@@ -33,7 +33,7 @@
             </div>
             <div class="col-lg-6 order-lg-1 history-content">
                 <div class="p-3">
-                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Awal (Sebelum Abad ke-13)</span>
+                    <h2 class="text-center text-lg-start history-section-title"><span style="color:#7B241C">Masa Awal (Sebelum Abad ke-13)</span>
                     </h2>
                     <hr class="divider my-4" />
                     <p class="text-muted">
@@ -49,8 +49,7 @@
 </section>
 
 <!-- Perkembangan di Masyarakat Batak -->
-
-<section class="page-section bg-white py-5" id="perkembangan">
+<section class="page-section history-section-bg-white py-5" id="perkembangan">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 history-image">
@@ -59,7 +58,7 @@
             </div>
             <div class="col-lg-6 history-content">
                 <div class="p-3">
-                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Perkembangan di Masyarakat Batak
+                    <h2 class="text-center text-lg-start history-section-title"><span style="color:#7B241C">Perkembangan di Masyarakat Batak
                             (Abad ke-13 – 16)</span></h2>
                     <hr class="divider my-4" />
                     <p class="text-muted">
@@ -82,9 +81,7 @@
 </section>
 
 <!-- Masa Keemasan -->
-
-<section class="page-section bg-light py-5" id="masa-keemasan"
-    style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+<section class="page-section history-section-bg-light py-5" id="masa-keemasan">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2 history-image">
@@ -93,7 +90,7 @@
             </div>
             <div class="col-lg-6 order-lg-1 history-content">
                 <div class="p-3">
-                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Keemasan (Abad ke-17 – 19)</span>
+                    <h2 class="text-center text-lg-start history-section-title"><span style="color:#7B241C">Masa Keemasan (Abad ke-17 – 19)</span>
                     </h2>
                     <hr class="divider my-4" />
                     <p class="text-muted">
@@ -115,8 +112,7 @@
 </section>
 
 <!-- Masa Kemunduran -->
-
-<section class="page-section bg-white py-5" id="masa-kemunduran">
+<section class="page-section history-section-bg-white py-5" id="masa-kemunduran">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 history-image">
@@ -124,7 +120,7 @@
             </div>
             <div class="col-lg-6 history-content">
                 <div class="p-3">
-                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Kemunduran (Akhir Abad ke-19 –
+                    <h2 class="text-center text-lg-start history-section-title"><span style="color:#7B241C">Masa Kemunduran (Akhir Abad ke-19 –
                             Pertengahan Abad ke-20)</span></h2>
                     <hr class="divider my-4" />
                     <p class="text-muted">
@@ -140,9 +136,7 @@
 </section>
 
 <!-- Masa Pelestarian dan Kebangkitan Kembali -->
-
-<section class="page-section bg-light py-5" id="pelestarian-modern"
-    style="background: linear-gradient(to right, #f3f3f3, #ffffff);">
+<section class="page-section history-section-bg-light py-5" id="pelestarian-modern">
     <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 align-items-center">
             <div class="col-lg-6 order-lg-2 history-image">
@@ -150,7 +144,7 @@
             </div>
             <div class="col-lg-6 order-lg-1 history-content">
                 <div class="p-3">
-                    <h2 class="text-center text-lg-start"><span style="color:#7B241C">Masa Pelestarian dan Kebangkitan
+                    <h2 class="text-center text-lg-start history-section-title"><span style="color:#7B241C">Masa Pelestarian dan Kebangkitan
                             Kembali (Akhir Abad ke-20 – Sekarang)</span></h2>
                     <hr class="divider my-4" />
                     <p class="text-muted">
@@ -173,12 +167,99 @@
     </div>
 </section>
 
+<!-- Custom CSS untuk Responsivitas dan Gaya -->
+<style>
+    /* Styling umum untuk Masthead */
+    .masthead {
+        background-image: url('{{ asset('assets/img/masthead-bg-history.jpg') }}'); /* Ganti dengan path gambar yang relevan jika ada */
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        position: relative;
+    }
+
+    /* Styling untuk Section Sejarah */
+    .history-section-bg-light {
+        background: linear-gradient(to right, #f3f3f3, #ffffff);
+    }
+    .history-section-bg-white {
+        background: white; /* Konsisten dengan nama class */
+    }
+
+    .history-section-title {
+        color: #7B241C;
+    }
+
+    /* ==================================== */
+    /* Media Queries untuk Responsivitas */
+    /* ==================================== */
+
+    @media (max-width: 991.98px) { /* Untuk tablet dan mobile (breakpoint Bootstrap 'lg' ke bawah) */
+        /* Mengatur agar teks dan gambar di tengah saat menumpuk */
+        .page-section .container .row .col-lg-6 {
+            text-align: center;
+        }
+
+        /* Menyesuaikan margin antara gambar dan teks saat menumpuk */
+        .history-image {
+            margin-bottom: 1.5rem; /* Tambah margin bawah untuk gambar */
+        }
+        .history-content {
+            margin-top: 1.5rem; /* Tambah margin atas untuk konten teks */
+        }
+        .history-image img {
+            max-width: 80%; /* Sesuaikan ukuran gambar pada mobile agar tidak terlalu besar */
+            height: auto;
+            margin-left: auto;
+            margin-right: auto;
+            display: block; /* Pastikan gambar menjadi blok untuk centering */
+        }
+
+        /* Pastikan list item tetap rata kiri */
+        .history-content ul {
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: fit-content; /* Untuk memusatkan list */
+        }
+    }
+
+    @media (max-width: 767.98px) { /* Untuk mobile (breakpoint Bootstrap 'md' ke bawah) */
+        .page-section {
+            padding: 30px 0 !important; /* Kurangi padding section pada mobile */
+        }
+        .container {
+            padding: 0 15px !important; /* Kurangi padding container pada mobile */
+        }
+        .history-section-title {
+            font-size: 1.8rem; /* Kurangi ukuran font judul */
+        }
+        .text-muted {
+            font-size: 0.9rem; /* Kurangi ukuran font paragraf */
+        }
+    }
+
+    @media (max-width: 575.98px) { /* Untuk mobile sangat kecil (breakpoint Bootstrap 'sm' ke bawah) */
+        .history-image img {
+            max-width: 90%; /* Sesuaikan lagi untuk ponsel sangat kecil */
+        }
+        .history-content ul {
+            padding-left: 20px; /* Sesuaikan padding list agar tidak terlalu ke kiri */
+        }
+    }
+
+</style>
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
 <script>
     gsap.registerPlugin(ScrollTrigger);
 
-    // Animasi Masthead
+    // Definisi breakpoint yang sama dengan CSS Bootstrap 'lg'
+    const LG_BREAKPOINT = 991.98;
+
+    // Animasi Masthead (Tidak berubah karena ini biasanya fixed layout)
     gsap.fromTo("#historyTitle", { opacity: 0, y: 50 }, {
         opacity: 1, y: 0, duration: 1,
         scrollTrigger: {
@@ -215,7 +296,7 @@
         }
     });
 
-    // Animasi setiap section
+    // Animasi setiap section (tetap vertikal karena section secara keseluruhan akan selalu full-width)
     gsap.utils.toArray(".page-section").forEach(section => {
         gsap.fromTo(section, { opacity: 0, y: 50 }, {
             opacity: 1, y: 0, duration: 0.75,
@@ -230,34 +311,65 @@
         });
     });
 
-    // Animasi gambar di setiap section
+    // Animasi gambar dan konten di setiap section - Adaptif berdasarkan ukuran layar
     gsap.utils.toArray(".history-image").forEach(image => {
-        gsap.fromTo(image, { opacity: 0, x: -50 }, {
-            opacity: 1, x: 0, duration: 0.75,
-            scrollTrigger: {
-                trigger: image,
-                start: "top 80%",
-                end: "bottom 20%",
-                markers: false,
-                scrub: false,
-                once: true
-            }
-        });
+        if (window.innerWidth > LG_BREAKPOINT) {
+            // Untuk desktop, gunakan animasi horizontal asli
+            gsap.fromTo(image, { opacity: 0, x: -50 }, {
+                opacity: 1, x: 0, duration: 0.75,
+                scrollTrigger: {
+                    trigger: image,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    markers: false,
+                    scrub: false,
+                    once: true
+                }
+            });
+        } else {
+            // Untuk mobile, gunakan animasi vertikal
+            gsap.fromTo(image, { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.75,
+                scrollTrigger: {
+                    trigger: image,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    markers: false,
+                    scrub: false,
+                    once: true
+                }
+            });
+        }
     });
 
-    // Animasi konten di setiap section
     gsap.utils.toArray(".history-content").forEach(content => {
-        gsap.fromTo(content, { opacity: 0, x: 50 }, {
-            opacity: 1, x: 0, duration: 0.75,
-            scrollTrigger: {
-                trigger: content,
-                start: "top 80%",
-                end: "bottom 20%",
-                markers: false,
-                scrub: false,
-                once: true
-            }
-        });
+        if (window.innerWidth > LG_BREAKPOINT) {
+            // Untuk desktop, gunakan animasi horizontal asli
+            gsap.fromTo(content, { opacity: 0, x: 50 }, {
+                opacity: 1, x: 0, duration: 0.75,
+                scrollTrigger: {
+                    trigger: content,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    markers: false,
+                    scrub: false,
+                    once: true
+                }
+            });
+        } else {
+            // Untuk mobile, gunakan animasi vertikal
+            gsap.fromTo(content, { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.75,
+                scrollTrigger: {
+                    trigger: content,
+                    start: "top 80%",
+                    end: "bottom 20%",
+                    markers: false,
+                    scrub: false,
+                    once: true
+                }
+            });
+        }
     });
 </script>
 

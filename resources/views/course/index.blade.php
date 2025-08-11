@@ -16,14 +16,21 @@
             color: #333;
         }
 
-        /* Masthead tidak lagi memiliki margin negatif di sini, biarkan tema utama menanganinya */
-        /* .masthead {
+        /* Masthead */
+        .masthead {
+            background-image: url('{{ asset('assets/img/masthead-bg-course.jpg') }}'); /* Pastikan path gambar benar */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
             position: relative;
-        } */
+        }
 
+        /* Drawing Canvas Styles */
         .drawing-canvas {
             width: 100%;
-            height: 400px; /* Penting agar canvas punya tinggi yang jelas */
+            max-height: 400px; /* Batasi tinggi maksimum di desktop */
+            height: auto; /* Biarkan tinggi menyesuaikan konten/lebar */
             background-color: #f8f9fa;
             border: 1px solid #ddd;
             border-radius: 8px;
@@ -131,7 +138,7 @@
 
         .target-aksara {
             font-family: 'Noto Sans Batak', serif;
-            font-size: 4rem;
+            font-size: 4rem; /* Default for desktop */
             font-weight: bold;
             color: #a84232;
             margin-bottom: 1.5rem;
@@ -224,6 +231,105 @@
             pointer-events: none;
             z-index: 9999;
         }
+
+        /* ==================================== */
+        /* Media Queries untuk Responsivitas */
+        /* ==================================== */
+
+        @media (max-width: 991.98px) { /* Untuk tablet dan mobile (breakpoint Bootstrap 'lg' ke bawah) */
+            .page-section {
+                padding: 40px 0 !important; /* Sedikit kurangi padding section */
+            }
+            .container {
+                padding: 0 20px !important; /* Sesuaikan padding container */
+            }
+            .aksara-result {
+                font-size: 1.8rem; /* Kurangi ukuran font hasil transliterasi */
+            }
+            .target-aksara {
+                font-size: 3rem; /* Kurangi ukuran font target aksara di kanvas */
+            }
+            .drawing-canvas {
+                max-height: 300px; /* Batasi tinggi kanvas lebih rendah di tablet */
+            }
+            .writing-header {
+                font-size: 1.1rem;
+            }
+            .progress-text {
+                font-size: 0.9rem;
+            }
+            /* Tombol-tombol di latihan menulis bisa menumpuk lebih baik */
+            .d-flex.flex-wrap.justify-content-center.gap-2 {
+                gap: 0.5rem !important; /* Pastikan gap tetap baik saat wrap */
+            }
+            .d-flex.flex-wrap.justify-content-center.gap-2 .btn {
+                flex: 1 1 auto; /* Biarkan tombol mengambil ruang yang tersedia */
+                max-width: 100%; /* Pastikan tidak melebihi lebar parent */
+            }
+        }
+
+        @media (max-width: 767.98px) { /* Untuk mobile (breakpoint Bootstrap 'md' ke bawah) */
+            .page-section {
+                padding: 30px 0 !important; /* Lebih kecil lagi untuk mobile */
+            }
+            .container {
+                padding: 0 15px !important; /* Lebih kecil lagi untuk mobile */
+            }
+            h1.font-weight-bold {
+                font-size: 2.5rem; /* Ukuran font masthead title */
+            }
+            p.text-white-75 {
+                font-size: 0.9rem; /* Ukuran font masthead text */
+            }
+            h2.text-center {
+                font-size: 1.8rem; /* Ukuran font judul section */
+            }
+            .table-responsive table th, .table-responsive table td {
+                font-size: 0.85rem; /* Kecilkan font di tabel kamus */
+                white-space: nowrap; /* Mencegah teks aksara terpotong */
+                padding: 0.5rem;
+            }
+            .aksara-result {
+                font-size: 1.5rem; /* Kecilkan font hasil transliterasi lagi */
+            }
+            .target-aksara {
+                font-size: 2.5rem; /* Kecilkan ukuran font target aksara lagi */
+            }
+            .drawing-canvas {
+                max-height: 250px; /* Lebih kecil di mobile */
+                height: 200px; /* Berikan tinggi minimum yang layak untuk drawing */
+            }
+            .drawing-canvas::before {
+                font-size: 1.2rem; /* Kecilkan ikon pensil */
+                top: 5px;
+                left: 5px;
+            }
+            .btn-xl {
+                padding: 0.8rem 1.5rem; /* Kecilkan tombol xl */
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.6rem 1rem; /* Kecilkan padding tombol umum */
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 575.98px) { /* Untuk mobile sangat kecil (breakpoint Bootstrap 'sm' ke bawah) */
+            h1.font-weight-bold {
+                font-size: 2rem;
+            }
+            .target-aksara {
+                font-size: 2rem;
+            }
+            .drawing-canvas {
+                height: 180px; /* Lebih kecil untuk ponsel sangat kecil */
+                max-height: 180px;
+            }
+            .table-responsive table th, .table-responsive table td {
+                font-size: 0.8rem;
+            }
+        }
+
     </style>
 
     <header class="masthead">
@@ -406,15 +512,17 @@
         document.addEventListener('DOMContentLoaded', function() {
             gsap.registerPlugin(ScrollTrigger);
 
+            const LG_BREAKPOINT = 991.98; // Definisi breakpoint untuk konsistensi dengan Bootstrap
+
             // --- GSAP Animations ---
             // Animasi Masthead (Saat halaman dimuat pertama kali)
             gsap.fromTo("#mastheadTitle", { opacity: 0, y: 50 }, {
                 opacity: 1, y: 0, duration: 1,
                 scrollTrigger: {
                     trigger: ".masthead",
-                    start: "top 80%", // Mulai animasi saat bagian atas masthead masuk 80% dari viewport
-                    markers: false, // Set false untuk produksi
-                    once: true // Animasi hanya berjalan sekali
+                    start: "top 80%",
+                    markers: false,
+                    once: true
                 }
             });
             gsap.fromTo("#mastheadText", { opacity: 0, y: 50 }, {
@@ -466,15 +574,30 @@
                     once: true
                 }
             });
-            gsap.fromTo("#transliterasiCard", { opacity: 0, x: -100 }, {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.3,
-                scrollTrigger: {
-                    trigger: "#transliterasiCard",
-                    start: "top 80%",
-                    markers: false,
-                    once: true
-                }
-            });
+
+            // Animasi Transliterasi Card (adaptif)
+            if (window.innerWidth > LG_BREAKPOINT) {
+                gsap.fromTo("#transliterasiCard", { opacity: 0, x: -100 }, {
+                    opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.3,
+                    scrollTrigger: {
+                        trigger: "#transliterasiCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
+            } else {
+                gsap.fromTo("#transliterasiCard", { opacity: 0, y: 50 }, {
+                    opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.3,
+                    scrollTrigger: {
+                        trigger: "#transliterasiCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
+            }
+
 
             // Animasi Kuis
             gsap.fromTo("#quizTitle", { opacity: 0, y: 50 }, {
@@ -524,88 +647,47 @@
                     once: true
                 }
             });
-            gsap.fromTo("#writingCard", { opacity: 0, x: 100 }, {
-                opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.4,
-                scrollTrigger: {
-                    trigger: "#writingCard",
-                    start: "top 80%",
-                    markers: false,
-                    once: true
-                }
-            });
+
+            // Animasi Writing Card (adaptif)
+            if (window.innerWidth > LG_BREAKPOINT) {
+                gsap.fromTo("#writingCard", { opacity: 0, x: 100 }, {
+                    opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.4,
+                    scrollTrigger: {
+                        trigger: "#writingCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
+            } else {
+                gsap.fromTo("#writingCard", { opacity: 0, y: 50 }, {
+                    opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.4,
+                    scrollTrigger: {
+                        trigger: "#writingCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
+            }
 
 
             // --- Logika Asli Fitur-fitur (Tidak Diubah) ---
             const aksaraMap = {
-                    'a_independent': 'ᯀ',
-                    'i_independent': 'ᯤ',
-                    'u_independent': 'ᯥ',
-                    'e_independent': 'ᯀᯩ',
-                    'o_independent': 'ᯀᯬ',
-                    'i_vowel_sign': 'ᯪ',
-                    'u_vowel_sign': 'ᯮ',
-                    'e_vowel_sign': 'ᯩ',
-                    'o_vowel_sign': 'ᯬ',
-                    'b': 'ᯅ',
-                    'c': 'ᯋ',
-                    'd': 'ᯑ',
-                    'g': 'ᯎ',
-                    'h': 'ᯄ',
-                    'j': 'ᯐ',
-                    'k': 'ᯂ',
-                    'l': 'ᯞ',
-                    'm': 'ᯔ',
-                    'n': 'ᯉ',
-                    'p': 'ᯇ',
-                    'r': 'ᯒ',
-                    's': 'ᯘ',
-                    't': 'ᯖ',
-                    'w': 'ᯋ',
-                    'y': 'ᯛ',
-                    'z': 'ᯗ',
-                    'nga_consonant': 'ᯝ',
-                    'pangolat': '᯲',
-                    'ng': 'ᯰ',
-                    ' ': ' ',
-                    '.': '.',
-                    ',': ',',
-                    '?': '?',
-                    '!': '!'
+                    'a_independent': 'ᯀ', 'i_independent': 'ᯤ', 'u_independent': 'ᯥ', 'e_independent': 'ᯀᯩ', 'o_independent': 'ᯀᯬ',
+                    'i_vowel_sign': 'ᯪ', 'u_vowel_sign': 'ᯮ', 'e_vowel_sign': 'ᯩ', 'o_vowel_sign': 'ᯬ',
+                    'b': 'ᯅ', 'c': 'ᯋ', 'd': 'ᯑ', 'g': 'ᯎ', 'h': 'ᯄ', 'j': 'ᯐ', 'k': 'ᯂ', 'l': 'ᯞ', 'm': 'ᯔ', 'n': 'ᯉ', 'p': 'ᯇ', 'r': 'ᯒ', 's': 'ᯘ', 't': 'ᯖ', 'w': 'ᯋ', 'y': 'ᯛ', 'z': 'ᯗ',
+                    'nga_consonant': 'ᯝ', 'pangolat': '᯲', 'ng': 'ᯰ',
+                    ' ': ' ', '.': '.', ',': ',', '?': '?', '!': '!'
                 };
                 const aksaraReverseMap = {
-                    'ᯀ': 'a',
-                    'ᯤ': 'i',
-                    'ᯥ': 'u',
-                    'ᯀᯩ': 'e',
-                    'ᯀᯬ': 'o',
-                    'ᯪ': 'i',
-                    'ᯮ': 'u',
-                    'ᯩ': 'e',
-                    'ᯬ': 'o',
-                    'ᯅ': 'ba',
-                    'ᯋ': 'ca/wa',
-                    'ᯑ': 'da',
-                    'ᯎ': 'ga',
-                    'ᯄ': 'ha',
-                    'ᯐ': 'ja',
-                    'ᯂ': 'ka',
-                    'ᯞ': 'la',
-                    'ᯔ': 'ma',
-                    'ᯉ': 'na',
-                    'ᯇ': 'pa',
-                    'ᯒ': 'ra',
-                    'ᯘ': 'sa',
-                    'ᯖ': 'ta',
-                    'ᯛ': 'ya',
-                    'ᯗ': 'za',
-                    'ᯝ': 'nga',
-                    '᯲': 'pangolat',
-                    'ᯰ': 'ng'
+                    'ᯀ': 'a', 'ᯤ': 'i', 'ᯥ': 'u', 'ᯀᯩ': 'e', 'ᯀᯬ': 'o',
+                    'ᯪ': 'i', 'ᯮ': 'u', 'ᯩ': 'e', 'ᯬ': 'o',
+                    'ᯅ': 'ba', 'ᯋ': 'ca/wa', 'ᯑ': 'da', 'ᯎ': 'ga', 'ᯄ': 'ha', 'ᯐ': 'ja', 'ᯂ': 'ka', 'ᯞ': 'la', 'ᯔ': 'ma', 'ᯉ': 'na', 'ᯇ': 'pa', 'ᯒ': 'ra', 'ᯘ': 'sa', 'ᯖ': 'ta', 'ᯛ': 'ya', 'ᯗ': 'za',
+                    'ᯝ': 'nga', '᯲': 'pangolat', 'ᯰ': 'ng'
                 };
                 const vowels = ['a', 'i', 'u', 'e', 'o'];
-                const consonants = ['b', 'c', 'd', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'w', 'y',
-                    'z'
-                ];
+                const consonants = ['b', 'c', 'd', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'w', 'y', 'z'];
 
                 function transliterasi(text) {
                     let hasil = '';
@@ -671,12 +753,17 @@
                 window.updateTransliterasi = function() {
                     let latinText = document.getElementById('latinInput').value;
                     document.getElementById('translitResult').innerText = transliterasi(latinText);
+                    document.querySelector('.clear-input').style.display = latinText.length > 0 ? 'block' : 'none';
                 }
                 window.copyToClipboard = function() {
                     let aksaraText = document.getElementById('translitResult').innerText;
-                    navigator.clipboard.writeText(aksaraText).then(() => {
-                        alert('Teks Aksara Batak telah disalin!');
-                    });
+                    if (aksaraText) {
+                        navigator.clipboard.writeText(aksaraText).then(() => {
+                            alert('Teks Aksara Batak telah disalin!');
+                        });
+                    } else {
+                        alert('Tidak ada teks untuk disalin!');
+                    }
                 }
                 window.clearInput = function() {
                     document.getElementById('latinInput').value = '';
@@ -779,7 +866,6 @@
 
                     if (jawabanDipilih === soalSaatIni.jawabanBenar) {
                         let pesanBenar = '';
-                        // Logika untuk menentukan pesan yang benar
                         const jawabanBenar = soalSaatIni.jawabanBenar;
                         const pertanyaan = soalSaatIni.pertanyaan;
 
@@ -787,7 +873,7 @@
                             const latin = pertanyaan.match(/"(.*?)"/)[1];
                             pesanBenar = `Benar! ${jawabanBenar} dibaca **${latin}**`;
                         } else if (pertanyaan.includes('Apa bunyi dari aksara')) {
-                            const aksara = pertanyaan.match(/ᯀ|ᯂ|ᯄ|ᯆ|ᯔ/)[0];
+                            const aksara = pertanyaan.match(/ᯀ|ᯂ|ᯄ|ᯆ|ᯔ/)[0]; // Regex lebih spesifik
                             pesanBenar = `Benar! ${aksara} dibaca **${jawabanBenar}**`;
                         } else if (pertanyaan.includes('bersimbolkan')) {
                             const latin = pertanyaan.match(/"(.*?)"/)[1];
@@ -795,8 +881,7 @@
                         } else if (pertanyaan.includes('Bagaimana cara menulis')) {
                             const latin = pertanyaan.match(/"(.*?)"/)[1];
                             pesanBenar = `Benar! **${latin}** ditulis ${jawabanBenar}`;
-                        }
-                         else if (pertanyaan.includes('Pilihlah aksara yang berbunyi')) {
+                        } else if (pertanyaan.includes('Pilihlah aksara yang berbunyi')) {
                             const latin = pertanyaan.match(/"(.*?)"/)[1];
                             pesanBenar = `Benar! **${latin}** bersimbolkan ${jawabanBenar}`;
                         } else {
@@ -807,10 +892,7 @@
                         umpanBalikDiv.innerHTML = `<div class="alert alert-success">${pesanBenar}</div>`;
 
                         if (modeRevisi) {
-                            // Hapus soal yang benar dari array revisi
                             soalRevisi.splice(nomorSoal, 1);
-                            // Karena soal dihapus, nomorSoal tidak perlu diincrement
-                            // Jika ada soal lagi, tampilkan, jika tidak, lanjutkan
                             if (soalRevisi.length > 0) {
                                 nomorSoal = Math.min(nomorSoal, soalRevisi.length - 1);
                             }
@@ -820,11 +902,9 @@
                     } else {
                         umpanBalikDiv.innerHTML =
                             `<div class="alert alert-danger">Salah, silakan coba lagi</div>`;
-                        // Jika bukan mode revisi, tambahkan soal ke array revisi
                         if (!modeRevisi) {
                             soalSalah.push(soalSaatIni);
                         }
-                        // Increment nomorSoal untuk melanjutkan ke soal berikutnya
                         nomorSoal++;
                     }
 
@@ -833,45 +913,32 @@
                 }
 
                 window.lanjutSoal = function() {
-                    // Cek jika kita berada di mode revisi
                     if (modeRevisi) {
                         if (soalRevisi.length > 0) {
-                            // Tampilkan soal revisi berikutnya
                             tampilkanSoal();
                         } else {
-                            // Jika semua soal revisi sudah benar, tampilkan pesan selesai
                             tampilkanPesanSelesai();
                         }
                     } else {
-                        // Mode kuis utama
                         if (nomorSoal < daftarSoal.length) {
                             tampilkanSoal();
                         } else if (soalSalah.length > 0) {
-                            // Pindah ke mode revisi setelah kuis utama selesai
-                            soalRevisi = [...soalSalah]; // Salin array soalSalah
-                            soalSalah = []; // Reset array soalSalah untuk siklus revisi berikutnya
+                            soalRevisi = [...soalSalah];
+                            soalSalah = [];
                             nomorSoal = 0;
                             modeRevisi = true;
                             soalKuisDiv.innerHTML =
                                 '<div class="alert alert-warning">Mari kita ulang kesalahan pada soal sebelumnya</div>';
                             periksaBtn.classList.add('d-none');
                             lanjutBtn.classList.remove('d-none');
+                             setTimeout(tampilkanSoal, 1500); // Beri sedikit jeda sebelum tampil soal revisi
                         } else {
-                            // Jika tidak ada soal yang salah, tampilkan pesan selesai
                             tampilkanPesanSelesai();
                         }
                     }
                 }
 
                 function tampilkanPesanSelesai() {
-                    if (modeRevisi) {
-                        // Setelah semua revisi selesai
-                        soalKuisDiv.innerHTML = '<div class="alert alert-info">Semua soal revisi telah selesai!</div>';
-                        umpanBalikDiv.innerHTML = '';
-                        lanjutBtn.classList.add('d-none');
-                    }
-
-                    // Tampilkan pesan kemenangan dengan animasi
                     const jsConfetti = new JSConfetti();
                     jsConfetti.addConfetti({
                         emojis: ['🎉', '🎊', '🥳', '✨'],
@@ -880,8 +947,12 @@
                         soalKuisDiv.innerHTML = '<div class="alert alert-success">Selamat! Anda telah menyelesaikan semua soal dengan benar!</div>';
                         umpanBalikDiv.innerHTML = '';
                         lanjutBtn.classList.add('d-none');
+                        modeRevisi = false; // Reset mode revisi
+                        nomorSoal = 0; // Reset nomor soal
+                        soalSalah = []; // Pastikan ini kosong
+                        soalRevisi = []; // Pastikan ini kosong
+                        shuffleArray(daftarSoal); // Acak ulang soal untuk kuis berikutnya
                     });
-
                 }
 
                 tampilkanSoal();
@@ -898,7 +969,8 @@
                 const levelData = [
                     ['ᯀ', 'ᯅ', 'ᯄ', 'ᯂ', 'ᯞ'],
                     ['ᯪ', 'ᯮ', 'ᯩ', 'ᯬ', '᯲'],
-                    ['ᯀᯤ', 'ᯅᯮ', 'ᯄᯩ', 'ᯂᯬ', 'ᯖ᯲'],
+                    ['ᯀᯤ', 'ᯅᯮ', 'ᯄᯩ', 'ᯂᯬ', 'ᯖ᯲'], // Contoh aksara gabungan
+                    ['ᯑ', 'ᯎ', 'ᯐ', 'ᯔ', 'ᯉ'] // Level tambahan jika diperlukan
                 ];
                 let currentLevel = 0;
                 let aksaraInLevel = levelData[currentLevel];
@@ -928,11 +1000,24 @@
                 }
 
                 function resizeCanvas() {
-                    const rect = canvas.getBoundingClientRect();
+                    const rect = canvas.parentElement.getBoundingClientRect(); // Ambil lebar dari parent (col-lg-8)
                     canvas.width = rect.width;
-                    canvas.height = rect.height;
+                    // Tentukan tinggi responsif
+                    if (window.innerWidth <= 767.98) { // Mobile
+                        canvas.height = 200; // Tinggi tetap yang lebih kecil untuk mobile
+                    } else if (window.innerWidth <= 991.98) { // Tablet
+                        canvas.height = 300;
+                    }
+                    else { // Desktop
+                        canvas.height = 400; // Tinggi default desktop
+                    }
+
                     hiddenCanvas.width = canvas.width;
                     hiddenCanvas.height = canvas.height;
+                    // Gambar ulang target aksara jika ada dan dalam mode terpandu
+                    if (currentMode === 'guided' && currentAksaraTarget) {
+                        drawTargetOnHiddenCanvas(currentAksaraTarget);
+                    }
                 }
                 resizeCanvas();
                 window.addEventListener('resize', resizeCanvas);
@@ -1001,10 +1086,8 @@
 
                 window.setMode = function(mode) {
                     currentMode = mode;
-                    document.getElementById('modeGuidedButton').classList.remove('btn-primary',
-                        'btn-outline-primary');
-                    document.getElementById('modeFreeButton').classList.remove('btn-primary',
-                        'btn-outline-primary');
+                    document.getElementById('modeGuidedButton').classList.remove('btn-primary', 'btn-outline-primary');
+                    document.getElementById('modeFreeButton').classList.remove('btn-primary', 'btn-outline-primary');
 
                     clearCanvas();
 
@@ -1023,25 +1106,36 @@
                 }
 
                 function loadAksaraForLevel() {
+                    const feedbackDiv = document.getElementById('feedbackMessage');
+                    if (currentLevel >= levelData.length) {
+                         feedbackDiv.innerHTML = '<div class="alert alert-success">Selamat! Anda telah menyelesaikan semua level!</div>';
+                         document.getElementById('targetAksara').innerText = ''; // Kosongkan target
+                         document.getElementById('nextAksaraButton').classList.add('d-none');
+                         document.getElementById('currentLevel').innerText = levelData.length;
+                         updateProgress();
+                         return;
+                    }
+
+                    aksaraInLevel = levelData[currentLevel]; // Pastikan aksaraInLevel diperbarui untuk level saat ini
                     const remainingAksara = aksaraInLevel.filter(a => !completedAksara.includes(a));
+
                     if (remainingAksara.length > 0) {
                         const randomIndex = Math.floor(Math.random() * remainingAksara.length);
                         currentAksaraTarget = remainingAksara[randomIndex];
                         document.getElementById('targetAksara').innerText = currentAksaraTarget;
+                        clearCanvas(); // Bersihkan kanvas untuk aksara baru
+                        feedbackDiv.innerHTML = ''; // Hapus pesan feedback sebelumnya
+                        updateProgress();
                     } else {
                         alert(`Level ${currentLevel + 1} Selesai! Selamat!`);
                         currentLevel++;
+                        completedAksara = []; // Reset completed aksara untuk level baru
                         saveProgress();
                         if (currentLevel < levelData.length) {
-                            aksaraInLevel = levelData[currentLevel];
-                            completedAksara = [];
-                            document.getElementById('currentLevel').innerText = currentLevel + 1;
-                            updateProgress();
-                            loadAksaraForLevel();
+                            loadAksaraForLevel(); // Lanjut ke level berikutnya
                         } else {
-                            alert('Anda telah menyelesaikan semua level! Hebat!');
-                            document.getElementById('guided-mode-display').innerHTML =
-                                '<div class="alert alert-success">Semua level selesai!</div>';
+                            feedbackDiv.innerHTML = '<div class="alert alert-success">Selamat! Anda telah menyelesaikan semua level!</div>';
+                            document.getElementById('targetAksara').innerText = '';
                             document.getElementById('nextAksaraButton').classList.add('d-none');
                         }
                     }
@@ -1049,8 +1143,8 @@
 
                 function drawTargetOnHiddenCanvas(aksara) {
                     hiddenCtx.clearRect(0, 0, hiddenCanvas.width, hiddenCanvas.height);
-                    hiddenCtx.fillStyle = 'black';
-                    hiddenCtx.font = `bold ${canvas.height * 0.8}px 'Noto Sans Batak', serif`;
+                    hiddenCtx.fillStyle = 'rgba(0,0,0,1)'; // Pastikan target digambar dengan warna solid
+                    hiddenCtx.font = `bold ${canvas.height * 0.8}px 'Noto Sans Batak', serif`; // Ukuran font berdasarkan tinggi kanvas
                     hiddenCtx.textAlign = 'center';
                     hiddenCtx.textBaseline = 'middle';
                     hiddenCtx.fillText(aksara, hiddenCanvas.width / 2, hiddenCanvas.height / 2);
@@ -1077,19 +1171,18 @@
                     let totalTargetPixels = 0;
 
                     for (let i = 0; i < userPixels.length; i += 4) {
-                        const isUserPixelBlack = userPixels[i] < 100 && userPixels[i + 1] < 100 && userPixels[i +
-                            2] < 100;
-                        const isTargetPixelBlack = targetPixels[i] < 100 && targetPixels[i + 1] < 100 &&
-                            targetPixels[i + 2] < 100;
+                        // Cek transparansi (alpha channel) untuk menentukan piksel yang digambar (bukan hanya warna hitam)
+                        const isUserPixelDrawn = userPixels[i + 3] > 0; // Periksa nilai alpha
+                        const isTargetPixelDrawn = targetPixels[i + 3] > 0;
 
-                        if (isUserPixelBlack) totalUserPixels++;
-                        if (isTargetPixelBlack) totalTargetPixels++;
-                        if (isUserPixelBlack && isTargetPixelBlack) overlapPixels++;
+                        if (isUserPixelDrawn) totalUserPixels++;
+                        if (isTargetPixelDrawn) totalTargetPixels++;
+                        if (isUserPixelDrawn && isTargetPixelDrawn) overlapPixels++;
                     }
 
                     if (totalTargetPixels === 0) {
                         feedbackDiv.innerHTML =
-                            `<div class="alert alert-danger">Terjadi kesalahan pada sistem, silakan muat ulang halaman.</div>`;
+                            `<div class="alert alert-danger">Terjadi kesalahan pada sistem, silakan muat ulang halaman. Target aksara tidak terdeteksi.</div>`;
                         return;
                     }
 
@@ -1136,6 +1229,7 @@
 
                 loadProgress();
                 setMode('guided');
+                updateTransliterasi(); // Panggil ini untuk memastikan tampilan awal tombol clear input
 
             });
         </script>
