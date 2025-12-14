@@ -1,890 +1,359 @@
-{{-- @extends('layouts.app')
-
-@section('title', 'Belajar Aksara Batak')
-
-@section('content')
-    <!-- Masthead (Course Header) -->
-    <header class="masthead">
-        <div class="container px-4 px-lg-5 h-100">
-            <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-                <div class="col-lg-10 align-self-end">
-                    <h1 class="text-white font-weight-bold">Mulai Belajar Aksara Batak</h1>
-                    <hr class="divider" />
-                </div>
-                <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">
-                        Selamat datang di halaman pembelajaran Aksara Batak!
-                        Gunakan fitur-fitur di bawah ini untuk memperdalam pengetahuan Anda.
-                    </p>
-                    <a class="btn btn-maroon btn-xl" href="#kamus">Lihat Kamus Aksara</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <!-- Kamus Aksara Batak -->
-    <section id="kamus" class="page-section bg-white py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Kamus Aksara Batak</h2>
-            <div class="table-responsive">
-                <table class="table table-bordered table-striped">
-                    <thead>
-                        <tr>
-                            <th>Latin</th>
-                            <th>Toba</th>
-                            <th>Simalungun</th>
-                            <th>Karo</th>
-                            <th>Pakpak/Dairi</th>
-                            <th>Mandailing</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>a</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                        </tr>
-                        <tr>
-                            <td>i</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                        </tr>
-                        <tr>
-                            <td>u</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                        </tr>
-                        <tr>
-                            <td>e</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                        </tr>
-                        <tr>
-                            <td>o</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                        </tr>
-                        <tr>
-                            <td>ba</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                        </tr>
-                        <tr>
-                            <td>ca</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                        </tr>
-                        <tr>
-                            <td>da</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                        </tr>
-                        <tr>
-                            <td>ga</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                        </tr>
-                        <tr>
-                            <td>ha</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                        </tr>
-                        <tr>
-                            <td>ja</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                        </tr>
-                        <tr>
-                            <td>ka</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                        </tr>
-                        <tr>
-                            <td>la</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                        </tr>
-                        <tr>
-                            <td>ma</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                        </tr>
-                        <tr>
-                            <td>na</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                        </tr>
-                        <tr>
-                            <td>pa</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                        </tr>
-                        <tr>
-                            <td>ra</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                        </tr>
-                        <tr>
-                            <td>sa</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                        </tr>
-                        <tr>
-                            <td>ta</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                        </tr>
-                        <tr>
-                            <td>wa</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                        </tr>
-                        <tr>
-                            <td>ya</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                        </tr>
-                        <tr>
-                            <td>za</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                        </tr>
-                        <!-- Tambahkan baris lainnya sesuai kebutuhan -->
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- Transliterasi Section -->
-    <section id="transliterasi" class="page-section bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Transliterasi Latin ke Aksara Batak</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="mb-3">
-                        <label for="latinInput" class="form-label">Masukkan Teks Latin:</label>
-                        <input type="text" class="form-control" id="latinInput" placeholder="Contoh: Horas"
-                            oninput="updateTransliterasi()">
-                    </div>
-                    <div class="mt-3">
-                        <label class="form-label">Hasil Aksara Batak:</label>
-                        <div id="translitResult" class="border rounded p-3 bg-white"></div>
-                        <button class="btn btn-secondary btn-sm mt-2" onclick="copyToClipboard()">Salin ke Papan
-                            Klip</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Quiz Section -->
-    <section id="quiz" class="page-section bg-white py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Kuis Tebak Aksara</h2>
-            <p class="text-center">Uji pengetahuan Anda tentang Aksara Batak!</p>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div id="soalKuis">
-                        <!-- Soal kuis akan ditampilkan di sini -->
-                    </div>
-                    <div class="mt-3 text-center">
-                        <button class="btn btn-success" onclick="periksaJawaban()">Periksa Jawaban</button>
-                    </div>
-                    <div id="umpanBalikKuis" class="mt-2 text-center"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tulis Namamu Section -->
-    <section id="tulis-nama" class="page-section bg-light py-5">
-        <div class="container">
-            <h2 class="text-center mb-4">Tulis Namamu dalam Aksara Batak</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-8">
-                    <div class="mb-3">
-                        <label for="nameInput" class="form-label">Masukkan Nama Anda:</label>
-                        <input type="text" class="form-control" id="nameInput" placeholder="Nama Anda"
-                            oninput="updatePratinjauNama()">
-                    </div>
-                    <div class="mt-3">
-                        <label class="form-label">Hasil:</label>
-                        <div id="nameResult" class="border rounded p-3 bg-white"></div>
-                        <button class="btn btn-info btn-sm mt-2" onclick="unduhSebagaiGambar()">Unduh Gambar</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    @push('scripts')
-        <script>
-            const aksaraMap = {
-                'a': 'ᯀ',
-                'b': 'ᯅ',
-                'c': 'ᯋ',
-                'd': 'ᯑ',
-                'g': 'ᯎ',
-                'h': 'ᯄ',
-                'j': 'ᯐ',
-                'k': 'ᯂ',
-                'l': 'ᯞ',
-                'm': 'ᯔ',
-                'n': 'ᯉ',
-                'p': 'ᯇ',
-                'r': 'ᯒ',
-                's': 'ᯘ',
-                't': 'ᯖ',
-                'w': 'ᯋ',
-                'y': 'ᯛ',
-                'z': 'ᯗ',
-
-                'i': 'ᯪ',
-                'u': 'ᯮ',
-                'e': 'ᯩ',
-                'o': 'ᯬ',
-
-                'pangolat': '᯲',
-
-                'ng': 'ᯰ',
-
-                ' ': ' ',
-                '.': '.',
-                ',': ',',
-                '?': '?',
-                '!': '!'
-            };
-
-            const vowels = ['a', 'i', 'u', 'e', 'o'];
-            const consonants = ['b', 'c', 'd', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'w', 'y', 'z'];
-
-            function transliterasi(text) {
-                let hasil = '';
-                let i = 0;
-                const textLower = text.toLowerCase();
-                const len = textLower.length;
-
-                while (i < len) {
-                    let matched = false;
-
-                    if (i + 1 < len) {
-                        const duaHuruf = textLower.substring(i, i + 2);
-                        if (duaHuruf === 'ng') {
-                            hasil += aksaraMap['ng'];
-                            i += 2;
-                            matched = true;
-                        }
-                    }
-
-                    if (!matched && i + 1 < len) {
-                        const konsonan = textLower.charAt(i);
-                        const vokal = textLower.charAt(i + 1);
-
-                        if (consonants.includes(konsonan) && vowels.includes(vokal)) {
-                            if (vokal === 'a') {
-                                hasil += aksaraMap[konsonan];
-                            }
-                            else {
-                                hasil += aksaraMap[konsonan] + aksaraMap[vokal];
-                            }
-                            i += 2;
-                            matched = true;
-                        }
-                    }
-
-                    if (!matched) {
-                        const char = textLower.charAt(i);
-
-                        if (vowels.includes(char)) {
-                            hasil += aksaraMap[char];
-                        }
-                        else if (consonants.includes(char)) {
-                            hasil += aksaraMap[char] + aksaraMap['pangolat'];
-                        }
-                        else {
-                            hasil += char;
-                        }
-                        i++;
-                    }
-                }
-                return hasil;
-            }
-
-            function updateTransliterasi() {
-                let latinText = document.getElementById('latinInput').value;
-                document.getElementById('translitResult').innerText = transliterasi(latinText);
-            }
-
-            function copyToClipboard() {
-                let aksaraText = document.getElementById('translitResult').innerText;
-                navigator.clipboard.writeText(aksaraText).then(() => {
-                    alert('Teks Aksara Batak telah disalin!');
-                });
-            }
-            tampilkanSoal();
-
-            // Kuis
-            const daftarSoal = [{
-                    pertanyaan: 'Aksara Batak manakah yang melambangkan "ka"?',
-                    jawabanBenar: 'ᯂ',
-                    pilihan: ['ᯀ', 'ᯂ', 'ᯄ', 'ᯆ']
-                },
-                {
-                    pertanyaan: 'Apa bunyi dari aksara ᯔ?',
-                    jawabanBenar: 'ma',
-                    pilihan: ['ka', 'la', 'ma', 'na']
-                },
-                {
-                    pertanyaan: 'Aksara Batak untuk "ba" adalah...',
-                    jawabanBenar: 'ᯅ',
-                    pilihan: ['ᯀ', 'ᯅ', 'ᯘ', 'ᯖ']
-                },
-                {
-                    pertanyaan: 'Aksara Batak manakah yang mewakili suara "ta"?',
-                    jawabanBenar: 'ᯖ',
-                    pilihan: ['ᯖ', 'ᯗ', 'ᯘ', 'ᯒ']
-                },
-                {
-                    pertanyaan: 'Bagaimana cara menulis "la" dalam Aksara Batak?',
-                    jawabanBenar: 'ᯞ',
-                    pilihan: ['ᯞ', 'ᯟ', 'ᯡ', 'ᯠ']
-                },
-                {
-                    pertanyaan: 'Pilihlah aksara yang berbunyi "na"...',
-                    jawabanBenar: 'ᯉ',
-                    pilihan: ['ᯊ', 'ᯉ', 'ᯘ', 'ᯔ']
-                },
-                {
-                    pertanyaan: 'Aksara apakah ini: ᯄ ?',
-                    jawabanBenar: 'ha',
-                    pilihan: ['ga', 'ha', 'ja', 'ka']
-                },
-                {
-                    pertanyaan: 'Jika Anda ingin menulis "pa", aksara apa yang Anda gunakan?',
-                    jawabanBenar: 'ᯇ',
-                    pilihan: ['ᯇ', 'ᯎ', 'ᯏ', 'ᯐ']
-                },
-                {
-                    pertanyaan: 'Aksara manakah yang bunyinya "sa"?',
-                    jawabanBenar: 'ᯘ',
-                    pilihan: ['ᯘ', 'ᯙ', 'ᯚ', 'ᯛ']
-                }
-            ];
-
-            let nomorSoal = 0;
-            let jawabanDipilih = null;
-
-            function tampilkanSoal() {
-                let soal = daftarSoal[nomorSoal];
-                let pilihanJawaban = '';
-                soal.pilihan.forEach(pilihan => {
-                    pilihanJawaban +=
-                        `<button class="btn btn-outline-primary m-1" onclick="pilihJawaban('${pilihan}')">${pilihan}</button>`;
-                });
-
-                document.getElementById('soalKuis').innerHTML = `
-                    <h3>Soal ${nomorSoal + 1}</h3>
-                    <p>${soal.pertanyaan}</p>
-                    <div>${pilihanJawaban}</div>
-                `;
-            }
-
-            function pilihJawaban(jawaban) {
-                jawabanDipilih = jawaban;
-            }
-
-            function periksaJawaban() {
-                if (jawabanDipilih === null) {
-                    alert('Pilih jawaban dulu!');
-                    return;
-                }
-
-                let soal = daftarSoal[nomorSoal];
-                let umpanBalik = document.getElementById('umpanBalikKuis');
-                if (jawabanDipilih === soal.jawabanBenar) {
-                    umpanBalik.innerHTML = '<div class="alert alert-success">Benar!</div>';
-                } else {
-                    umpanBalik.innerHTML =
-                        `<div class="alert alert-danger">Salah. Jawaban yang benar adalah ${soal.jawabanBenar}</div>`;
-                }
-
-                jawabanDipilih = null; // Reset jawaban
-                nomorSoal++; // Lanjut ke soal berikutnya
-
-                if (nomorSoal < daftarSoal.length) {
-                    tampilkanSoal();
-                } else {
-                    document.getElementById('soalKuis').innerHTML = '<div class="alert alert-info">Kuis selesai!</div>';
-                    umpanBalik.innerHTML = '';
-                }
-
-                // Setelah menjawab, soal berikutnya ditampilkan setelah 1 detik
-                setTimeout(tampilkanSoalBerikutnya, 1000);
-            }
-
-            function tampilkanSoalBerikutnya() {
-                if (nomorSoal < daftarSoal.length) {
-                    tampilkanSoal();
-                    document.getElementById('umpanBalikKuis').innerHTML = ''; // Bersihkan umpan balik
-                }
-            }
-
-            // Tulis Nama
-            function updatePratinjauNama() {
-                let nama = document.getElementById('nameInput').value;
-                document.getElementById('nameResult').innerText = transliterasi(nama);
-            }
-
-            function unduhSebagaiGambar() {
-                alert('Fitur ini belum tersedia.');
-                // Tambahkan logika untuk mengubah teks Aksara Batak menjadi gambar dan mengunduhnya
-            }
-
-            // Inisialisasi Kuis
-            tampilkanSoal();
-        </script>
-    @endpush
-@endsection --}}
-
-{{-- ================================================================================== --}}
 @extends('layouts.app')
 
 @section('title', 'Belajar Aksara Batak')
 
 @section('content')
-<<<<<<< HEAD
-<!-- Masthead (Course Header) -->
-<header class="masthead">
-  <div class="container px-4 px-lg-5 h-100">
-    <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
-      <div class="col-lg-10 align-self-end">
-        <h1 class="text-white font-weight-bold">Mulai Belajar Aksara Batak</h1>
-        <hr class="divider" />
-      </div>
-      <div class="col-lg-8 align-self-baseline">
-        <p class="text-white-75 mb-5">
-          Selamat datang di halaman pembelajaran Aksara Batak!
-          Gunakan fitur-fitur di bawah ini untuk memperdalam pengetahuan Anda.
-        </p>
-        <a class="btn btn-maroon btn-xl" href="#kamus">Lihat Kamus Aksara</a>
-      </div>
-    </div>
-  </div>
-</header>
+    {{-- Konsolidasi semua link dan style ke dalam satu blok style --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Batak&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<section id="kamus"
-  class="page-section py-5"
-  style="background: linear-gradient(to right, #ffffff, #f3f3f3);">
-  <div class="container">
-    <h2 class="text-center mb-4">Kamus Aksara Batak - Ina ni Surat</h2>
-    <div class="table-responsive">
-      <table class="table table-bordered text-center align-middle">
-        <thead class="table-dark">
-          <tr>
-            <th>No</th>
-            <th>Huruf</th>
-            <th>Toba</th>
-            <th>Mandailing</th>
-            <th>Karo</th>
-            <th>Simalungun</th>
-            <th>Pakpak</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>a</td>
-            <td>ᯀ</td>
-            <td>ᯀ</td>
-            <td>ᯀ</td>
-            <td>ᯀ</td>
-            <td>ᯀ</td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>ha/ka</td>
-            <td>ᯂ</td>
-            <td>ᯂ</td>
-            <td>ᯂ</td>
-            <td>ᯂ</td>
-            <td>ᯂ</td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>na</td>
-            <td>ᯉ</td>
-            <td>ᯉ</td>
-            <td>ᯉ</td>
-            <td>ᯉ</td>
-            <td>ᯉ</td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>ra</td>
-            <td>ᯒ</td>
-            <td>ᯒ</td>
-            <td>ᯒ</td>
-            <td>ᯒ</td>
-            <td>ᯒ</td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>ta</td>
-            <td>ᯖ</td>
-            <td>ᯖ</td>
-            <td>ᯖ</td>
-            <td>ᯖ</td>
-            <td>ᯖ</td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>ba</td>
-            <td>ᯅ</td>
-            <td>ᯅ</td>
-            <td>ᯅ</td>
-            <td>ᯅ</td>
-            <td>ᯅ</td>
-          </tr>
-          <tr>
-            <td>7</td>
-            <td>wa</td>
-            <td>ᯋ</td>
-            <td>ᯋ</td>
-            <td>ᯋ</td>
-            <td>ᯋ</td>
-            <td>ᯋ</td>
-          </tr>
-          <tr>
-            <td>8</td>
-            <td>i</td>
-            <td>ᯤ</td>
-            <td>ᯤ</td>
-            <td>ᯤ</td>
-            <td>ᯤ</td>
-            <td>ᯤ</td>
-          </tr>
-          <tr>
-            <td>9</td>
-            <td>ma</td>
-            <td>ᯔ</td>
-            <td>ᯔ</td>
-            <td>ᯔ</td>
-            <td>ᯔ</td>
-            <td>ᯔ</td>
-          </tr>
-          <tr>
-            <td>10</td>
-            <td>nga</td>
-            <td>ᯜ</td>
-            <td>ᯜ</td>
-            <td>ᯜ</td>
-            <td>ᯜ</td>
-            <td>ᯜ</td>
-          </tr>
-          <tr>
-            <td>11</td>
-            <td>la</td>
-            <td>ᯞ</td>
-            <td>ᯞ</td>
-            <td>ᯞ</td>
-            <td>ᯞ</td>
-            <td>ᯞ</td>
-          </tr>
-          <tr>
-            <td>12</td>
-            <td>pa</td>
-            <td>ᯇ</td>
-            <td>ᯇ</td>
-            <td>ᯇ</td>
-            <td>ᯇ</td>
-            <td>ᯇ</td>
-          </tr>
-          <tr>
-            <td>13</td>
-            <td>sa</td>
-            <td>ᯘ</td>
-            <td>ᯘ</td>
-            <td>ᯘ</td>
-            <td>ᯘ</td>
-            <td>ᯘ</td>
-          </tr>
-          <tr>
-            <td>14</td>
-            <td>da</td>
-            <td>ᯑ</td>
-            <td>ᯑ</td>
-            <td>ᯑ</td>
-            <td>ᯑ</td>
-            <td>ᯑ</td>
-          </tr>
-          <tr>
-            <td>15</td>
-            <td>ga</td>
-            <td>ᯎ</td>
-            <td>ᯎ</td>
-            <td>ᯎ</td>
-            <td>ᯎ</td>
-            <td>ᯎ</td>
-          </tr>
-          <tr>
-            <td>16</td>
-            <td>ja</td>
-            <td>ᯐ</td>
-            <td>ᯐ</td>
-            <td>ᯐ</td>
-            <td>ᯐ</td>
-            <td>ᯐ</td>
-          </tr>
-          <tr>
-            <td>17</td>
-            <td>u</td>
-            <td>ᯥ</td>
-            <td>ᯥ</td>
-            <td>ᯥ</td>
-            <td>ᯥ</td>
-            <td>ᯥ</td>
-          </tr>
-          <tr>
-            <td>18</td>
-            <td>ya</td>
-            <td>ᯛ</td>
-            <td>ᯛ</td>
-            <td>ᯛ</td>
-            <td>ᯛ</td>
-            <td>ᯛ</td>
-          </tr>
-          <tr>
-            <td>19</td>
-            <td>nya</td>
-            <td>ᯝ</td>
-            <td>ᯝ</td>
-            <td>ᯝ</td>
-            <td>ᯝ</td>
-            <td>ᯝ</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+        }
 
-<section id="anak-ni-surat" style="padding: 50px 0; background-color: #f8f9fa; color: #000">
-  <div class="container">
-    <h2 style="text-align:center; margin-bottom: 30px;">Anak Ni Surat (Aksara Batak)</h2>
-    <table border="1" cellpadding="8" style="border-collapse: collapse; width: 100%; text-align: center;">
-      <thead style="background-color: #e9ecef;">
-        <tr>
-          <th>Nama</th>
-          <th>Latin</th>
-          <th>Batak (Unicode)</th>
-          <th>Contoh</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Haborotan</td>
-          <td>u</td>
-          <td>ᯮ</td>
-          <td>ᯒᯮ (Ru)</td>
-        </tr>
-        <tr>
-          <td>Hatadingan</td>
-          <td>e</td>
-          <td>ᯩ</td>
-          <td>ᯒᯩ (Re)</td>
-        </tr>
-        <tr>
-          <td>Haluaan</td>
-          <td>i</td>
-          <td>ᯪ</td>
-          <td>ᯒᯪ (Ri)</td>
-        </tr>
-        <tr>
-          <td>Cikora</td>
-          <td>o</td>
-          <td>ᯬ</td>
-          <td>ᯒᯬ (Ro)</td>
-        </tr>
-        <tr>
-          <td>Kejeringen</td>
-          <td>h</td>
-          <td>ᯱ</td>
-          <td>ᯒᯱ (Rah)</td>
-        </tr>
-        <tr>
-          <td>Hamisaran</td>
-          <td>ng</td>
-          <td>ᯰ</td>
-          <td>ᯒᯰ (Rang)</td>
-        </tr>
-        <tr>
-          <td>Hatulungan</td>
-          <td>ou</td>
-          <td>ᯯ</td>
-          <td>ᯒᯯ (Rou)</td>
-        </tr>
-        <tr>
-          <td>Pangolat</td>
-          <td>-</td>
-          <td>᯲</td>
-          <td>ᯒ᯲ (R)</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-</section>
+        /* Masthead */
+        .masthead {
+            background-image: url('{{ asset('assets/img/masthead-bg-course.jpg') }}'); /* Pastikan path gambar benar */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            position: relative;
+        }
 
-<!-- Section Anak Ni Surat -->
-<section id="anak-ni-surat" style="background-color: #f1f1f1; padding: 60px 0;">
-  <div class="container">
-    <h2 class="text-center" style="color: #000;">Penggunaan Aksara </h2>
-    <hr class="divider" />
+        /* Drawing Canvas Styles */
+        .drawing-canvas {
+            width: 100%;
+            max-height: 400px; /* Batasi tinggi maksimum di desktop */
+            height: auto; /* Biarkan tinggi menyesuaikan konten/lebar */
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            touch-action: none; /* Mencegah default touch behavior seperti scrolling */
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12.067 15.341l-2.062 2.062-1.938-1.938 2.062-2.062 1.938 1.938zm-3.082 3.082l2.361-2.361 2.938 2.938-2.361 2.361-2.938-2.938zm-1.768 1.768l2.938-2.938 2.361 2.361-2.938 2.938z" fill="%23a84232"/><path d="M14.005 5.518l-1.938 1.938 2.062 2.062 1.938-1.938-2.062-2.062zm-4.329 4.329l-3.328 3.328 1.938 1.938 3.328-3.328-1.938-1.938zm-1.895 1.895l-3.328 3.328 1.938 1.938 3.328-3.328-1.938-1.938z" fill="%23a84232"/><path d="M17.172 13.067l-2.062 2.062-1.938-1.938 2.062-2.062 1.938 1.938zm-3.082 3.082l-2.361 2.361 2.938 2.938-2.361 2.361-2.938-2.938z" fill="%23a84232"/><path d="M22.029 4.808l-2.188-2.188c-1.125-1.125-2.956-1.125-4.081 0l-12.75 12.75c-1.125 1.125-1.125 2.956 0 4.081l2.188 2.188c1.125 1.125 2.956 1.125 4.081 0l12.75-12.75c1.125-1.125 1.125-2.956 0-4.081zm-10.428 13.91l-4.14-4.14-1.938 1.938 4.14 4.14 1.938-1.938zm-2.062-2.062l-1.938 1.938-2.062-2.062 1.938-1.938 2.062 2.062zm-1.938-1.938l-4.14-4.14 1.938-1.938 4.14 4.14-1.938 1.938zm-1.768-1.768l-2.938-2.938 2.361-2.361 2.938 2.938-2.361 2.361zm11.233-11.233l2.938 2.938-2.361 2.361-2.938-2.938 2.361-2.361z" fill="%23a84232"/></svg>') 12 12, auto;
+            position: relative;
+        }
 
-    <div class="table-responsive">
-      <table class="table table-bordered" style="color: #000; background-color: #fff;">
-        <thead class="table-light">
-          <tr>
-            <th class="text-center">Contoh Kata</th>
-            <th class="text-center">Arti</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td style="font-size: 1.5rem; text-align: center;"> ᯐᯅᯮ</td>
-            <td>Jabu (rumah)</td>
-          </tr>
-          <tr>
-            <td style="font-size: 1.5rem; text-align: center;">ᯔᯝᯉ᯲</td>
-            <td>Mangan (makan)</td>
-          </tr>
-          <tr>
-            <td style="font-size: 1.5rem; text-align: center;">ᯔᯒ᯲ᯘᯪᯀᯐᯒ᯲</td>
-            <td>Marsiajar (belajar)</td>
-          </tr>
-          <tr>
-            <td style="font-size: 1.5rem; text-align: center;"> ᯔᯉ᯲ᯐᯂ</td>
-            <td>manjaha (membaca)</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</section>
+        .drawing-canvas::before {
+            content: "\f244"; /* Ikon pensil dari FontAwesome */
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            color: #ccc;
+            font-size: 1.5rem;
+            pointer-events: none;
+            opacity: 0.5;
+        }
 
-<!-- Canvas Section -->
-<section id="belajar-aksara" class="page-section py-5 bg-light">
-  <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow">
-          <div class="card-header bg-danger">
-            <h4 style="color : white;"><i class="bi bi-pencil me-2"></i>Latihan Menulis Aksara Batak</h4>
-          </div>
-          <div class="card-body">
-            <div class="row">
-              <!-- Kontrol Canvas -->
-              <div class="col-md-4 mb-3">
-                <div class="mb-3">
-                  <label class="form-label">Pilih Varian:</label>
-                  <select id="varianSelect" class="form-select">
-                    <option value="Toba">Toba</option>
-                    <option value="Mandailing">Mandailing</option>
-                    <option value="Karo">Karo</option>
-                    <option value="Simalungun">Simalungun</option>
-                    <option value="Pakpak">Pakpak</option>
-                  </select>
-=======
-    <!-- Masthead (Course Header) -->
+        .progress-bar-custom {
+            background-color: #a84232;
+        }
+
+        .card-custom {
+            border-radius: 1rem;
+            box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+            background-color: #ffffff;
+        }
+
+        .transliteration-container {
+            background-color: #fcf8f3;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+        }
+
+        .input-group-custom .form-control {
+            border-radius: 8px;
+            border: 2px solid #a84232;
+            padding-right: 10px;
+            font-size: 1.25rem;
+        }
+
+        .input-group-custom .clear-input {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #999;
+            font-size: 1.5rem;
+            line-height: 1;
+            display: none;
+        }
+
+        .result-box {
+            background-color: #ffffff;
+            border-radius: 8px;
+            border: 2px dashed #f2b705;
+            padding: 10px;
+            position: relative;
+            min-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .copy-button {
+            background-color: #a84232;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .copy-button:hover {
+            background-color: #8c362b;
+        }
+
+        .aksara-result {
+            font-family: 'Noto Sans Batak', serif;
+            font-size: 2rem;
+            color: #333;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Gaya baru untuk bagian belajar menulis */
+        .writing-header {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .target-aksara {
+            font-family: 'Noto Sans Batak', serif;
+            font-size: 4rem; /* Default for desktop */
+            font-weight: bold;
+            color: #a84232;
+            margin-bottom: 1.5rem;
+        }
+
+        .progress-bar {
+            background-color: #28a745;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .progress-text {
+            color: #555;
+            font-weight: 600;
+        }
+
+        /* Gaya tombol yang lebih konsisten */
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .btn-outline-primary {
+            color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-outline-primary:hover {
+            color: #fff;
+            background-color: #007bff;
+        }
+
+        .btn-success {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+
+        .btn-success:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .btn-danger:hover {
+            background-color: #c82333;
+            border-color: #bd2130;
+        }
+
+        .btn-secondary,
+        .btn-info {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: #fff;
+        }
+
+        .btn-secondary:hover,
+        .btn-info:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+            color: #fff;
+        }
+        .btn-outline-secondary {
+            color: #6c757d;
+            background-color: transparent;
+        }
+        .btn-outline-info {
+            color: #17a2b8;
+            background-color: transparent;
+            border-color: #17a2b8;
+        }
+        .btn-outline-info:hover {
+            background-color: #17a2b8;
+            color: #fff;
+        }
+
+        .confetti-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+
+        /* ==================================== */
+        /* Media Queries untuk Responsivitas */
+        /* ==================================== */
+
+        @media (max-width: 991.98px) { /* Untuk tablet dan mobile (breakpoint Bootstrap 'lg' ke bawah) */
+            .page-section {
+                padding: 40px 0 !important; /* Sedikit kurangi padding section */
+            }
+            .container {
+                padding: 0 20px !important; /* Sesuaikan padding container */
+            }
+            .aksara-result {
+                font-size: 1.8rem; /* Kurangi ukuran font hasil transliterasi */
+            }
+            .target-aksara {
+                font-size: 3rem; /* Kurangi ukuran font target aksara di kanvas */
+            }
+            .drawing-canvas {
+                max-height: 300px; /* Batasi tinggi kanvas lebih rendah di tablet */
+            }
+            .writing-header {
+                font-size: 1.1rem;
+            }
+            .progress-text {
+                font-size: 0.9rem;
+            }
+            /* Tombol-tombol di latihan menulis bisa menumpuk lebih baik */
+            .d-flex.flex-wrap.justify-content-center.gap-2 {
+                gap: 0.5rem !important; /* Pastikan gap tetap baik saat wrap */
+            }
+            .d-flex.flex-wrap.justify-content-center.gap-2 .btn {
+                flex: 1 1 auto; /* Biarkan tombol mengambil ruang yang tersedia */
+                max-width: 100%; /* Pastikan tidak melebihi lebar parent */
+            }
+        }
+
+        @media (max-width: 767.98px) { /* Untuk mobile (breakpoint Bootstrap 'md' ke bawah) */
+            .page-section {
+                padding: 30px 0 !important; /* Lebih kecil lagi untuk mobile */
+            }
+            .container {
+                padding: 0 15px !important; /* Lebih kecil lagi untuk mobile */
+            }
+            h1.font-weight-bold {
+                font-size: 2.5rem; /* Ukuran font masthead title */
+            }
+            p.text-white-75 {
+                font-size: 0.9rem; /* Ukuran font masthead text */
+            }
+            h2.text-center {
+                font-size: 1.8rem; /* Ukuran font judul section */
+            }
+            .table-responsive table th, .table-responsive table td {
+                font-size: 0.85rem; /* Kecilkan font di tabel kamus */
+                white-space: nowrap; /* Mencegah teks aksara terpotong */
+                padding: 0.5rem;
+            }
+            .aksara-result {
+                font-size: 1.5rem; /* Kecilkan font hasil transliterasi lagi */
+            }
+            .target-aksara {
+                font-size: 2.5rem; /* Kecilkan ukuran font target aksara lagi */
+            }
+            .drawing-canvas {
+                max-height: 250px; /* Lebih kecil di mobile */
+                height: 200px; /* Berikan tinggi minimum yang layak untuk drawing */
+            }
+            .drawing-canvas::before {
+                font-size: 1.2rem; /* Kecilkan ikon pensil */
+                top: 5px;
+                left: 5px;
+            }
+            .btn-xl {
+                padding: 0.8rem 1.5rem; /* Kecilkan tombol xl */
+                font-size: 1rem;
+            }
+            .btn {
+                padding: 0.6rem 1rem; /* Kecilkan padding tombol umum */
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 575.98px) { /* Untuk mobile sangat kecil (breakpoint Bootstrap 'sm' ke bawah) */
+            h1.font-weight-bold {
+                font-size: 2rem;
+            }
+            .target-aksara {
+                font-size: 2rem;
+            }
+            .drawing-canvas {
+                height: 180px; /* Lebih kecil untuk ponsel sangat kecil */
+                max-height: 180px;
+            }
+            .table-responsive table th, .table-responsive table td {
+                font-size: 0.8rem;
+            }
+        }
+
+    </style>
+
     <header class="masthead">
         <div class="container px-4 px-lg-5 h-100">
             <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
                 <div class="col-lg-10 align-self-end">
-                    <h1 class="text-white font-weight-bold">Mulai Belajar Aksara Batak</h1>
+                    <h1 class="text-white font-weight-bold" id="mastheadTitle">Mulai Belajar Aksara Batak</h1>
                     <hr class="divider" />
                 </div>
                 <div class="col-lg-8 align-self-baseline">
-                    <p class="text-white-75 mb-5">
+                    <p class="text-white-75 mb-5" id="mastheadText">
                         Selamat datang di halaman pembelajaran Aksara Batak!
                         Gunakan fitur-fitur di bawah ini untuk memperdalam pengetahuan Anda.
                     </p>
-                    <a class="btn btn-maroon btn-xl" href="#kamus">Lihat Kamus Aksara</a>
+                    <a class="btn btn-maroon btn-xl" href="#kamus" id="mastheadButton">Lihat Kamus Aksara</a>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- Kamus Aksara Batak -->
     <section id="kamus" class="page-section bg-white py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Kamus Aksara Batak</h2>
-            <div class="table-responsive">
+            <h2 class="text-center mb-4" id="kamusTitle">Kamus Aksara Batak</h2>
+            <div class="table-responsive" id="kamusTable">
                 <table class="table table-bordered table-striped">
                     <thead>
                         <tr>
@@ -897,1488 +366,871 @@
                         </tr>
                     </thead>
                     <tbody>
-                         <tr>
-                            <td>a</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                            <td>ᯀ</td>
-                        </tr>
-                         <tr>
-                            <td>i</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                            <td>ᯪ</td>
-                        </tr>
-                         <tr>
-                            <td>u</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                            <td>ᯮ</td>
-                        </tr>
-                         <tr>
-                            <td>e</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                            <td>ᯇᯩ</td>
-                        </tr>
-                         <tr>
-                            <td>o</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                            <td>ᯅᯬ</td>
-                        </tr>
-                        <tr>
-                            <td>ba</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                            <td>ᯅ</td>
-                        </tr>
-                        <tr>
-                            <td>ca</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                        </tr>
-                        <tr>
-                            <td>da</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                        </tr>
-                        <tr>
-                            <td>ga</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                            <td>ᯎ</td>
-                        </tr>
-                        <tr>
-                            <td>ha</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                            <td>ᯄ</td>
-                        </tr>
-                        <tr>
-                            <td>ja</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                            <td>ᯐ</td>
-                        </tr>
-                        <tr>
-                            <td>ka</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                            <td>ᯂ</td>
-                        </tr>
-                        <tr>
-                            <td>la</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                            <td>ᯞ</td>
-                        </tr>
-                        <tr>
-                            <td>ma</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                            <td>ᯔ</td>
-                        </tr>
-                        <tr>
-                            <td>na</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                            <td>ᯉ</td>
-                        </tr>
-                        <tr>
-                            <td>pa</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                            <td>ᯇ</td>
-                        </tr>
-                        <tr>
-                            <td>ra</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                            <td>ᯒ</td>
-                        </tr>
-                        <tr>
-                            <td>sa</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                            <td>ᯘ</td>
-                        </tr>
-                        <tr>
-                            <td>ta</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                            <td>ᯖ</td>
-                        </tr>
-                         <tr>
-                            <td>wa</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                            <td>ᯋ</td>
-                        </tr>
-                         <tr>
-                            <td>ya</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                            <td>ᯛ</td>
-                        </tr>
-                         <tr>
-                            <td>za</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                            <td>ᯗ</td>
-                        </tr>
-                        <!-- Tambahkan baris lainnya sesuai kebutuhan -->
+                        <tr> <td>a</td> <td>ᯀ</td> <td>ᯀ</td> <td>ᯀ</td> <td>ᯀ</td> <td>ᯀ</td> </tr>
+                        <tr> <td>i</td> <td>ᯪ</td> <td>ᯪ</td> <td>ᯪ</td> <td>ᯪ</td> <td>ᯪ</td> </tr>
+                        <tr> <td>u</td> <td>ᯮ</td> <td>ᯮ</td> <td>ᯮ</td> <td>ᯮ</td> <td>ᯮ</td> </tr>
+                        <tr> <td>e</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> <td>ᯇᯩ</td> </tr>
+                        <tr> <td>o</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> <td>ᯅᯬ</td> </tr>
+                        <tr> <td>ba</td> <td>ᯅ</td> <td>ᯅ</td> <td>ᯅ</td> <td>ᯅ</td> <td>ᯅ</td> </tr>
+                        <tr> <td>ca</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> </tr>
+                        <tr> <td>da</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> </tr>
+                        <tr> <td>ga</td> <td>ᯎ</td> <td>ᯎ</td> <td>ᯎ</td> <td>ᯎ</td> <td>ᯎ</td> </tr>
+                        <tr> <td>ha</td> <td>ᯄ</td> <td>ᯄ</td> <td>ᯄ</td> <td>ᯄ</td> <td>ᯄ</td> </tr>
+                        <tr> <td>ja</td> <td>ᯐ</td> <td>ᯐ</td> <td>ᯐ</td> <td>ᯐ</td> <td>ᯐ</td> </tr>
+                        <tr> <td>ka</td> <td>ᯂ</td> <td>ᯂ</td> <td>ᯂ</td> <td>ᯂ</td> <td>ᯂ</td> </tr>
+                        <tr> <td>la</td> <td>ᯞ</td> <td>ᯞ</td> <td>ᯞ</td> <td>ᯞ</td> <td>ᯞ</td> </tr>
+                        <tr> <td>ma</td> <td>ᯔ</td> <td>ᯔ</td> <td>ᯔ</td> <td>ᯔ</td> <td>ᯔ</td> </tr>
+                        <tr> <td>na</td> <td>ᯉ</td> <td>ᯉ</td> <td>ᯉ</td> <td>ᯉ</td> <td>ᯉ</td> </tr>
+                        <tr> <td>pa</td> <td>ᯇ</td> <td>ᯇ</td> <td>ᯇ</td> <td>ᯇ</td> <td>ᯇ</td> </tr>
+                        <tr> <td>ra</td> <td>ᯒ</td> <td>ᯒ</td> <td>ᯒ</td> <td>ᯒ</td> <td>ᯒ</td> </tr>
+                        <tr> <td>sa</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> <td>ᯘ</td> </tr>
+                        <tr> <td>ta</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> <td>ᯖ</td> </tr>
+                        <tr> <td>wa</td> <td>ᯋ</td> <td>ᯋ</td> <td>ᯋ</td> <td>ᯋ</td> <td>ᯋ</td> </tr>
+                        <tr> <td>ya</td> <td>ᯛ</td> <td>ᯛ</td> <td>ᯛ</td> <td>ᯛ</td> <td>ᯛ</td> </tr>
+                        <tr> <td>za</td> <td>ᯗ</td> <td>ᯗ</td> <td>ᯗ</td> <td>ᯗ</td> <td>ᯗ</td> </tr>
                     </tbody>
                 </table>
             </div>
         </div>
     </section>
 
-    <!-- Transliterasi Section -->
     <section id="transliterasi" class="page-section bg-light py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Transliterasi Latin ke Aksara Batak</h2>
+            <h2 class="text-center mb-4" id="transliterasiTitle">Transliterasi Latin ke Aksara Batak</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="mb-3">
-                        <label for="latinInput" class="form-label">Masukkan Teks Latin:</label>
-                        <input type="text" class="form-control" id="latinInput" placeholder="Contoh: Horas" oninput="updateTransliterasi()">
+                    <div class="card card-custom p-4" id="transliterasiCard">
+                        <div class="card-body">
+                            <label for="latinInput" class="form-label d-flex align-items-center">
+                                <i class="fas fa-keyboard me-2"></i>
+                                Masukkan Teks Latin:
+                            </label>
+                            <div class="input-group-custom mb-4 position-relative">
+                                <input type="text" class="form-control" id="latinInput" placeholder="Contoh: Horas"
+                                    oninput="updateTransliterasi()">
+                                <button type="button" class="clear-input" onclick="clearInput()"
+                                    style="display: none;">×</button>
+                            </div>
+
+                            <label class="form-label d-flex align-items-center">
+                                <i class="fas fa-font me-2"></i>
+                                Hasil Aksara Batak:
+                            </label>
+                            <div class="result-box">
+                                <div id="translitResult" class="aksara-result"></div>
+                            </div>
+
+                            <button class="btn copy-button mt-3" onclick="copyToClipboard()">
+                                <i class="fas fa-copy"></i>
+                                Salin Teks
+                            </button>
+                        </div>
                     </div>
-                    <div class="mt-3">
-                        <label class="form-label">Hasil Aksara Batak:</label>
-                        <div id="translitResult" class="border rounded p-3 bg-white"></div>
-                        <button class="btn btn-secondary btn-sm mt-2" onclick="copyToClipboard()">Salin ke Papan Klip</button>
-                    </div>
->>>>>>> e64d966aa64e3be5ee5d22847f268fa625dabb06
                 </div>
-                <div class="mb-3">
-                  <label class="form-label">Pilih Aksara:</label>
-                  <select id="aksaraSelect" class="form-select">
-                    <!-- Akan diisi oleh JavaScript -->
-                  </select>
-                </div>
-                <div class="d-grid gap-2">
-                  <button id="btnContoh" class="btn btn-primary">
-                    <i class="bi bi-eye me-2"></i>Tampilkan Contoh
-                  </button>
-                  <button id="btnClear" class="btn btn-danger">
-                    <i class="bi bi-eraser me-2"></i>Hapus Canvas
-                  </button>
-                </div>
-                <div class="mt-3">
-                  <small class="text-muted">Ukuran Kuas:</small>
-                  <input type="range" id="brushSize" class="form-range" min="1" max="10" value="3">
-                </div>
-              </div>
-
-              <!-- Canvas Area -->
-              <div class="col-md-8">
-                <div class="text-center mb-3">
-                  <canvas id="aksaraCanvas" width="400" height="400"
-                    style="border:1px solid #ddd; background-color: #fff9f0;"></canvas>
-                </div>
-                <div class="text-center">
-                  <small class="text-muted">Gunakan mouse/touch untuk menulis aksara</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-<<<<<<< HEAD
-      </div>
-    </div>
-  </div>
-</section>
-=======
-    </section>
->>>>>>> e64d966aa64e3be5ee5d22847f268fa625dabb06
-
-<style>
-  #aksaraCanvas {
-    cursor: crosshair;
-    touch-action: none;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    max-width: 100%;
-    height: auto;
-  }
-
-  @media (max-width: 768px) {
-    #aksaraCanvas {
-<<<<<<< HEAD
-      width: 300px;
-      height: 300px;
-=======
-        cursor: crosshair;
-        touch-action: none;
-        border-radius: 8px;
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        max-width: 100%;
-        height: auto;
-    }
-
-    @media (max-width: 768px) {
-        #aksaraCanvas {
-            width: 300px;
-            height: 300px;
-        }
->>>>>>> e64d966aa64e3be5ee5d22847f268fa625dabb06
-    }
-  }
-</style>
-
-<script>
-  // Data Aksara Batak Lengkap
-  const aksaraBatak = [{
-      no: 1,
-      huruf: 'a',
-      Toba: 'ᯀ',
-      Mandailing: 'ᯀ',
-      Karo: 'ᯀ',
-      Simalungun: 'ᯀ',
-      Pakpak: 'ᯀ'
-    },
-    {
-      no: 2,
-      huruf: 'ha/ka',
-      Toba: 'ᯂ',
-      Mandailing: 'ᯂ',
-      Karo: 'ᯂ',
-      Simalungun: 'ᯂ',
-      Pakpak: 'ᯂ'
-    },
-    {
-      no: 3,
-      huruf: 'na',
-      Toba: 'ᯉ',
-      Mandailing: 'ᯉ',
-      Karo: 'ᯉ',
-      Simalungun: 'ᯉ',
-      Pakpak: 'ᯉ'
-    },
-    {
-      no: 4,
-      huruf: 'ra',
-      Toba: 'ᯒ',
-      Mandailing: 'ᯒ',
-      Karo: 'ᯒ',
-      Simalungun: 'ᯒ',
-      Pakpak: 'ᯒ'
-    },
-    {
-      no: 5,
-      huruf: 'ta',
-      Toba: 'ᯖ',
-      Mandailing: 'ᯖ',
-      Karo: 'ᯖ',
-      Simalungun: 'ᯖ',
-      Pakpak: 'ᯖ'
-    },
-    {
-      no: 6,
-      huruf: 'ba',
-      Toba: 'ᯅ',
-      Mandailing: 'ᯅ',
-      Karo: 'ᯅ',
-      Simalungun: 'ᯅ',
-      Pakpak: 'ᯅ'
-    },
-    {
-      no: 7,
-      huruf: 'wa',
-      Toba: 'ᯋ',
-      Mandailing: 'ᯋ',
-      Karo: 'ᯋ',
-      Simalungun: 'ᯋ',
-      Pakpak: 'ᯋ'
-    },
-    {
-      no: 8,
-      huruf: 'i',
-      Toba: 'ᯤ',
-      Mandailing: 'ᯤ',
-      Karo: 'ᯤ',
-      Simalungun: 'ᯤ',
-      Pakpak: 'ᯤ'
-    },
-    {
-      no: 9,
-      huruf: 'ma',
-      Toba: 'ᯔ',
-      Mandailing: 'ᯔ',
-      Karo: 'ᯔ',
-      Simalungun: 'ᯔ',
-      Pakpak: 'ᯔ'
-    },
-    {
-      no: 10,
-      huruf: 'nga',
-      Toba: 'ᯜ',
-      Mandailing: 'ᯜ',
-      Karo: 'ᯜ',
-      Simalungun: 'ᯜ',
-      Pakpak: 'ᯜ'
-    },
-    {
-      no: 11,
-      huruf: 'la',
-      Toba: 'ᯞ',
-      Mandailing: 'ᯞ',
-      Karo: 'ᯞ',
-      Simalungun: 'ᯞ',
-      Pakpak: 'ᯞ'
-    },
-    {
-      no: 12,
-      huruf: 'pa',
-      Toba: 'ᯇ',
-      Mandailing: 'ᯇ',
-      Karo: 'ᯇ',
-      Simalungun: 'ᯇ',
-      Pakpak: 'ᯇ'
-    },
-    {
-      no: 13,
-      huruf: 'sa',
-      Toba: 'ᯘ',
-      Mandailing: 'ᯘ',
-      Karo: 'ᯘ',
-      Simalungun: 'ᯘ',
-      Pakpak: 'ᯘ'
-    },
-    {
-      no: 14,
-      huruf: 'da',
-      Toba: 'ᯑ',
-      Mandailing: 'ᯑ',
-      Karo: 'ᯑ',
-      Simalungun: 'ᯑ',
-      Pakpak: 'ᯑ'
-    },
-    {
-      no: 15,
-      huruf: 'ga',
-      Toba: 'ᯎ',
-      Mandailing: 'ᯎ',
-      Karo: 'ᯎ',
-      Simalungun: 'ᯎ',
-      Pakpak: 'ᯎ'
-    },
-    {
-      no: 16,
-      huruf: 'ja',
-      Toba: 'ᯐ',
-      Mandailing: 'ᯐ',
-      Karo: 'ᯐ',
-      Simalungun: 'ᯐ',
-      Pakpak: 'ᯐ'
-    },
-    {
-      no: 17,
-      huruf: 'u',
-      Toba: 'ᯥ',
-      Mandailing: 'ᯥ',
-      Karo: 'ᯥ',
-      Simalungun: 'ᯥ',
-      Pakpak: 'ᯥ'
-    },
-    {
-      no: 18,
-      huruf: 'ya',
-      Toba: 'ᯛ',
-      Mandailing: 'ᯛ',
-      Karo: 'ᯛ',
-      Simalungun: 'ᯛ',
-      Pakpak: 'ᯛ'
-    },
-    {
-      no: 19,
-      huruf: 'nya',
-      Toba: 'ᯝ',
-      Mandailing: 'ᯝ',
-      Karo: 'ᯝ',
-      Simalungun: 'ᯝ',
-      Pakpak: 'ᯝ'
-    }
-  ];
-
-<<<<<<< HEAD
-  // Inisialisasi Canvas
-  const canvas = document.getElementById('aksaraCanvas');
-  const ctx = canvas.getContext('2d');
-  const varianSelect = document.getElementById('varianSelect');
-  const aksaraSelect = document.getElementById('aksaraSelect');
-  const brushSize = document.getElementById('brushSize');
-
-  let isDrawing = false;
-  let lastX = 0;
-  let lastY = 0;
-
-  // Setup Canvas Awal
-  function setupCanvas() {
-    ctx.fillStyle = '#fff9f0';
-    ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.strokeStyle = '#7B241C';
-    ctx.lineWidth = brushSize.value;
-    ctx.lineCap = 'round';
-    ctx.lineJoin = 'round';
-  }
-
-  // Mengisi dropdown aksara
-  function populateAksaraDropdown() {
-    aksaraSelect.innerHTML = '';
-    aksaraBatak.forEach(aksara => {
-      const option = document.createElement('option');
-      option.value = aksara.huruf;
-      option.textContent = `${aksara.huruf} (${aksara[varianSelect.value]})`;
-      aksaraSelect.appendChild(option);
-    });
-  }
-
-  // Event Listeners untuk Menggambar
-  canvas.addEventListener('mousedown', startDrawing);
-  canvas.addEventListener('mousemove', draw);
-  canvas.addEventListener('mouseup', stopDrawing);
-  canvas.addEventListener('mouseout', stopDrawing);
-
-  // Touch support untuk mobile
-  canvas.addEventListener('touchstart', handleTouchStart);
-  canvas.addEventListener('touchmove', handleTouchMove);
-  canvas.addEventListener('touchend', handleTouchEnd);
-
-  function startDrawing(e) {
-    isDrawing = true;
-    [lastX, lastY] = [e.offsetX, e.offsetY];
-  }
-
-  function draw(e) {
-    if (!isDrawing) return;
-
-    ctx.beginPath();
-    ctx.moveTo(lastX, lastY);
-    ctx.lineTo(e.offsetX, e.offsetY);
-    ctx.stroke();
-    [lastX, lastY] = [e.offsetX, e.offsetY];
-  }
-
-  function stopDrawing() {
-    isDrawing = false;
-  }
-
-  function handleTouchStart(e) {
-    e.preventDefault();
-    const rect = canvas.getBoundingClientRect();
-    const touch = e.touches[0];
-    const mouseEvent = new MouseEvent('mousedown', {
-      clientX: touch.clientX,
-      clientY: touch.clientY,
-      offsetX: touch.clientX - rect.left,
-      offsetY: touch.clientY - rect.top
-    });
-    canvas.dispatchEvent(mouseEvent);
-  }
-
-  function handleTouchMove(e) {
-    e.preventDefault();
-    const rect = canvas.getBoundingClientRect();
-    const touch = e.touches[0];
-    const mouseEvent = new MouseEvent('mousemove', {
-      clientX: touch.clientX,
-      clientY: touch.clientY,
-      offsetX: touch.clientX - rect.left,
-      offsetY: touch.clientY - rect.top
-    });
-    canvas.dispatchEvent(mouseEvent);
-  }
-
-  function handleTouchEnd(e) {
-    e.preventDefault();
-    const mouseEvent = new MouseEvent('mouseup', {});
-    canvas.dispatchEvent(mouseEvent);
-  }
-
-  // Tampilkan contoh aksara
-  document.getElementById('btnContoh').addEventListener('click', function() {
-    const selectedVarian = varianSelect.value;
-    const selectedAksara = aksaraSelect.value;
-    const aksaraData = aksaraBatak.find(a => a.huruf === selectedAksara);
-
-    if (!aksaraData) return;
-
-    const aksaraChar = aksaraData[selectedVarian];
-
-    setupCanvas();
-    ctx.font = '200px Batak Unicode';
-    ctx.textAlign = 'center';
-    ctx.textBaseline = 'middle';
-    ctx.fillStyle = '#7B241C';
-    ctx.fillText(aksaraChar, canvas.width / 2, canvas.height / 2);
-  });
-
-  // Event Listeners lainnya
-  document.getElementById('btnClear').addEventListener('click', setupCanvas);
-  varianSelect.addEventListener('change', populateAksaraDropdown);
-  brushSize.addEventListener('input', function() {
-    ctx.lineWidth = this.value;
-  });
-
-  // Inisialisasi awal
-  setupCanvas();
-  populateAksaraDropdown();
-
-  // Load font khusus jika diperlukan
-  document.fonts.load('200px "Batak Unicode"').catch(err => {
-    console.log('Font Batak Unicode tidak tersedia, menggunakan font default');
-  });
-=======
-    // Inisialisasi Canvas
-    const canvas = document.getElementById('aksaraCanvas');
-    const ctx = canvas.getContext('2d');
-    const varianSelect = document.getElementById('varianSelect');
-    const aksaraSelect = document.getElementById('aksaraSelect');
-    const brushSize = document.getElementById('brushSize');
-
-    let isDrawing = false;
-    let lastX = 0;
-    let lastY = 0;
-
-    // Setup Canvas Awal
-    function setupCanvas() {
-        ctx.fillStyle = '#fff9f0';
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
-        ctx.strokeStyle = '#7B241C';
-        ctx.lineWidth = brushSize.value;
-        ctx.lineCap = 'round';
-        ctx.lineJoin = 'round';
-    }
-
-    // Mengisi dropdown aksara
-    function populateAksaraDropdown() {
-        aksaraSelect.innerHTML = '';
-        aksaraBatak.forEach(aksara => {
-            const option = document.createElement('option');
-            option.value = aksara.huruf;
-            option.textContent = `${aksara.huruf} (${aksara[varianSelect.value]})`;
-            aksaraSelect.appendChild(option);
-        });
-    }
-
-    // Event Listeners untuk Menggambar
-    canvas.addEventListener('mousedown', startDrawing);
-    canvas.addEventListener('mousemove', draw);
-    canvas.addEventListener('mouseup', stopDrawing);
-    canvas.addEventListener('mouseout', stopDrawing);
-
-    // Touch support untuk mobile
-    canvas.addEventListener('touchstart', handleTouchStart);
-    canvas.addEventListener('touchmove', handleTouchMove);
-    canvas.addEventListener('touchend', handleTouchEnd);
-
-    function startDrawing(e) {
-        isDrawing = true;
-        [lastX, lastY] = [e.offsetX, e.offsetY];
-    }
-
-    function draw(e) {
-        if (!isDrawing) return;
-
-        ctx.beginPath();
-        ctx.moveTo(lastX, lastY);
-        ctx.lineTo(e.offsetX, e.offsetY);
-        ctx.stroke();
-        [lastX, lastY] = [e.offsetX, e.offsetY];
-    }
-
-    function stopDrawing() {
-        isDrawing = false;
-    }
-
-    function handleTouchStart(e) {
-        e.preventDefault();
-        const rect = canvas.getBoundingClientRect();
-        const touch = e.touches[0];
-        const mouseEvent = new MouseEvent('mousedown', {
-            clientX: touch.clientX,
-            clientY: touch.clientY,
-            offsetX: touch.clientX - rect.left,
-            offsetY: touch.clientY - rect.top
-        });
-        canvas.dispatchEvent(mouseEvent);
-    }
-
-    function handleTouchMove(e) {
-        e.preventDefault();
-        const rect = canvas.getBoundingClientRect();
-        const touch = e.touches[0];
-        const mouseEvent = new MouseEvent('mousemove', {
-            clientX: touch.clientX,
-            clientY: touch.clientY,
-            offsetX: touch.clientX - rect.left,
-            offsetY: touch.clientY - rect.top
-        });
-        canvas.dispatchEvent(mouseEvent);
-    }
-
-    function handleTouchEnd(e) {
-        e.preventDefault();
-        const mouseEvent = new MouseEvent('mouseup', {});
-        canvas.dispatchEvent(mouseEvent);
-    }
-
-    // Tampilkan contoh aksara
-    document.getElementById('btnContoh').addEventListener('click', function() {
-        const selectedVarian = varianSelect.value;
-        const selectedAksara = aksaraSelect.value;
-        const aksaraData = aksaraBatak.find(a => a.huruf === selectedAksara);
-
-        if (!aksaraData) return;
-
-        const aksaraChar = aksaraData[selectedVarian];
-
-        setupCanvas();
-        ctx.font = '200px Batak Unicode';
-        ctx.textAlign = 'center';
-        ctx.textBaseline = 'middle';
-        ctx.fillStyle = '#7B241C';
-        ctx.fillText(aksaraChar, canvas.width/2, canvas.height/2);
-    });
-
-    // Event Listeners lainnya
-    document.getElementById('btnClear').addEventListener('click', setupCanvas);
-    varianSelect.addEventListener('change', populateAksaraDropdown);
-    brushSize.addEventListener('input', function() {
-        ctx.lineWidth = this.value;
-    });
-
-    // Inisialisasi awal
-    setupCanvas();
-    populateAksaraDropdown();
-
-    // Load font khusus jika diperlukan
-    document.fonts.load('200px "Batak Unicode"').catch(err => {
-        console.log('Font Batak Unicode tidak tersedia, menggunakan font default');
-    });
->>>>>>> e64d966aa64e3be5ee5d22847f268fa625dabb06
-</script>
-<!-- Transliterasi Section -->
-<!-- Transliterasi Latin ke Aksara Batak -->
-<section id="transliterasi" style="background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%); padding: 80px 0;">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-4 fw-bold" style="color: #2c3e50; position: relative; display: inline-block;">
-        <span style="position: relative; z-index: 1;">Transliterasi Latin ke Aksara Batak</span>
-        <span style="position: absolute; bottom: 5px; left: 0; width: 100%; height: 10px; background-color: rgba(123, 36, 28, 0.3); z-index: 0;"></span>
-      </h2>
-      <p class="lead text-muted">Masukkan teks Latin dan lihat ajaibnya aksara Batak!</p>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-sm border-0 overflow-hidden">
-          <div class="card-body p-4">
-            <div class="mb-4">
-              <label for="latinInput" class="form-label fw-bold" style="color: #2c3e50; font-size: 1.1rem;">
-                <i class="bi bi-input-cursor-text me-2"></i>Masukkan Teks Latin:
-              </label>
-              <div class="input-group">
-                <input type="text" class="form-control form-control-lg" id="latinInput" placeholder="Contoh: Horas" oninput="updateTransliterasi()">
-                <button class="btn btn-outline-secondary" type="button" onclick="document.getElementById('latinInput').value = ''; updateTransliterasi()">
-                  <i class="bi bi-x-circle"></i>
-                </button>
-              </div>
-            </div>
-
-            <div class="mt-4">
-              <label class="form-label fw-bold" style="color: #2c3e50; font-size: 1.1rem;">
-                <i class="bi bi-translate me-2"></i>Hasil Aksara Batak:
-              </label>
-              <div id="translitResult" class="border rounded p-4 bg-white shadow-inner text-center"
-<<<<<<< HEAD
-                style="min-height: 100px; font-size: 2rem; line-height: 1.5; background-color: #fff9f0; border: 2px dashed #e9c46a !important;">
-=======
-                   style="min-height: 100px; font-size: 2rem; line-height: 1.5; background-color: #fff9f0; border: 2px dashed #e9c46a !important;">
->>>>>>> e64d966aa64e3be5ee5d22847f268fa625dabb06
-                <span id="batakText" style="font-family: 'Aksara Batak', sans-serif; color: #7B241C;"></span>
-              </div>
-
-              <div class="d-flex justify-content-between mt-3">
-                <button class="btn btn-primary" onclick="copyToClipboard()">
-                  <i class="bi bi-clipboard me-2"></i>Salin Teks
-                </button>
-              </div>
             </div>
         </div>
     </section>
 
-<<<<<<< HEAD
-<!-- Tambahkan di bagian CSS -->
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-
-  #transliterasi {
-    font-family: 'Poppins', sans-serif;
-  }
-
-  .card {
-    border-radius: 15px !important;
-    transition: transform 0.3s ease;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-  }
-
-  .shadow-inner {
-    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-
-  .form-control:focus {
-    border-color: #7B241C;
-    box-shadow: 0 0 0 0.25rem rgba(123, 36, 28, 0.25);
-  }
-</style>
-
-<!-- Tambahkan di bagian JavaScript -->
-<script>
-  // Fungsi untuk animasi saat menyalin
-  function copyToClipboard() {
-    const text = document.getElementById('batakText').innerText;
-    navigator.clipboard.writeText(text);
-
-    // Animasi feedback
-    const btn = event.target;
-    btn.innerHTML = '<i class="bi bi-check2 me-2"></i>Tersalin!';
-    btn.classList.remove('btn-primary');
-    btn.classList.add('btn-success');
-
-    setTimeout(() => {
-      btn.innerHTML = '<i class="bi bi-clipboard me-2"></i>Salin Teks';
-      btn.classList.remove('btn-success');
-      btn.classList.add('btn-primary');
-    }, 2000);
-  }
-
-  // Fungsi text-to-speech (opsional)
-
-  // Fungsi transliterasi (contoh sederhana)
-  function updateTransliterasi() {
-    const latin = document.getElementById('latinInput').value;
-    // Logika transliterasi disesuaikan dengan kebutuhan
-    const batak = latin.toUpperCase(); // Contoh sederhana
-    document.getElementById('batakText').innerText = batak;
-  }
-</script>
-
-@push('scripts')
-<script>
-  /* ====== Peta Ina ni Surat (huruf dasar dengan vokal 'a' bawaan) ====== */
-  const consonantBase = {
-    'h': 'ᯂ', // Ha
-    'k': 'ᯂ', // Ka
-    'b': 'ᯅ', // Ba
-    'p': 'ᯇ', // Pa
-    'w': 'ᯋ', // Wa
-    'g': 'ᯎ', // Ga
-    'j': 'ᯐ', // Ja
-    'd': 'ᯑ', // Da
-    'r': 'ᯒ', // Ra
-    't': 'ᯖ', // Ta
-    's': 'ᯘ', // Sa
-    'y': 'ᯛ', // Ya
-    'ng': 'ᯝ', // Nga
-    'n': 'ᯉ', // Na
-    'm': 'ᯔ', // Ma
-    'l': 'ᯞ', // La
-    'ny': 'ᯠ' // Nya
-  };
-
-  /* ====== Vokal mandiri (bila di awal kata) ====== */
-  const independentVowel = {
-    'a': 'ᯀ',
-    'i': 'ᯤ',
-    'u': 'ᯥ',
-    'e': 'ᯧ',
-    'o': 'ᯮ' // opsional, variasi aksara daerah
-  };
-
-  /* ====== Anak ni Surat (diakritik) ====== */
-  const diacritic = {
-    'i': 'ᯪ', // Haluaan
-    'u': 'ᯮ', // Haborotan
-    'e': 'ᯩ', // Hatadingan
-    'o': 'ᯬ', // Cikora
-    'ou': 'ᯯ', // Bunyi diftong
-    'h': 'ᯱ', // Kejeringen
-    'ng': 'ᯰ', // Hamisaran
-    'pangolat': '᯲' // Tanda mati konsonan
-  };
-
-  const vowels = ['a', 'i', 'u', 'e', 'o'];
-
-  /* ====== Fungsi utama transliterasi ====== */
-  function transliterate(text) {
-    text = (text || '').toLowerCase();
-    let out = '';
-    let i = 0;
-
-    while (i < text.length) {
-      let ch = text[i];
-
-      // 1. Vokal mandiri di awal kata
-      if ((i === 0 || text[i - 1] === ' ') && independentVowel[ch]) {
-        out += independentVowel[ch];
-        i++;
-        continue;
-      }
-
-      // 2. Deteksi digraf konsonan
-      let cons = null;
-      if (text.startsWith('ng', i) || text.startsWith('ny', i)) {
-        cons = text.substr(i, 2);
-      } else if (consonantBase[ch]) {
-        cons = ch;
-      }
-
-      if (cons) {
-        out += consonantBase[cons];
-        i += cons.length;
-
-        // 3. Cek vokal sesudah konsonan
-        let vowel = null;
-        if (text.startsWith('ou', i)) {
-          vowel = 'ou';
-        } else if (i < text.length && vowels.includes(text[i])) {
-          vowel = text[i];
-        }
-
-        if (vowel) {
-          if (vowel !== 'a') {
-            out += diacritic[vowel] || '';
-          }
-          i += vowel.length;
-
-          // 4. Cek konsonan akhir h/ng sebagai anak ni surat
-          if (text.startsWith('ng', i) && (i + 2 >= text.length || !vowels.includes(text[i + 2]))) {
-            out += diacritic['ng'];
-            i += 2;
-          } else if (text[i] === 'h' && (i + 1 >= text.length || !vowels.includes(text[i + 1]))) {
-            out += diacritic['h'];
-            i++;
-          }
-
-        } else {
-          // 5. Tidak ada vokal sesudah konsonan → pangolat
-          out += diacritic['pangolat'];
-        }
-        continue;
-      }
-
-      // 6. Karakter lain (spasi/tanda baca)
-      out += ch;
-      i++;
-    }
-
-    return out;
-  }
-
-  /* ====== Update hasil di UI ====== */
-  function updateTransliterasi() {
-    const latinText = document.getElementById('latinInput').value || '';
-    document.getElementById('translitResult').innerText = transliterate(latinText.trim());
-  }
-
-  /* ====== Copy hasil ====== */
-  function copyToClipboard() {
-    const aksaraText = document.getElementById('translitResult').innerText;
-    if (!navigator.clipboard) {
-      alert('Clipboard API tidak tersedia di browser ini.');
-      return;
-    }
-    navigator.clipboard.writeText(aksaraText).then(() => {
-      alert('Teks Aksara Batak telah disalin!');
-    });
-  }
-
-  /* ====== Tes cepat di console ====== */
-  console.log('Horas ->', transliterate('horas')); // ᯂᯬᯒᯘ᯲
-  console.log('Serdadu ->', transliterate('serdadu')); // ᯘᯩᯒ᯲ᯑᯑᯮ
-  console.log('Mangan ->', transliterate('mangan')); // ᯔᯝᯉ᯲
-</script>
-@endpush
-
-
-
-<!-- Quiz Section -->
-<section id="quiz" class="page-section py-5" style="background: linear-gradient(to bottom, #f8f9fa, #e9ecef);">
-  <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="display-4 fw-bold" style="color: #7B241C; text-shadow: 1px 1px 2px rgba(0,0,0,0.1);">
-        <i class="bi bi-puzzle-fill me-2"></i>Kuis Tebak Aksara
-      </h2>
-      <p class="lead text-muted">Uji pengetahuanmu tentang Aksara Batak!</p>
-      <div class="progress mb-3" style="height: 8px;">
-        <div id="progressBar" class="progress-bar bg-danger" role="progressbar" style="width: 0%"></div>
-      </div>
-    </div>
-
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow-lg border-0">
-          <div class="card-body p-4">
-            <div id="soalKuis" class="text-center p-3">
-              <!-- Soal akan muncul di sini -->
-            </div>
-
-            <div class="mt-4 text-center">
-              <button id="btnPeriksa" class="btn btn-lg btn-success px-4" onclick="periksaJawaban()" disabled>
-                <i class="bi bi-check-circle me-2"></i>Periksa Jawaban
-              </button>
-              <button id="btnLanjut" class="btn btn-lg btn-primary px-4 d-none" onclick="tampilkanSoalBerikutnya()">
-                <i class="bi bi-arrow-right-circle me-2"></i>Lanjut
-              </button>
-            </div>
-
-            <div id="umpanBalikKuis" class="mt-3 text-center"></div>
-          </div>
-        </div>
-
-        <div class="text-center mt-4">
-          <div class="badge bg-dark text-white p-2">
-            Skor: <span id="skor" class="fw-bold">0</span>/<span id="totalSoal">0</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<style>
-  /* Animasi khusus untuk kuis */
-  .card {
-    border-radius: 15px !important;
-    transition: transform 0.3s ease;
-    background-color: #fff9f0;
-  }
-
-  .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
-  }
-
-  .btn-outline-batak {
-    border: 2px solid #7B241C;
-    color: #7B241C;
-    font-size: 1.2rem;
-    min-width: 60px;
-    transition: all 0.3s;
-  }
-
-  .btn-outline-batak:hover,
-  .btn-outline-batak.active {
-    background-color: #7B241C;
-    color: white !important;
-    transform: scale(1.05);
-  }
-
-  .aksara-display {
-    font-size: 3rem;
-    line-height: 1;
-    margin: 15px 0;
-    color: #7B241C;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .fade-in {
-    animation: fadeIn 0.5s ease-out;
-  }
-</style>
-
-<script>
-  // Data kuis dengan pengacakan
-  const daftarSoal = [{
-      pertanyaan: 'Aksara Batak manakah yang melambangkan "ka"?',
-      jawabanBenar: 'ᯂ',
-      pilihan: ['ᯀ', 'ᯂ', 'ᯄ', 'ᯆ']
-    },
-    {
-      pertanyaan: 'Apa bunyi dari aksara ᯔ?',
-      jawabanBenar: 'ma',
-      pilihan: ['ka', 'la', 'ma', 'na']
-    },
-    {
-      pertanyaan: 'Aksara Batak untuk "ba" adalah...',
-      jawabanBenar: 'ᯅ',
-      pilihan: ['ᯀ', 'ᯅ', 'ᯘ', 'ᯖ']
-    },
-    {
-      pertanyaan: 'Aksara Batak manakah yang mewakili suara "ta"?',
-      jawabanBenar: 'ᯖ',
-      pilihan: ['ᯖ', 'ᯗ', 'ᯘ', 'ᯒ']
-    },
-    {
-      pertanyaan: 'Bagaimana cara menulis "la" dalam Aksara Batak?',
-      jawabanBenar: 'ᯞ',
-      pilihan: ['ᯞ', 'ᯟ', 'ᯡ', 'ᯠ']
-    },
-    {
-      pertanyaan: 'Pilihlah aksara yang berbunyi "na"...',
-      jawabanBenar: 'ᯉ',
-      pilihan: ['ᯊ', 'ᯉ', 'ᯘ', 'ᯔ']
-    },
-    {
-      pertanyaan: 'Aksara apakah ini: ᯄ ?',
-      jawabanBenar: 'ha',
-      pilihan: ['ga', 'ha', 'ja', 'na']
-    },
-    {
-      pertanyaan: 'Jika Anda ingin menulis "pa", aksara apa yang Anda gunakan?',
-      jawabanBenar: 'ᯇ',
-      pilihan: ['ᯇ', 'ᯎ', 'ᯏ', 'ᯐ']
-    },
-    {
-      pertanyaan: 'Aksara manakah yang bunyinya "sa"?',
-      jawabanBenar: 'ᯘ',
-      pilihan: ['ᯘ', 'ᯙ', 'ᯚ', 'ᯛ']
-    },
-    // Soal baru yang ditambahkan
-    {
-      pertanyaan: 'Aksara Batak manakah yang melambangkan bunyi "ra"?',
-      jawabanBenar: 'ᯙ',
-      pilihan: ['ᯚ', 'ᯙ', 'ᯛ', 'ᯘ']
-    }
-  ];
-
-  // Variabel state kuis
-  let nomorSoal = 0;
-  let jawabanDipilih = null;
-  let skor = 0;
-  let soalAcak = [];
-
-  // Fungsi untuk mengacak array (Fisher-Yates shuffle agar lebih stabil)
-  function acakArray(array) {
-    let currentIndex = array.length,
-      randomIndex;
-    while (currentIndex !== 0) {
-      randomIndex = Math.floor(Math.random() * currentIndex);
-      currentIndex--;
-      [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
-    }
-    return array;
-  }
-
-  // Inisialisasi kuis
-  function mulaiKuis() {
-    nomorSoal = 0; // reset nomor soal
-    skor = 0; // reset skor
-    soalAcak = acakArray([...daftarSoal]);
-    document.getElementById('totalSoal').textContent = soalAcak.length;
-    document.getElementById('skor').textContent = skor;
-    tampilkanSoal();
-  }
-
-  // Tampilkan soal
-  function tampilkanSoal() {
-    if (nomorSoal >= soalAcak.length) {
-      // Kuis selesai
-      const persentase = Math.round((skor / soalAcak.length) * 100);
-      let pesan = '';
-
-      if (persentase >= 80) {
-        pesan = `<div class="alert alert-success fade-in">
-                            <h4><i class="bi bi-trophy-fill me-2"></i>Luar Biasa!</h4>
-                            <p>Anda benar ${skor} dari ${soalAcak.length} soal (${persentase}%)</p>
-                            <p>Pengetahuan Anda tentang Aksara Batak sangat baik!</p>
-                        </div>`;
-      } else if (persentase >= 50) {
-        pesan = `<div class="alert alert-info fade-in">
-                            <h4><i class="bi bi-emoji-smile-fill me-2"></i>Bagus!</h4>
-                            <p>Anda benar ${skor} dari ${soalAcak.length} soal (${persentase}%)</p>
-                            <p>Terus belajar untuk meningkatkan pemahaman!</p>
-                        </div>`;
-      } else {
-        pesan = `<div class="alert alert-warning fade-in">
-                            <h4><i class="bi bi-emoji-frown-fill me-2"></i>Belum berhasil</h4>
-                            <p>Anda benar ${skor} dari ${soalAcak.length} soal (${persentase}%)</p>
-                            <p>Jangan menyerah, coba lagi!</p>
-                        </div>`;
-      }
-
-      document.getElementById('soalKuis').innerHTML = pesan;
-      document.getElementById('btnPeriksa').classList.add('d-none');
-      document.getElementById('btnLanjut').classList.add('d-none');
-      return;
-    }
-
-    let soal = soalAcak[nomorSoal];
-    let pilihanJawaban = '';
-
-    // Acak urutan pilihan jawaban
-    const pilihanAcak = acakArray([...soal.pilihan]);
-
-    pilihanAcak.forEach(pilihan => {
-      pilihanJawaban += `
-                <button class="btn btn-outline-batak m-2 p-3" 
-                        onclick="pilihJawaban('${pilihan}', event)"
-                        data-bs-toggle="tooltip" 
-                        title="Pilih jawaban ini">
-                    ${pilihan}
-                </button>`;
-    });
-
-    // Update progress bar
-    const progress = ((nomorSoal) / soalAcak.length) * 100;
-    document.getElementById('progressBar').style.width = `${progress}%`;
-
-    // Tampilkan soal
-    document.getElementById('soalKuis').innerHTML = `
-            <div class="fade-in">
-                <h3 class="mb-4">Soal ${nomorSoal + 1}</h3>
-                <p class="fs-5">${soal.pertanyaan}</p>
-                <div class="d-flex flex-wrap justify-content-center">${pilihanJawaban}</div>
-            </div>
-        `;
-
-    // Reset tombol
-    document.getElementById('btnPeriksa').disabled = true;
-    jawabanDipilih = null;
-    document.getElementById('btnPeriksa').classList.remove('d-none');
-    document.getElementById('btnLanjut').classList.add('d-none');
-    document.getElementById('umpanBalikKuis').innerHTML = '';
-  }
-
-  // Pilih jawaban
-  function pilihJawaban(jawaban, event) {
-    // Hapus active dari semua tombol
-    document.querySelectorAll('.btn-outline-batak').forEach(btn => {
-      btn.classList.remove('active');
-    });
-
-    // Tambahkan active ke tombol yang dipilih
-    event.target.classList.add('active');
-
-    jawabanDipilih = jawaban;
-    document.getElementById('btnPeriksa').disabled = false;
-  }
-
-  // Periksa jawaban
-  function periksaJawaban() {
-    if (jawabanDipilih === null) return;
-
-    let soal = soalAcak[nomorSoal];
-    let umpanBalik = document.getElementById('umpanBalikKuis');
-
-    if (jawabanDipilih === soal.jawabanBenar) {
-      umpanBalik.innerHTML = `
-                <div class="alert alert-success fade-in">
-                    <i class="bi bi-check-circle-fill me-2"></i>
-                    <strong>Benar!</strong> ${soal.jawabanBenar} adalah jawaban yang tepat.
-                </div>`;
-      skor++;
-    } else {
-      umpanBalik.innerHTML = `
-                <div class="alert alert-danger fade-in">
-                    <i class="bi bi-x-circle-fill me-2"></i>
-                    <strong>Salah.</strong> Jawaban yang benar adalah <strong>${soal.jawabanBenar}</strong>.
-                </div>`;
-    }
-
-    // Update skor
-    document.getElementById('skor').textContent = skor;
-
-    // Tampilkan tombol lanjut
-    document.getElementById('btnPeriksa').classList.add('d-none');
-    document.getElementById('btnLanjut').classList.remove('d-none');
-  }
-
-  // Lanjut ke soal berikutnya
-  function tampilkanSoalBerikutnya() {
-    nomorSoal++;
-    document.getElementById('btnPeriksa').classList.remove('d-none');
-    document.getElementById('btnLanjut').classList.add('d-none');
-    document.getElementById('umpanBalikKuis').innerHTML = '';
-    tampilkanSoal();
-  }
-
-  // Mulai kuis ketika halaman dimuat
-  window.addEventListener('DOMContentLoaded', mulaiKuis);
-</script>
-
-@endsection
-=======
-    <!-- Tulis Namamu Section -->
-    <section id="tulis-nama" class="page-section bg-light py-5">
+    <section id="quiz" class="page-section bg-white py-5">
         <div class="container">
-            <h2 class="text-center mb-4">Tulis Namamu dalam Aksara Batak</h2>
+            <h2 class="text-center mb-4" id="quizTitle">Kuis Tebak Aksara</h2>
+            <p class="text-center" id="quizSubtitle">Uji pengetahuan Anda tentang Aksara Batak!</p>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div class="mb-3">
-                        <label for="nameInput" class="form-label">Masukkan Nama Anda:</label>
-                        <input type="text" class="form-control" id="nameInput" placeholder="Nama Anda" oninput="updatePratinjauNama()">
-                    </div>
-                    <div class="mt-3">
-                        <label class="form-label">Hasil:</label>
-                        <div id="nameResult" class="border rounded p-3 bg-white"></div>
-                        <button class="btn btn-info btn-sm mt-2" onclick="unduhSebagaiGambar()">Unduh Gambar</button>
+                    <div class="card card-custom p-4" id="quizCard">
+                        <div class="card-body">
+                            <div id="soalKuis"></div>
+                            <div class="mt-3 text-center">
+                                <button id="periksaBtn" class="btn btn-success" onclick="periksaJawaban()">Periksa Jawaban</button>
+                                <button id="lanjutBtn" class="btn btn-primary d-none" onclick="lanjutSoal()">Lanjut</button>
+                            </div>
+                            <div id="umpanBalikKuis" class="mt-2 text-center"></div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    @push('scripts')
+    <section id="latihan-menulis" class="page-section bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4" id="writingTitle">Belajar Menulis Aksara Batak</h2>
+            <p class="text-center" id="writingSubtitle">
+                Gunakan mouse atau jari Anda (di perangkat seluler) untuk berlatih menulis aksara.
+            </p>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="card card-custom p-4" id="writingCard">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-center mb-3">
+                                <button id="modeGuidedButton" class="btn btn-primary me-2"
+                                    onclick="setMode('guided')">Latihan Terpandu</button>
+                                <button id="modeFreeButton" class="btn btn-outline-primary"
+                                    onclick="setMode('free')">Latihan Bebas</button>
+                            </div>
+                            <div id="guided-mode-display" class="text-center mb-3 d-none">
+                                <p class="writing-header">Tuliskan aksara ini:</p>
+                                <div id="targetAksara" class="target-aksara" style="font-family: 'Noto Sans Batak', serif;">
+                                </div>
+                                <div class="progress mt-3">
+                                    <div id="levelProgress" class="progress-bar" role="progressbar" style="width: 0%;"
+                                        aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <p class="progress-text mt-2">Level <span id="currentLevel">1</span>: <span
+                                        id="progressText">0/5 aksara</span></p>
+                                <div id="feedbackMessage" class="mt-2"></div>
+                            </div>
+                            <div class="position-relative">
+                                <canvas id="writingCanvas" class="drawing-canvas"></canvas>
+                                <div class="position-absolute top-0 start-0 m-2">
+                                    <i class="fas fa-pen-alt text-muted" style="font-size: 1.5rem; opacity: 0.5;"></i>
+                                </div>
+                            </div>
+
+                            <div class="mt-3 text-center d-flex flex-wrap justify-content-center gap-2">
+                                <button class="btn btn-outline-secondary" onclick="clearCanvas()">Hapus Tulisan</button>
+                                <button class="btn btn-outline-info" onclick="changeStroke(2)">Tebal</button>
+                                <button class="btn btn-outline-info" onclick="changeStroke(1)">Tipis</button>
+                                <button id="nextAksaraButton" class="btn btn-success d-none"
+                                    onclick="checkAksara()">Periksa & Lanjut</button>
+                                <button class="btn btn-outline-primary" onclick="downloadCanvas()">Unduh Gambar</button>
+                                <button class="btn btn-danger" onclick="resetProgress()">Reset Progres</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Script untuk GSAP, Confetti, HTML2Canvas, dan semua fungsionalitas halaman --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <script>
-        // Data Aksara Batak (perlu dilengkapi dengan lengkap)
-        const aksaraMap = {
-           'a': 'ᯀ',
-            'i': 'ᯪ',
-            'u': 'ᯮ',
-            'e': 'ᯇᯩ',
-            'o': 'ᯅᯬ',
-            'ba': 'ᯅ',
-            'ca': 'ᯘ',
-            'da': 'ᯖ',
-            'ga': 'ᯎ',
-            'ha': 'ᯄ',
-            'ja': 'ᯐ',
-            'ka': 'ᯂ',
-            'la': 'ᯞ',
-            'ma': 'ᯔ',
-            'na': 'ᯉ',
-            'pa': 'ᯇ',
-            'ra': 'ᯒ',
-            'sa': 'ᯘ',
-            'ta': 'ᯖ',
-            'wa': 'ᯋ',
-            'ya': 'ᯛ',
-            'za': 'ᯗ',
+        document.addEventListener('DOMContentLoaded', function() {
+            gsap.registerPlugin(ScrollTrigger);
 
-            // Diakritik (tanda vokal)
-            'di': 'ᯖᯪ',
-            'du': 'ᯖᯮ',
-            'de': 'ᯖᯇᯩ',
-            'do': 'ᯖᯬ',
-            //Inffixes (sisipan)
-            'in': 'ᯪᯉ᯲',
-            'um': 'ᯮᯔ᯲',
-            'ar': 'ᯀᯒ᯲',
+            const LG_BREAKPOINT = 991.98; // Definisi breakpoint untuk konsistensi dengan Bootstrap
 
-            //Simbol Vokal di akhir kata (membutuhkan *pangolat*)
-            'a\'': 'ᯀ᯲',
-            'i\'': 'ᯪ᯲',
-            'u\'': 'ᯮ᯲',
-            'e\'': 'ᯇᯩ᯲',
-            'o\'': 'ᯅᯬ᯲',
-
-            //Tanda baca (disesuaikan)
-            '.': '.',
-            ',': ',',
-            '?': '?',
-            '!': '!',
-            ' ': ' '
-        };
-
-        // Fungsi Transliterasi
-        function transliterasi(text) {
-            let hasil = '';
-            text = text.toLowerCase();
-            for (let i = 0,l = text.length; i < l; i++) {
-                let char = text[i];
-                if (aksaraMap[char]) {
-                    hasil += aksaraMap[char];
-                } else {
-                    hasil += char;
+            // --- GSAP Animations ---
+            // Animasi Masthead (Saat halaman dimuat pertama kali)
+            gsap.fromTo("#mastheadTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1,
+                scrollTrigger: {
+                    trigger: ".masthead",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
                 }
-            }
-            return hasil;
-        }
-
-        function updateTransliterasi() {
-            let latinText = document.getElementById('latinInput').value;
-            document.getElementById('translitResult').innerText = transliterasi(latinText);
-        }
-
-        function copyToClipboard() {
-            let aksaraText = document.getElementById('translitResult').innerText;
-            navigator.clipboard.writeText(aksaraText).then(() => {
-                alert('Teks Aksara Batak telah disalin!');
             });
-        }
-
-        // Kuis
-        const daftarSoal = [{
-                pertanyaan: 'Aksara Batak manakah yang melambangkan "ka"?',
-                jawabanBenar: 'ᯂ',
-                pilihan: ['ᯀ', 'ᯂ', 'ᯄ', 'ᯆ']
-            },
-            {
-                pertanyaan: 'Apa bunyi dari aksara ᯔ?',
-                jawabanBenar: 'ma',
-                pilihan: ['ka', 'la', 'ma', 'na']
-            },
-            {
-                pertanyaan: 'Aksara Batak untuk "ba" adalah...',
-                jawabanBenar: 'ᯅ',
-                pilihan: ['ᯀ', 'ᯅ', 'ᯘ', 'ᯖ']
-            },
-            {
-                pertanyaan: 'Aksara Batak manakah yang mewakili suara "ta"?',
-                jawabanBenar: 'ᯖ',
-                pilihan: ['ᯖ', 'ᯗ', 'ᯘ', 'ᯒ']
-            },
-            {
-                pertanyaan: 'Bagaimana cara menulis "la" dalam Aksara Batak?',
-                jawabanBenar: 'ᯞ',
-                pilihan: ['ᯞ', 'ᯟ', 'ᯡ', 'ᯠ']
-            },
-            {
-                pertanyaan: 'Pilihlah aksara yang berbunyi "na"...',
-                jawabanBenar: 'ᯉ',
-                pilihan: ['ᯊ', 'ᯉ', 'ᯘ', 'ᯔ']
-            },
-            {
-                pertanyaan: 'Aksara apakah ini: ᯄ ?',
-                jawabanBenar: 'ha',
-                pilihan: ['ga', 'ha', 'ja', 'ka']
-            },
-            {
-                pertanyaan: 'Jika Anda ingin menulis "pa", aksara apa yang Anda gunakan?',
-                jawabanBenar: 'ᯇ',
-                pilihan: ['ᯇ', 'ᯎ', 'ᯏ', 'ᯐ']
-            },
-            {
-                pertanyaan: 'Aksara manakah yang bunyinya "sa"?',
-                jawabanBenar: 'ᯘ',
-                pilihan: ['ᯘ', 'ᯙ', 'ᯚ', 'ᯛ']
-            }
-        ];
-
-        let nomorSoal = 0;
-        let jawabanDipilih = null;
-
-        function tampilkanSoal() {
-            let soal = daftarSoal[nomorSoal];
-            let pilihanJawaban = '';
-            soal.pilihan.forEach(pilihan => {
-                pilihanJawaban += `<button class="btn btn-outline-primary m-1" onclick="pilihJawaban('${pilihan}')">${pilihan}</button>`;
+            gsap.fromTo("#mastheadText", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 1, delay: 0.5,
+                scrollTrigger: {
+                    trigger: ".masthead",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#mastheadButton", { opacity: 0, scale: 0 }, {
+                opacity: 1, scale: 1, duration: 0.75, delay: 1, ease: "back.out(1.7)",
+                scrollTrigger: {
+                    trigger: ".masthead",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
             });
 
-            document.getElementById('soalKuis').innerHTML = `
-                    <h3>Soal ${nomorSoal + 1}</h3>
-                    <p>${soal.pertanyaan}</p>
-                    <div>${pilihanJawaban}</div>
-                `;
-        }
+            // Animasi Kamus
+            gsap.fromTo("#kamusTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#kamus",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#kamusTable", { opacity: 0, scale: 0.9 }, {
+                opacity: 1, scale: 1, duration: 1, ease: "power3.out", delay: 0.3,
+                scrollTrigger: {
+                    trigger: "#kamusTable",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
 
-        function pilihJawaban(jawaban) {
-            jawabanDipilih = jawaban;
-        }
+            // Animasi Transliterasi
+            gsap.fromTo("#transliterasiTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#transliterasi",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
 
-        function periksaJawaban() {
-            if (jawabanDipilih === null) {
-                alert('Pilih jawaban dulu!');
-                return;
-            }
-
-            let soal = daftarSoal[nomorSoal];
-            let umpanBalik = document.getElementById('umpanBalikKuis');
-            if (jawabanDipilih === soal.jawabanBenar) {
-                umpanBalik.innerHTML = '<div class="alert alert-success">Benar!</div>';
+            // Animasi Transliterasi Card (adaptif)
+            if (window.innerWidth > LG_BREAKPOINT) {
+                gsap.fromTo("#transliterasiCard", { opacity: 0, x: -100 }, {
+                    opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.3,
+                    scrollTrigger: {
+                        trigger: "#transliterasiCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
             } else {
-                umpanBalik.innerHTML = `<div class="alert alert-danger">Salah. Jawaban yang benar adalah ${soal.jawabanBenar}</div>`;
+                gsap.fromTo("#transliterasiCard", { opacity: 0, y: 50 }, {
+                    opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.3,
+                    scrollTrigger: {
+                        trigger: "#transliterasiCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
             }
 
-            jawabanDipilih = null; // Reset jawaban
-            nomorSoal++; // Lanjut ke soal berikutnya
 
-            if (nomorSoal < daftarSoal.length) {
-                tampilkanSoal();
+            // Animasi Kuis
+            gsap.fromTo("#quizTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#quiz",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#quizSubtitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8, delay: 0.2,
+                scrollTrigger: {
+                    trigger: "#quiz",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#quizCard", { opacity: 0, scale: 0.8 }, {
+                opacity: 1, scale: 1, duration: 1, ease: "back.out(1.7)", delay: 0.4,
+                scrollTrigger: {
+                    trigger: "#quizCard",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+            // Animasi Latihan Menulis
+            gsap.fromTo("#writingTitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8,
+                scrollTrigger: {
+                    trigger: "#latihan-menulis",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+            gsap.fromTo("#writingSubtitle", { opacity: 0, y: 50 }, {
+                opacity: 1, y: 0, duration: 0.8, delay: 0.2,
+                scrollTrigger: {
+                    trigger: "#latihan-menulis",
+                    start: "top 80%",
+                    markers: false,
+                    once: true
+                }
+            });
+
+            // Animasi Writing Card (adaptif)
+            if (window.innerWidth > LG_BREAKPOINT) {
+                gsap.fromTo("#writingCard", { opacity: 0, x: 100 }, {
+                    opacity: 1, x: 0, duration: 1, ease: "power3.out", delay: 0.4,
+                    scrollTrigger: {
+                        trigger: "#writingCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
             } else {
-                document.getElementById('soalKuis').innerHTML = '<div class="alert alert-info">Kuis selesai!</div>';
-                umpanBalik.innerHTML = '';
+                gsap.fromTo("#writingCard", { opacity: 0, y: 50 }, {
+                    opacity: 1, y: 0, duration: 1, ease: "power3.out", delay: 0.4,
+                    scrollTrigger: {
+                        trigger: "#writingCard",
+                        start: "top 80%",
+                        markers: false,
+                        once: true
+                    }
+                });
             }
 
-            // Setelah menjawab, soal berikutnya ditampilkan setelah 1 detik
-            setTimeout(tampilkanSoalBerikutnya, 1000);
-        }
 
-        function tampilkanSoalBerikutnya() {
-            if (nomorSoal < daftarSoal.length) {
+            // --- Logika Asli Fitur-fitur (Tidak Diubah) ---
+            const aksaraMap = {
+                    'a_independent': 'ᯀ', 'i_independent': 'ᯤ', 'u_independent': 'ᯥ', 'e_independent': 'ᯀᯩ', 'o_independent': 'ᯀᯬ',
+                    'i_vowel_sign': 'ᯪ', 'u_vowel_sign': 'ᯮ', 'e_vowel_sign': 'ᯩ', 'o_vowel_sign': 'ᯬ',
+                    'b': 'ᯅ', 'c': 'ᯋ', 'd': 'ᯑ', 'g': 'ᯎ', 'h': 'ᯄ', 'j': 'ᯐ', 'k': 'ᯂ', 'l': 'ᯞ', 'm': 'ᯔ', 'n': 'ᯉ', 'p': 'ᯇ', 'r': 'ᯒ', 's': 'ᯘ', 't': 'ᯖ', 'w': 'ᯋ', 'y': 'ᯛ', 'z': 'ᯗ',
+                    'nga_consonant': 'ᯝ', 'pangolat': '᯲', 'ng': 'ᯰ',
+                    ' ': ' ', '.': '.', ',': ',', '?': '?', '!': '!'
+                };
+                const aksaraReverseMap = {
+                    'ᯀ': 'a', 'ᯤ': 'i', 'ᯥ': 'u', 'ᯀᯩ': 'e', 'ᯀᯬ': 'o',
+                    'ᯪ': 'i', 'ᯮ': 'u', 'ᯩ': 'e', 'ᯬ': 'o',
+                    'ᯅ': 'ba', 'ᯋ': 'ca/wa', 'ᯑ': 'da', 'ᯎ': 'ga', 'ᯄ': 'ha', 'ᯐ': 'ja', 'ᯂ': 'ka', 'ᯞ': 'la', 'ᯔ': 'ma', 'ᯉ': 'na', 'ᯇ': 'pa', 'ᯒ': 'ra', 'ᯘ': 'sa', 'ᯖ': 'ta', 'ᯛ': 'ya', 'ᯗ': 'za',
+                    'ᯝ': 'nga', '᯲': 'pangolat', 'ᯰ': 'ng'
+                };
+                const vowels = ['a', 'i', 'u', 'e', 'o'];
+                const consonants = ['b', 'c', 'd', 'g', 'h', 'j', 'k', 'l', 'm', 'n', 'p', 'r', 's', 't', 'w', 'y', 'z'];
+
+                function transliterasi(text) {
+                    let hasil = '';
+                    let i = 0;
+                    const textLower = text.toLowerCase();
+                    const len = textLower.length;
+                    while (i < len) {
+                        let matched = false;
+                        if (i === 0 && vowels.includes(textLower.charAt(i))) {
+                            const char = textLower.charAt(i);
+                            hasil += aksaraMap[`${char}_independent`];
+                            i++;
+                            matched = true;
+                        }
+                        if (!matched && i + 2 < len) {
+                            const tigaHuruf = textLower.substring(i, i + 3);
+                            if (tigaHuruf.startsWith('ng') && vowels.includes(tigaHuruf.charAt(2))) {
+                                const vokal = tigaHuruf.charAt(2);
+                                if (vokal === 'a') {
+                                    hasil += aksaraMap['nga_consonant'];
+                                } else {
+                                    hasil += aksaraMap['nga_consonant'] + aksaraMap[`${vokal}_vowel_sign`];
+                                }
+                                i += 3;
+                                matched = true;
+                            }
+                        }
+                        if (!matched && i + 1 < len) {
+                            const duaHuruf = textLower.substring(i, i + 2);
+                            if (duaHuruf === 'ng') {
+                                hasil += aksaraMap['ng'];
+                                i += 2;
+                                matched = true;
+                            }
+                        }
+                        if (!matched && i + 1 < len) {
+                            const konsonan = textLower.charAt(i);
+                            const vokal = textLower.charAt(i + 1);
+                            if (consonants.includes(konsonan) && vowels.includes(vokal)) {
+                                if (vokal === 'a') {
+                                    hasil += aksaraMap[konsonan];
+                                } else {
+                                    hasil += aksaraMap[konsonan] + aksaraMap[`${vokal}_vowel_sign`];
+                                }
+                                i += 2;
+                                matched = true;
+                            }
+                        }
+                        if (!matched) {
+                            const char = textLower.charAt(i);
+                            if (consonants.includes(char)) {
+                                hasil += aksaraMap[char] + aksaraMap['pangolat'];
+                            } else if (vowels.includes(char)) {
+                                hasil += aksaraMap[`${char}_independent`];
+                            } else {
+                                hasil += char;
+                            }
+                            i++;
+                        }
+                    }
+                    return hasil;
+                }
+                window.updateTransliterasi = function() {
+                    let latinText = document.getElementById('latinInput').value;
+                    document.getElementById('translitResult').innerText = transliterasi(latinText);
+                    document.querySelector('.clear-input').style.display = latinText.length > 0 ? 'block' : 'none';
+                }
+                window.copyToClipboard = function() {
+                    let aksaraText = document.getElementById('translitResult').innerText;
+                    if (aksaraText) {
+                        navigator.clipboard.writeText(aksaraText).then(() => {
+                            alert('Teks Aksara Batak telah disalin!');
+                        });
+                    } else {
+                        alert('Tidak ada teks untuk disalin!');
+                    }
+                }
+                window.clearInput = function() {
+                    document.getElementById('latinInput').value = '';
+                    updateTransliterasi();
+                }
+
+                const daftarSoal = [{
+                    pertanyaan: 'Aksara Batak manakah yang melambangkan "ka"?',
+                    jawabanBenar: 'ᯂ',
+                    pilihan: ['ᯀ', 'ᯂ', 'ᯄ', 'ᯆ']
+                }, {
+                    pertanyaan: 'Apa bunyi dari aksara ᯔ?',
+                    jawabanBenar: 'ma',
+                    pilihan: ['ka', 'la', 'ma', 'na']
+                }, {
+                    pertanyaan: 'Aksara Batak untuk "ba" adalah...',
+                    jawabanBenar: 'ᯅ',
+                    pilihan: ['ᯀ', 'ᯅ', 'ᯘ', 'ᯖ']
+                }, {
+                    pertanyaan: 'Aksara Batak manakah yang mewakili suara "ta"?',
+                    jawabanBenar: 'ᯖ',
+                    jawabanBenarAksara: 'ta',
+                    pilihan: ['ᯖ', 'ᯗ', 'ᯘ', 'ᯒ']
+                }, {
+                    pertanyaan: 'Bagaimana cara menulis "la" dalam Aksara Batak?',
+                    jawabanBenar: 'ᯞ',
+                    pilihan: ['ᯞ', 'ᯟ', 'ᯡ', 'ᯠ']
+                }, {
+                    pertanyaan: 'Pilihlah aksara yang berbunyi "na"...',
+                    jawabanBenar: 'ᯉ',
+                    pilihan: ['ᯊ', 'ᯉ', 'ᯘ', 'ᯔ']
+                }, {
+                    pertanyaan: 'Aksara apakah ini: ᯄ ?',
+                    jawabanBenar: 'ha',
+                    pilihan: ['ga', 'ha', 'ja', 'ka']
+                }, {
+                    pertanyaan: 'Jika Anda ingin menulis "pa", aksara apa yang Anda gunakan?',
+                    jawabanBenar: 'ᯇ',
+                    pilihan: ['ᯇ', 'ᯎ', 'ᯏ', 'ᯐ']
+                }, {
+                    pertanyaan: 'Aksara manakah yang bunyinya "sa"?',
+                    jawabanBenar: 'ᯘ',
+                    pilihan: ['ᯘ', 'ᯙ', 'ᯚ', 'ᯛ']
+                }];
+                let nomorSoal = 0;
+                let jawabanDipilih = null;
+                let soalSalah = [];
+                let soalRevisi = [];
+                let modeRevisi = false;
+
+                const periksaBtn = document.getElementById('periksaBtn');
+                const lanjutBtn = document.getElementById('lanjutBtn');
+                const soalKuisDiv = document.getElementById('soalKuis');
+                const umpanBalikDiv = document.getElementById('umpanBalikKuis');
+
+                function shuffleArray(array) {
+                    for (let i = array.length - 1; i > 0; i--) {
+                        const j = Math.floor(Math.random() * (i + 1));
+                        [array[i], array[j]] = [array[j], array[i]];
+                    }
+                }
+
+                function tampilkanSoal() {
+                    let soal = modeRevisi ? soalRevisi[nomorSoal] : daftarSoal[nomorSoal];
+                    if (!soal) {
+                         tampilkanPesanSelesai();
+                         return;
+                    }
+                    let pilihanJawaban = '';
+                    soal.pilihan.forEach(pilihan => {
+                        pilihanJawaban +=
+                            `<button class="btn btn-outline-primary m-1" onclick="pilihJawaban('${pilihan}', this)">${pilihan}</button>`;
+                    });
+                    soalKuisDiv.innerHTML =
+                        `<h3>Soal ${nomorSoal + 1}</h3><p>${soal.pertanyaan}</p><div>${pilihanJawaban}</div>`;
+
+                    periksaBtn.classList.remove('d-none');
+                    lanjutBtn.classList.add('d-none');
+                    umpanBalikDiv.innerHTML = '';
+                    jawabanDipilih = null;
+                }
+
+                window.pilihJawaban = function(jawaban, element) {
+                    jawabanDipilih = jawaban;
+                    document.querySelectorAll('#soalKuis .btn').forEach(btn => {
+                        btn.classList.remove('btn-success');
+                        btn.classList.add('btn-outline-primary');
+                    });
+                    element.classList.remove('btn-outline-primary');
+                    element.classList.add('btn-success');
+                }
+
+                window.periksaJawaban = function() {
+                    if (jawabanDipilih === null) {
+                        alert('Pilih jawaban dulu!');
+                        return;
+                    }
+
+                    let soalSaatIni = modeRevisi ? soalRevisi[nomorSoal] : daftarSoal[nomorSoal];
+
+                    if (jawabanDipilih === soalSaatIni.jawabanBenar) {
+                        let pesanBenar = '';
+                        const jawabanBenar = soalSaatIni.jawabanBenar;
+                        const pertanyaan = soalSaatIni.pertanyaan;
+
+                        if (pertanyaan.includes('Aksara Batak manakah yang melambangkan')) {
+                            const latin = pertanyaan.match(/"(.*?)"/)[1];
+                            pesanBenar = `Benar! ${jawabanBenar} dibaca **${latin}**`;
+                        } else if (pertanyaan.includes('Apa bunyi dari aksara')) {
+                            const aksara = pertanyaan.match(/ᯀ|ᯂ|ᯄ|ᯆ|ᯔ/)[0]; // Regex lebih spesifik
+                            pesanBenar = `Benar! ${aksara} dibaca **${jawabanBenar}**`;
+                        } else if (pertanyaan.includes('bersimbolkan')) {
+                            const latin = pertanyaan.match(/"(.*?)"/)[1];
+                            pesanBenar = `Benar! ${latin} bersimbolkan **${jawabanBenar}**`;
+                        } else if (pertanyaan.includes('Bagaimana cara menulis')) {
+                            const latin = pertanyaan.match(/"(.*?)"/)[1];
+                            pesanBenar = `Benar! **${latin}** ditulis ${jawabanBenar}`;
+                        } else if (pertanyaan.includes('Pilihlah aksara yang berbunyi')) {
+                            const latin = pertanyaan.match(/"(.*?)"/)[1];
+                            pesanBenar = `Benar! **${latin}** bersimbolkan ${jawabanBenar}`;
+                        } else {
+                            pesanBenar = `Benar! Jawaban yang benar adalah **${jawabanBenar}**`;
+                        }
+
+
+                        umpanBalikDiv.innerHTML = `<div class="alert alert-success">${pesanBenar}</div>`;
+
+                        if (modeRevisi) {
+                            soalRevisi.splice(nomorSoal, 1);
+                            if (soalRevisi.length > 0) {
+                                nomorSoal = Math.min(nomorSoal, soalRevisi.length - 1);
+                            }
+                        } else {
+                            nomorSoal++;
+                        }
+                    } else {
+                        umpanBalikDiv.innerHTML =
+                            `<div class="alert alert-danger">Salah, silakan coba lagi</div>`;
+                        if (!modeRevisi) {
+                            soalSalah.push(soalSaatIni);
+                        }
+                        nomorSoal++;
+                    }
+
+                    periksaBtn.classList.add('d-none');
+                    lanjutBtn.classList.remove('d-none');
+                }
+
+                window.lanjutSoal = function() {
+                    if (modeRevisi) {
+                        if (soalRevisi.length > 0) {
+                            tampilkanSoal();
+                        } else {
+                            tampilkanPesanSelesai();
+                        }
+                    } else {
+                        if (nomorSoal < daftarSoal.length) {
+                            tampilkanSoal();
+                        } else if (soalSalah.length > 0) {
+                            soalRevisi = [...soalSalah];
+                            soalSalah = [];
+                            nomorSoal = 0;
+                            modeRevisi = true;
+                            soalKuisDiv.innerHTML =
+                                '<div class="alert alert-warning">Mari kita ulang kesalahan pada soal sebelumnya</div>';
+                            periksaBtn.classList.add('d-none');
+                            lanjutBtn.classList.remove('d-none');
+                             setTimeout(tampilkanSoal, 1500); // Beri sedikit jeda sebelum tampil soal revisi
+                        } else {
+                            tampilkanPesanSelesai();
+                        }
+                    }
+                }
+
+                function tampilkanPesanSelesai() {
+                    const jsConfetti = new JSConfetti();
+                    jsConfetti.addConfetti({
+                        emojis: ['🎉', '🎊', '🥳', '✨'],
+                        confettiNumber: 100
+                    }).then(() => {
+                        soalKuisDiv.innerHTML = '<div class="alert alert-success">Selamat! Anda telah menyelesaikan semua soal dengan benar!</div>';
+                        umpanBalikDiv.innerHTML = '';
+                        lanjutBtn.classList.add('d-none');
+                        modeRevisi = false; // Reset mode revisi
+                        nomorSoal = 0; // Reset nomor soal
+                        soalSalah = []; // Pastikan ini kosong
+                        soalRevisi = []; // Pastikan ini kosong
+                        shuffleArray(daftarSoal); // Acak ulang soal untuk kuis berikutnya
+                    });
+                }
+
                 tampilkanSoal();
-                document.getElementById('umpanBalikKuis').innerHTML = ''; // Bersihkan umpan balik
-            }
-        }
 
-        // Tulis Nama
-        function updatePratinjauNama() {
-            let nama = document.getElementById('nameInput').value;
-            document.getElementById('nameResult').innerText = transliterasi(nama);
-        }
+                const canvas = document.getElementById('writingCanvas');
+                const ctx = canvas.getContext('2d');
+                let isDrawing = false;
+                let lastX = 0;
+                let lastY = 0;
+                let strokeWidth = 2;
+                let currentMode = 'guided';
+                let isCanvasEmpty = true;
 
-        function unduhSebagaiGambar() {
-            alert('Fitur ini belum tersedia.');
-            // Tambahkan logika untuk mengubah teks Aksara Batak menjadi gambar dan mengunduhnya
-        }
+                const levelData = [
+                    ['ᯀ', 'ᯅ', 'ᯄ', 'ᯂ', 'ᯞ'],
+                    ['ᯪ', 'ᯮ', 'ᯩ', 'ᯬ', '᯲'],
+                    ['ᯀᯤ', 'ᯅᯮ', 'ᯄᯩ', 'ᯂᯬ', 'ᯖ᯲'], // Contoh aksara gabungan
+                    ['ᯑ', 'ᯎ', 'ᯐ', 'ᯔ', 'ᯉ'] // Level tambahan jika diperlukan
+                ];
+                let currentLevel = 0;
+                let aksaraInLevel = levelData[currentLevel];
+                let completedAksara = [];
+                let currentAksaraTarget = '';
 
-        // Inisialisasi Kuis
-        tampilkanSoal();
-    </script>
-    @endpush
+                const hiddenCanvas = document.createElement('canvas');
+                const hiddenCtx = hiddenCanvas.getContext('2d');
+                const similarityThreshold = 0.75;
+
+                function saveProgress() {
+                    const progress = {
+                        level: currentLevel,
+                        completed: completedAksara
+                    };
+                    localStorage.setItem('batakAksaraProgress', JSON.stringify(progress));
+                }
+
+                function loadProgress() {
+                    const savedProgress = localStorage.getItem('batakAksaraProgress');
+                    if (savedProgress) {
+                        const progress = JSON.parse(savedProgress);
+                        currentLevel = progress.level;
+                        completedAksara = progress.completed;
+                        aksaraInLevel = levelData[currentLevel] || [];
+                    }
+                }
+
+                function resizeCanvas() {
+                    const rect = canvas.parentElement.getBoundingClientRect(); // Ambil lebar dari parent (col-lg-8)
+                    canvas.width = rect.width;
+                    // Tentukan tinggi responsif
+                    if (window.innerWidth <= 767.98) { // Mobile
+                        canvas.height = 200; // Tinggi tetap yang lebih kecil untuk mobile
+                    } else if (window.innerWidth <= 991.98) { // Tablet
+                        canvas.height = 300;
+                    }
+                    else { // Desktop
+                        canvas.height = 400; // Tinggi default desktop
+                    }
+
+                    hiddenCanvas.width = canvas.width;
+                    hiddenCanvas.height = canvas.height;
+                    // Gambar ulang target aksara jika ada dan dalam mode terpandu
+                    if (currentMode === 'guided' && currentAksaraTarget) {
+                        drawTargetOnHiddenCanvas(currentAksaraTarget);
+                    }
+                }
+                resizeCanvas();
+                window.addEventListener('resize', resizeCanvas);
+
+                function getCoordinates(e) {
+                    const rect = canvas.getBoundingClientRect();
+                    let x, y;
+                    if (e.touches) {
+                        x = e.touches[0].clientX - rect.left;
+                        y = e.touches[0].clientY - rect.top;
+                    } else {
+                        x = e.clientX - rect.left;
+                        y = e.clientY - rect.top;
+                    }
+                    return [x, y];
+                }
+
+                function startDrawing(e) {
+                    isDrawing = true;
+                    isCanvasEmpty = false;
+                    [lastX, lastY] = getCoordinates(e);
+                    e.preventDefault();
+                }
+
+                function draw(e) {
+                    if (!isDrawing) return;
+                    e.preventDefault();
+                    const [currentX, currentY] = getCoordinates(e);
+
+                    ctx.beginPath();
+                    ctx.moveTo(lastX, lastY);
+                    ctx.lineTo(currentX, currentY);
+                    ctx.strokeStyle = '#343a40';
+                    ctx.lineWidth = strokeWidth;
+                    ctx.lineCap = 'round';
+                    ctx.stroke();
+
+                    [lastX, lastY] = [currentX, currentY];
+                }
+
+                function stopDrawing() {
+                    isDrawing = false;
+                }
+
+                window.clearCanvas = function() {
+                    ctx.clearRect(0, 0, canvas.width, canvas.height);
+                    isCanvasEmpty = true;
+                }
+
+                window.changeStroke = function(width) {
+                    strokeWidth = width;
+                }
+
+                window.downloadCanvas = function() {
+                    const link = document.createElement('a');
+                    link.download = 'tulisan-aksara-batak.png';
+                    link.href = canvas.toDataURL('image/png');
+                    link.click();
+                }
+
+                window.resetProgress = function() {
+                    localStorage.removeItem('batakAksaraProgress');
+                    alert('Progres belajar Anda telah direset. Halaman akan dimuat ulang.');
+                    window.location.reload();
+                }
+
+                window.setMode = function(mode) {
+                    currentMode = mode;
+                    document.getElementById('modeGuidedButton').classList.remove('btn-primary', 'btn-outline-primary');
+                    document.getElementById('modeFreeButton').classList.remove('btn-primary', 'btn-outline-primary');
+
+                    clearCanvas();
+
+                    if (mode === 'guided') {
+                        document.getElementById('modeGuidedButton').classList.add('btn-primary');
+                        document.getElementById('modeFreeButton').classList.add('btn-outline-primary');
+                        document.getElementById('guided-mode-display').classList.remove('d-none');
+                        document.getElementById('nextAksaraButton').classList.remove('d-none');
+                        loadAksaraForLevel();
+                    } else {
+                        document.getElementById('modeGuidedButton').classList.add('btn-outline-primary');
+                        document.getElementById('modeFreeButton').classList.add('btn-primary');
+                        document.getElementById('guided-mode-display').classList.add('d-none');
+                        document.getElementById('nextAksaraButton').classList.add('d-none');
+                    }
+                }
+
+                function loadAksaraForLevel() {
+                    const feedbackDiv = document.getElementById('feedbackMessage');
+                    if (currentLevel >= levelData.length) {
+                         feedbackDiv.innerHTML = '<div class="alert alert-success">Selamat! Anda telah menyelesaikan semua level!</div>';
+                         document.getElementById('targetAksara').innerText = ''; // Kosongkan target
+                         document.getElementById('nextAksaraButton').classList.add('d-none');
+                         document.getElementById('currentLevel').innerText = levelData.length;
+                         updateProgress();
+                         return;
+                    }
+
+                    aksaraInLevel = levelData[currentLevel]; // Pastikan aksaraInLevel diperbarui untuk level saat ini
+                    const remainingAksara = aksaraInLevel.filter(a => !completedAksara.includes(a));
+
+                    if (remainingAksara.length > 0) {
+                        const randomIndex = Math.floor(Math.random() * remainingAksara.length);
+                        currentAksaraTarget = remainingAksara[randomIndex];
+                        document.getElementById('targetAksara').innerText = currentAksaraTarget;
+                        clearCanvas(); // Bersihkan kanvas untuk aksara baru
+                        feedbackDiv.innerHTML = ''; // Hapus pesan feedback sebelumnya
+                        updateProgress();
+                    } else {
+                        alert(`Level ${currentLevel + 1} Selesai! Selamat!`);
+                        currentLevel++;
+                        completedAksara = []; // Reset completed aksara untuk level baru
+                        saveProgress();
+                        if (currentLevel < levelData.length) {
+                            loadAksaraForLevel(); // Lanjut ke level berikutnya
+                        } else {
+                            feedbackDiv.innerHTML = '<div class="alert alert-success">Selamat! Anda telah menyelesaikan semua level!</div>';
+                            document.getElementById('targetAksara').innerText = '';
+                            document.getElementById('nextAksaraButton').classList.add('d-none');
+                        }
+                    }
+                }
+
+                function drawTargetOnHiddenCanvas(aksara) {
+                    hiddenCtx.clearRect(0, 0, hiddenCanvas.width, hiddenCanvas.height);
+                    hiddenCtx.fillStyle = 'rgba(0,0,0,1)'; // Pastikan target digambar dengan warna solid
+                    hiddenCtx.font = `bold ${canvas.height * 0.8}px 'Noto Sans Batak', serif`; // Ukuran font berdasarkan tinggi kanvas
+                    hiddenCtx.textAlign = 'center';
+                    hiddenCtx.textBaseline = 'middle';
+                    hiddenCtx.fillText(aksara, hiddenCanvas.width / 2, hiddenCanvas.height / 2);
+                }
+
+                window.checkAksara = function() {
+                    const feedbackDiv = document.getElementById('feedbackMessage');
+                    if (isCanvasEmpty) {
+                        feedbackDiv.innerHTML =
+                            `<div class="alert alert-warning">Tulis aksara terlebih dahulu!</div>`;
+                        return;
+                    }
+
+                    drawTargetOnHiddenCanvas(currentAksaraTarget);
+
+                    const userImageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+                    const targetImageData = hiddenCtx.getImageData(0, 0, hiddenCanvas.width, hiddenCanvas.height);
+
+                    const userPixels = userImageData.data;
+                    const targetPixels = targetImageData.data;
+
+                    let overlapPixels = 0;
+                    let totalUserPixels = 0;
+                    let totalTargetPixels = 0;
+
+                    for (let i = 0; i < userPixels.length; i += 4) {
+                        // Cek transparansi (alpha channel) untuk menentukan piksel yang digambar (bukan hanya warna hitam)
+                        const isUserPixelDrawn = userPixels[i + 3] > 0; // Periksa nilai alpha
+                        const isTargetPixelDrawn = targetPixels[i + 3] > 0;
+
+                        if (isUserPixelDrawn) totalUserPixels++;
+                        if (isTargetPixelDrawn) totalTargetPixels++;
+                        if (isUserPixelDrawn && isTargetPixelDrawn) overlapPixels++;
+                    }
+
+                    if (totalTargetPixels === 0) {
+                        feedbackDiv.innerHTML =
+                            `<div class="alert alert-danger">Terjadi kesalahan pada sistem, silakan muat ulang halaman. Target aksara tidak terdeteksi.</div>`;
+                        return;
+                    }
+
+                    const similarity = (totalUserPixels + totalTargetPixels) > 0 ? (2 * overlapPixels) / (
+                        totalUserPixels + totalTargetPixels) : 0;
+
+                    if (similarity >= similarityThreshold) {
+                        if (!completedAksara.includes(currentAksaraTarget)) {
+                            completedAksara.push(currentAksaraTarget);
+                        }
+                        feedbackDiv.innerHTML =
+                            `<div class="alert alert-success">Bagus! Akurasi: ${Math.round(similarity * 100)}%</div>`;
+                        updateProgress();
+                        saveProgress();
+                        setTimeout(() => {
+                            clearCanvas();
+                            loadAksaraForLevel();
+                            feedbackDiv.innerHTML = '';
+                        }, 1500);
+                    } else {
+                        feedbackDiv.innerHTML =
+                            `<div class="alert alert-danger">Coba lagi! Akurasi: ${Math.round(similarity * 100)}%</div>`;
+                    }
+                }
+
+                function updateProgress() {
+                    const total = aksaraInLevel.length;
+                    const completed = completedAksara.length;
+                    const percentage = (completed / total) * 100;
+                    document.getElementById('levelProgress').style.width = percentage + '%';
+                    document.getElementById('levelProgress').setAttribute('aria-valuenow', percentage);
+                    document.getElementById('progressText').innerText = `${completed}/${total} aksara`;
+                    document.getElementById('currentLevel').innerText = currentLevel + 1;
+                }
+
+                canvas.addEventListener('mousedown', startDrawing);
+                canvas.addEventListener('mousemove', draw);
+                canvas.addEventListener('mouseup', stopDrawing);
+                canvas.addEventListener('mouseout', stopDrawing);
+                canvas.addEventListener('touchstart', startDrawing);
+                canvas.addEventListener('touchmove', draw);
+                canvas.addEventListener('touchend', stopDrawing);
+                canvas.addEventListener('touchcancel', stopDrawing);
+
+                loadProgress();
+                setMode('guided');
+                updateTransliterasi(); // Panggil ini untuk memastikan tampilan awal tombol clear input
+
+            });
+        </script>
 @endsection
->>>>>>> e64d966aa64e3be5ee5d22847f268fa625dabb06
